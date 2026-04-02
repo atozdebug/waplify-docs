@@ -1,0 +1,8 @@
+{
+  "label": "Account & Settings",
+  "position": 11,
+  "link": {
+    "type": "generated-index",
+    "description": "Manage your profile, WhatsApp account info, and application settings."
+  }
+}

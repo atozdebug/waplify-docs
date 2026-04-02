@@ -1,0 +1,487 @@
+---
+title: Complete API Reference
+description: Single-page API reference with all endpoints, schemas, and examples — optimized for AI tools and quick reference
+sidebar_position: 99
+---
+
+import CopyPageButton from '@site/src/components/CopyPageButton';
+
+# Waplify API — Complete Reference
+
+This page contains every endpoint, request/response schema, and example in one place. Copy it and paste into any AI tool to generate integration code instantly.
+
+<CopyPageButton />
+
+## Setup
+
+| Item | Value |
+|------|-------|
+| **Base URL** | `https://server.waplify.io` |
+| **Auth Header** | `Authorization: Bearer wapl_your_api_key` |
+| **Content-Type** | `application/json` |
+| **Rate Limit** | 100 requests/minute per API key |
+| **Phone Format** | Country code + number, no `+` sign (e.g., `911234567890`) |
+
+---
+
+## 1. Send Template Message
+
+Send a WhatsApp message using an approved template. Works anytime (no 24-hour window restriction).
+
+**POST** `/api/v1/messages/send`
+
+**Request:**
+```json
+{
+  "template_name": "order_confirmation",
+  "contact_phone": "911234567890",
+  "contact_name": "John Doe",
+  "body_data": {
+    "1": "John",
+    "2": "Premium Plan",
+    "3": "99"
+  },
+  "header_data": {
+    "1": "Daily Report"
+  },
+  "media_url": "https://example.com/image.png",
+  "filename": "Report.pdf",
+  "waba_phone_id": "123456789"
+}
+```
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| `template_name` | Yes | Template name (case-sensitive) |
+| `contact_phone` | Yes | With country code, no `+` |
+| `contact_name` | No | Defaults to "User #random" |
+| `body_data` | No | Template body variables (required if template has `{{1}}` etc.) |
+| `header_data` | No | For TEXT header variables only |
+| `media_url` | Conditional | Required if template has IMAGE/VIDEO/DOCUMENT header |
+| `filename` | No | For document templates |
+| `waba_phone_id` | No | Defaults to user's primary number |
+
+**Response (200):**
+```json
+{
+  "status": "success",
+  "message": "Message sent successfully",
+  "message_id": "wamid.HBgNOTE4MDMxMjM0NTY3OA==",
+  "contact_id": "507f1f77bcf86cd799439012",
+  "template_name": "order_confirmation",
+  "timestamp": "2024-06-15T10:00:00Z"
+}
+```
+
+**Errors:** 400 (missing variables, invalid phone, template not approved, media required), 401 (invalid API key), 404 (template not found), 429 (rate limit)
+
+**IMPORTANT — "success" means accepted, not delivered:**
+- A `"status": "success"` response means WhatsApp has **accepted** the message — it does NOT mean it was delivered
+- Actual delivery status arrives later via webhooks: `message.sent` → `message.delivered` → `message.read`
+- If delivery fails, you receive a `message.failed` webhook
+- You MUST set up webhooks to track actual delivery
+
+**Notes:**
+- Contact auto-created if phone number doesn't exist
+- Variables can be positional (`"1"`, `"2"`) or named (`"name"`, `"amount"`)
+- Media limits: Image 5MB (JPEG/PNG), Video 16MB (MP4), Document 100MB (PDF/DOC/DOCX/PPT/PPTX/TXT)
+
+---
+
+## 2. Send Free-Form Message
+
+Send a text or media message without a template. Only works within 24-hour window (contact must have messaged you in last 24 hours).
+
+**POST** `/api/v1/messages/send-message`
+
+**Request:**
+```json
+{
+  "contact_phone": "911234567890",
+  "contact_name": "John Doe",
+  "message_type": "text",
+  "message": "Hello! How can I help?",
+  "media_url": "https://example.com/file.pdf",
+  "caption": "Here is the document",
+  "filename": "Report.pdf",
+  "waba_phone_id": "123456789"
+}
+```
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| `contact_phone` | Yes | With country code, no `+` |
+| `contact_name` | No | Defaults to "User #random" |
+| `message_type` | Yes | `text`, `image`, `video`, `audio`, or `document` |
+| `message` | For text | Text message body (max 4,096 chars) |
+| `media_url` | For media | Required for image/video/audio/document |
+| `caption` | No | Caption for image/video/document |
+| `filename` | No | For document type |
+| `waba_phone_id` | No | Defaults to user's primary number |
+
+**Response (200):**
+```json
+{
+  "status": "success",
+  "message": "Message sent successfully",
+  "message_id": "wamid.HBgNOTE4MDMxMjM0NTY3OA==",
+  "contact_id": "507f1f77bcf86cd799439012",
+  "message_type": "text",
+  "timestamp": "2024-06-15T10:00:00Z"
+}
+```
+
+**Errors:** 400 (invalid phone, missing message/media), 401 (invalid API key), 403 (24-hour window closed — use template endpoint instead), 429 (rate limit)
+
+**Note:** 403 errors use `detail` field: `{"detail": "Cannot send free-form message: ..."}`
+
+**Media limits:** Image 5MB (JPEG/PNG), Video 16MB (MP4), Audio 16MB (AAC/MP3/M4A/AMR/OGG), Document 100MB (PDF/DOC/DOCX/PPT/PPTX/TXT)
+
+---
+
+## 3. List Templates
+
+Get all approved WhatsApp message templates.
+
+**GET** `/api/v1/templates/`
+
+**Response (200):**
+```json
+{
+  "status": "success",
+  "templates": [
+    {
+      "id": "507f1f77bcf86cd799439012",
+      "name": "order_confirmation",
+      "category": "UTILITY",
+      "language": "en_US",
+      "status": "APPROVED",
+      "header_format": "IMAGE",
+      "body": "Hello {{1}}, your order {{2}} is confirmed for {{3}}.",
+      "requires_media": true,
+      "created_at": "2024-06-15T10:00:00Z"
+    }
+  ],
+  "total": 1
+}
+```
+
+**Key fields:** `header_format` (NONE/TEXT/IMAGE/VIDEO/DOCUMENT), `requires_media` (true = need media_url), `body` (parse `{{1}}` etc. for variable count)
+
+---
+
+## 4. List Contacts
+
+**GET** `/api/v1/contacts/?page=1&limit=20&search=john`
+
+| Param | Default | Description |
+|-------|---------|-------------|
+| `page` | 1 | Page number |
+| `limit` | 20 | Per page (max 100) |
+| `search` | — | Search name, phone, or email |
+
+**Response (200):**
+```json
+{
+  "status": "success",
+  "contacts": [
+    {
+      "id": "507f1f77bcf86cd799439012",
+      "first_name": "John",
+      "last_name": "Doe",
+      "phone_number": "911234567890",
+      "email": "john@example.com",
+      "company": "Acme Corp",
+      "tags": ["vip"],
+      "opted_in": true,
+      "source": "api",
+      "created_at": "2024-06-15T10:00:00Z"
+    }
+  ],
+  "total": 1,
+  "page": 1,
+  "limit": 20
+}
+```
+
+---
+
+## 5. Create Contact
+
+**POST** `/api/v1/contacts/`
+
+**Request:**
+```json
+{
+  "phone_number": "911234567890",
+  "first_name": "John",
+  "last_name": "Doe",
+  "email": "john@example.com",
+  "company": "Acme Corp",
+  "tags": ["vip", "newsletter"]
+}
+```
+
+Fields: `phone_number` (required), `first_name` (required), `last_name` (optional), `email` (optional), `company` (optional), `tags` (optional).
+
+**Response (201):**
+```json
+{
+  "status": "success",
+  "message": "Contact created successfully",
+  "contact": { /* same fields as list response */ }
+}
+```
+
+---
+
+## 6. Get Contact
+
+**GET** `/api/v1/contacts/{contact_id}`
+
+**Response (200):** Same as create contact response.
+
+---
+
+## 7. Delete Contact
+
+**DELETE** `/api/v1/contacts/{contact_id}`
+
+**Response (200):**
+```json
+{
+  "status": "success",
+  "message": "Contact deleted successfully",
+  "contact_id": "507f1f77bcf86cd799439012"
+}
+```
+
+Note: Soft delete — contact deactivated, not permanently removed.
+
+---
+
+## 8. List Groups
+
+**GET** `/api/v1/groups/?page=1&limit=20&search=vip`
+
+**Response (200):**
+```json
+{
+  "status": "success",
+  "groups": [
+    {
+      "id": "507f1f77bcf86cd799439050",
+      "name": "VIP Customers",
+      "description": "High-value customers",
+      "tags": ["vip"],
+      "contact_count": 42,
+      "created_at": "2024-06-15T10:00:00Z"
+    }
+  ],
+  "total": 1,
+  "page": 1,
+  "limit": 20
+}
+```
+
+---
+
+## 9. Create Group
+
+**POST** `/api/v1/groups/`
+
+**Request:**
+```json
+{
+  "name": "VIP Customers",
+  "description": "High-value customers",
+  "tags": ["vip"],
+  "contact_ids": ["507f1f77bcf86cd799439012"]
+}
+```
+
+Fields: `name` (required, unique per account), `description` (optional), `tags` (optional), `contact_ids` (optional — add contacts immediately).
+
+**Response (201):**
+```json
+{
+  "status": "success",
+  "message": "Contact group created successfully",
+  "group": { /* same fields as list response */ }
+}
+```
+
+---
+
+## 10. Get Group
+
+**GET** `/api/v1/groups/{group_id}`
+
+---
+
+## 11. Delete Group
+
+**DELETE** `/api/v1/groups/{group_id}`
+
+Note: Contacts are NOT deleted — only removed from the group.
+
+---
+
+## 12. Add Contacts to Group
+
+**POST** `/api/v1/groups/{group_id}/contacts`
+
+**Request:**
+```json
+{
+  "contact_ids": ["507f1f77bcf86cd799439012", "507f1f77bcf86cd799439013"]
+}
+```
+
+**Response (200):**
+```json
+{
+  "status": "success",
+  "message": "2 contact(s) added to group",
+  "group_id": "507f1f77bcf86cd799439050",
+  "contact_ids": ["507f1f77bcf86cd799439012", "507f1f77bcf86cd799439013"]
+}
+```
+
+Duplicates are silently skipped.
+
+---
+
+## 13. Remove Contacts from Group
+
+**DELETE** `/api/v1/groups/{group_id}/contacts`
+
+**Request:**
+```json
+{
+  "contact_ids": ["507f1f77bcf86cd799439012"]
+}
+```
+
+Contacts are NOT deleted from your account — only removed from this group.
+
+---
+
+## Webhooks
+
+### Configuration
+
+Register endpoints at **Developers > Webhooks** in the dashboard.
+
+| Setting | Default | Description |
+|---------|---------|-------------|
+| `url` | — | HTTPS URL to receive notifications |
+| `secret` | — | Optional HMAC-SHA256 signing secret |
+| `subscribed_events` | all | Which events to receive |
+| `retry_count` | 3 | Max retries (0–10) |
+| `timeout` | 5s | Request timeout (1–30s) |
+
+### Events
+
+| Event | When |
+|-------|------|
+| `message.sent` | Message accepted by WhatsApp |
+| `message.delivered` | Delivered to contact's phone |
+| `message.read` | Read by contact |
+| `message.failed` | Delivery failed |
+| `button.clicked` | Button interaction |
+| `message.received` | New inbound message |
+| `message.reply` | Reply to your outbound message |
+
+### Payload — Message Status
+
+```json
+{
+  "event": "message.delivered",
+  "timestamp": "2024-06-15T10:05:00",
+  "campaign_id": "507f1f77bcf86cd799439060",
+  "campaign_name": "Summer Promo",
+  "message": {
+    "message_id": "507f1f77bcf86cd799439070",
+    "contact_phone": "911234567890",
+    "contact_name": "John Doe",
+    "status": "delivered",
+    "previous_status": "sent",
+    "status_timestamp": "2024-06-15T10:05:00"
+  }
+}
+```
+
+For `message.failed`, adds: `error_message` (string), `error_code` (number).
+
+### Payload — Inbound Message
+
+```json
+{
+  "event": "message.received",
+  "timestamp": "2024-06-15T10:15:00",
+  "message": {
+    "message_id": "wamid.HBgNOTE4MDMxMjM0NTY3OQ==",
+    "contact_phone": "911234567890",
+    "contact_name": "John Doe",
+    "content": "Hi, I have a question",
+    "message_type": "text",
+    "timestamp": "2024-06-15T10:15:00",
+    "waba_phone_id": "123456789012345",
+    "is_reply": false,
+    "is_from_ad": false
+  }
+}
+```
+
+### Payload — Reply
+
+```json
+{
+  "event": "message.reply",
+  "timestamp": "2024-06-15T10:10:00",
+  "campaign_id": "507f1f77bcf86cd799439060",
+  "campaign_name": "Summer Promo",
+  "original_message": {
+    "message_id": "507f1f77bcf86cd799439070",
+    "contact_phone": "911234567890",
+    "contact_name": "John Doe",
+    "sent_at": "2024-06-15T10:00:00"
+  },
+  "reply": {
+    "message_id": "507f1f77bcf86cd799439071",
+    "contact_phone": "911234567890",
+    "contact_name": "John Doe",
+    "content": "Yes, I'd like to know more!",
+    "message_type": "text",
+    "timestamp": "2024-06-15T10:10:00"
+  }
+}
+```
+
+### Signature Verification
+
+Header: `X-Webhook-Signature: sha256=<hex_digest>`
+
+Verify: `HMAC-SHA256(your_secret, raw_request_body)` must match the hex digest after `sha256=`.
+
+### Retry Policy
+
+- 2xx → success
+- 4xx (except 429) → not retried
+- 429/5xx/timeout → retried with exponential backoff (1s, 2s, 4s, 8s...)
+
+### Status Flow
+
+```
+pending → accepted → sent → delivered → read → clicked
+                  ↘ failed
+```
+
+### Delivery Headers
+
+```
+Content-Type: application/json
+User-Agent: Waplify-Webhook/1.0
+X-Webhook-Signature: sha256=... (if secret configured)
+```

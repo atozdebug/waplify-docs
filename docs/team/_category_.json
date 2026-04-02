@@ -1,0 +1,8 @@
+{
+  "label": "Team Management",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "Invite team members, assign roles, and manage permissions."
+  }
+}

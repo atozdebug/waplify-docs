@@ -1,0 +1,8 @@
+{
+  "label": "Chat & Inbox",
+  "position": 6,
+  "link": {
+    "type": "generated-index",
+    "description": "Chat with your customers in real time from the Waplify inbox."
+  }
+}

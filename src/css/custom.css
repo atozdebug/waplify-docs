@@ -1,30 +1,840 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Waplify Help Center — Custom Theme
+ * Design tokens ported from Waplify-FE/src/lib/brand.ts & index.css
  */
 
-/* You can override the default Infima variables here. */
+/* ============================================
+   1. CSS CUSTOM PROPERTIES — Light Mode
+   ============================================ */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* Brand palette */
+  --waplify-brand-primary: #1ecc5e;
+  --waplify-brand-primary-dark: #004d00;
+  --waplify-brand-ink: #0e0e0e;
+  --waplify-brand-border: #eeeeee;
+  --waplify-brand-hover: #297c29f7;
+  --waplify-brand-50: #c0f1d2;
+  --waplify-brand-100: #aeedc5;
+  --waplify-brand-200: #8ae4ab;
+  --waplify-brand-300: #66dc92;
+  --waplify-brand-400: #42d478;
+  --waplify-brand-500: #1ecc5e;
+  --waplify-brand-600: #19ab4f;
+  --waplify-brand-700: #148b40;
+  --waplify-brand-800: #106a31;
+  --waplify-brand-900: #0b4922;
+
+  /* Semantic tokens */
+  --waplify-bg: #ffffff;
+  --waplify-fg: #0a0a0a;
+  --waplify-card-bg: #ffffff;
+  --waplify-card-fg: #0a0a0a;
+  --waplify-muted: #f5f5f5;
+  --waplify-muted-fg: #737373;
+  --waplify-border: #e5e5e5;
+
+  /* Radius (matching FE: base 0.625rem) */
+  --waplify-radius: 0.625rem;
+  --waplify-radius-sm: 6px;
+  --waplify-radius-md: 8px;
+  --waplify-radius-lg: 10px;
+  --waplify-radius-xl: 14px;
+
+  /* Scrollbar */
+  --scrollbar-track: #f5f5f5;
+  --scrollbar-thumb: rgba(23, 23, 23, 0.5);
+  --scrollbar-thumb-hover: rgba(23, 23, 23, 0.7);
+
+  /* Infima overrides */
+  --ifm-color-primary: #1ecc5e;
+  --ifm-color-primary-dark: #19ab4f;
+  --ifm-color-primary-darker: #148b40;
+  --ifm-color-primary-darkest: #0b4922;
+  --ifm-color-primary-light: #42d478;
+  --ifm-color-primary-lighter: #66dc92;
+  --ifm-color-primary-lightest: #aeedc5;
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-heading-font-weight: 600;
+  --ifm-font-weight-semibold: 600;
+  --ifm-code-font-size: 0.85rem;
+  --ifm-border-radius: var(--waplify-radius-md);
+  --ifm-global-radius: var(--waplify-radius-md);
+  --ifm-navbar-shadow: none;
+  --ifm-global-spacing: 1rem;
+  --ifm-spacing-horizontal: 1.5rem;
+  --ifm-background-color: var(--waplify-bg);
+  --ifm-font-color-base: var(--waplify-fg);
+  --ifm-footer-background-color: #0e0e0e;
+  --ifm-footer-color: #fafafa;
+  --docusaurus-highlighted-code-line-bg: rgba(30, 204, 94, 0.1);
+
+  /* Typography — tighter, modern sizing */
+  --ifm-font-size-base: 15px;
+  --ifm-line-height-base: 1.65;
+  --ifm-heading-line-height: 1.3;
+  --ifm-h1-font-size: 1.75rem;
+  --ifm-h2-font-size: 1.35rem;
+  --ifm-h3-font-size: 1.1rem;
+  --ifm-h4-font-size: 1rem;
+  --ifm-h5-font-size: 0.9rem;
+
+  /* Spacing */
+  --ifm-leading: 1rem;
+  --ifm-paragraph-margin-bottom: 0.85rem;
+  --doc-sidebar-width: 260px;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* ============================================
+   2. CSS CUSTOM PROPERTIES — Dark Mode
+   ============================================ */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --waplify-bg: #0a0a0a;
+  --waplify-fg: #fafafa;
+  --waplify-card-bg: #171717;
+  --waplify-card-fg: #fafafa;
+  --waplify-muted: #262626;
+  --waplify-muted-fg: #a1a1a1;
+  --waplify-border: rgba(255, 255, 255, 0.1);
+  --scrollbar-track: #262626;
+  --scrollbar-thumb: rgba(250, 250, 250, 0.5);
+  --scrollbar-thumb-hover: rgba(250, 250, 250, 0.7);
+
+  --ifm-color-primary: #42d478;
+  --ifm-color-primary-dark: #1ecc5e;
+  --ifm-color-primary-darker: #19ab4f;
+  --ifm-color-primary-darkest: #148b40;
+  --ifm-color-primary-light: #66dc92;
+  --ifm-color-primary-lighter: #8ae4ab;
+  --ifm-color-primary-lightest: #c0f1d2;
+  --ifm-background-color: #0a0a0a;
+  --ifm-background-surface-color: #171717;
+  --ifm-font-color-base: #fafafa;
+  --ifm-footer-background-color: #0a0a0a;
+  --docusaurus-highlighted-code-line-bg: rgba(30, 204, 94, 0.15);
+}
+
+/* ============================================
+   3. SCROLLBAR (matching FE)
+   ============================================ */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+/* ============================================
+   4. NAVBAR
+   ============================================ */
+.navbar {
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--waplify-border);
+  box-shadow: none;
+}
+
+.navbar__title {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.navbar__link {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.navbar__link--active {
+  color: var(--ifm-color-primary);
+}
+
+/* Navbar right-side buttons — shared */
+.navbar__link--website.navbar__link,
+.navbar__link--login.navbar__link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: var(--waplify-radius-md);
+  padding: 0.45rem 1.1rem;
+  margin-left: 0.5rem;
+}
+
+/* Remove the external arrow icon from navbar buttons */
+.navbar__link--website[class*="navbar__link"],
+.navbar__link--login[class*="navbar__link"] {
+  -webkit-appearance: none;
+}
+.navbar__link--website svg,
+.navbar__link--login svg {
+  display: none !important;
+}
+.navbar__link--website::after,
+.navbar__link--login::after,
+.navbar__link--website[target="_blank"]::after,
+.navbar__link--login[target="_blank"]::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Website — plain text link */
+.navbar__link--website.navbar__link {
+  color: var(--waplify-muted-fg);
+  transition: color 0.2s;
+}
+.navbar__link--website.navbar__link:hover {
+  color: var(--waplify-fg);
+  text-decoration: none;
+}
+
+/* Login — green filled button */
+.navbar__link--login.navbar__link {
+  background-color: var(--waplify-brand-primary);
+  color: #ffffff;
+  font-weight: 600;
+  transition: background-color 0.2s;
+  margin-right: 0.75rem;
+}
+.navbar__link--login.navbar__link:hover {
+  background-color: var(--waplify-brand-600);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* ============================================
+   5. SIDEBAR (matching FE AppSidebar active state)
+   ============================================ */
+.theme-doc-sidebar-container {
+  border-right: 1px solid var(--waplify-border) !important;
+}
+
+/* Active sidebar link: green-50 bg, green-700 text */
+.menu__link--active:not(.menu__link--sublist) {
+  background-color: #f0fdf4;
+  color: #148b40;
+  border-radius: var(--waplify-radius-sm);
+  font-weight: 600;
+}
+[data-theme='dark'] .menu__link--active:not(.menu__link--sublist) {
+  background-color: rgba(30, 204, 94, 0.1);
+  color: #42d478;
+}
+
+/* Sidebar link hover */
+.menu__link:hover {
+  background-color: var(--waplify-muted);
+  border-radius: var(--waplify-radius-sm);
+}
+
+/* (category labels styled in section 9) */
+
+/* ============================================
+   6. FOOTER
+   ============================================ */
+.footer--dark {
+  background-color: #0e0e0e;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__title {
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #a1a1a1;
+}
+
+.footer__link-item {
+  font-size: 0.9rem;
+  color: #d4d4d4;
+  transition: color 0.2s;
+}
+.footer__link-item:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer__copyright {
+  font-size: 0.8rem;
+  color: #737373;
+}
+
+/* ============================================
+   7. DOC PAGE ELEMENTS
+   ============================================ */
+
+/* TOC active link */
+.table-of-contents__link--active {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+/* Admonitions */
+.alert {
+  border-radius: var(--waplify-radius-lg);
+}
+
+/* Code blocks */
+.prism-code {
+  border-radius: var(--waplify-radius-lg);
+}
+
+/* Tables */
+table {
+  border-radius: var(--waplify-radius-md);
+  overflow: hidden;
+}
+table th {
+  background-color: var(--waplify-muted);
+}
+
+/* Search highlight */
+mark {
+  background-color: rgba(30, 204, 94, 0.2);
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+/* Pagination nav (previous / next) */
+.pagination-nav__link {
+  border-radius: var(--waplify-radius-lg);
+  border: 1px solid var(--waplify-border);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.pagination-nav__link:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 2px 8px rgba(30, 204, 94, 0.1);
+}
+
+/* Breadcrumbs */
+.breadcrumbs__link {
+  border-radius: var(--waplify-radius-sm);
+}
+
+/* ============================================
+   8. BUTTONS
+   ============================================ */
+.button {
+  border-radius: var(--waplify-radius-md);
+  font-weight: 600;
+  transition: opacity 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+.button--primary {
+  background-color: var(--waplify-brand-primary);
+  border-color: var(--waplify-brand-primary);
+}
+.button--primary:hover {
+  background-color: var(--waplify-brand-600);
+  border-color: var(--waplify-brand-600);
+}
+
+/* ============================================
+   9. MODERN LAYOUT OVERHAUL
+   ============================================ */
+
+/* --- Global typography refinements --- */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+article h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+article h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-top: 2rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--waplify-border);
+}
+
+article h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+article p,
+article li {
+  font-size: 0.925rem;
+  line-height: 1.7;
+  color: var(--waplify-muted-fg);
+}
+
+[data-theme='dark'] article p,
+[data-theme='dark'] article li {
+  color: #b0b0b0;
+}
+
+article strong {
+  color: var(--waplify-fg);
+  font-weight: 600;
+}
+
+/* --- Sidebar — modern & compact --- */
+.menu {
+  font-size: 0.84rem;
+  padding: 0.75rem 0.6rem;
+}
+
+.menu__link {
+  padding: 0.35rem 0.7rem;
+  border-radius: var(--waplify-radius-sm);
+  font-weight: 450;
+  color: var(--waplify-muted-fg);
+  transition: all 0.15s;
+}
+
+.menu__link:hover {
+  color: var(--waplify-fg);
+  background-color: var(--waplify-muted);
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+  font-weight: 600;
+}
+
+/* Category labels — subtle, not shouty */
+.menu__list-item-collapsible > .menu__link {
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--waplify-fg);
+  padding: 0.4rem 0.7rem;
+  margin-top: 0.6rem;
+}
+
+.menu__list-item-collapsible > .menu__link:hover {
+  background: transparent;
+}
+
+/* Nested sidebar items — indent */
+.menu__list .menu__list {
+  padding-left: 0.5rem;
+  border-left: 1px solid var(--waplify-border);
+  margin-left: 0.7rem;
+}
+
+/* --- Breadcrumbs — minimal --- */
+.breadcrumbs {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.breadcrumbs__item:not(:last-child)::after {
+  opacity: 0.4;
+}
+
+.breadcrumbs__link {
+  padding: 0.25rem 0.5rem;
+  color: var(--waplify-muted-fg);
+}
+
+.breadcrumbs__item--active .breadcrumbs__link {
+  background: none;
+  color: var(--waplify-fg);
+  font-weight: 500;
+}
+
+/* --- Doc Cards (auto-generated index pages) --- */
+.card {
+  border: 1px solid var(--waplify-border);
+  border-radius: var(--waplify-radius-xl);
+  box-shadow: none;
+  padding: 1.25rem 1.5rem;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  background: var(--waplify-card-bg);
+}
+
+.card:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 4px 16px rgba(30, 204, 94, 0.08);
+  transform: translateY(-2px);
+}
+
+[data-theme='dark'] .card {
+  background: var(--waplify-card-bg);
+  border-color: var(--waplify-border);
+}
+
+[data-theme='dark'] .card:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 4px 16px rgba(30, 204, 94, 0.1);
+}
+
+/* Card title */
+.card h2,
+.card .cardTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+/* Card description */
+.card p,
+.card .cardDescription {
+  font-size: 0.84rem;
+  color: var(--waplify-muted-fg);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Hide the default doc card file emoji/icon */
+.card h2 .badge,
+.cardTitle::before {
+  display: none;
+}
+
+/* Doc card grid — tighter gap */
+.docItemContainer .row {
+  gap: 0.75rem;
+}
+
+/* --- Category page header --- */
+.generatedIndexPage .hero {
+  padding: 1.5rem 0;
+}
+
+.generatedIndexPage .hero .hero__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.generatedIndexPage .hero .hero__subtitle {
+  font-size: 0.9rem;
+  color: var(--waplify-muted-fg);
+}
+
+/* --- TOC (right sidebar) --- */
+.table-of-contents {
+  font-size: 0.8rem;
+}
+
+.table-of-contents__link {
+  padding: 0.25rem 0;
+  color: var(--waplify-muted-fg);
+  transition: color 0.15s;
+}
+
+.table-of-contents__link:hover {
+  color: var(--waplify-fg);
+}
+
+.table-of-contents__link--active {
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+}
+
+/* --- Content area --- */
+.theme-doc-markdown {
+  max-width: 720px;
+}
+
+/* Inline code */
+code {
+  font-size: 0.84rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  background-color: var(--waplify-muted);
+  border: 1px solid var(--waplify-border);
+}
+
+[data-theme='dark'] code {
+  background-color: #1e1e1e;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Tables — clean */
+table {
+  font-size: 0.875rem;
+}
+
+table td,
+table th {
+  padding: 0.65rem 1rem;
+}
+
+table tr {
+  border-bottom: 1px solid var(--waplify-border);
+}
+
+table th {
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--waplify-muted-fg);
+}
+
+/* Admonitions — modern */
+.alert {
+  border-left: 3px solid;
+  border-radius: var(--waplify-radius-md);
+  font-size: 0.9rem;
+  padding: 1rem 1.25rem;
+}
+
+.alert .admonitionHeading_node_modules-\@docusaurus-theme-classic-lib-theme-Admonition-styles-module {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* --- Pagination (prev/next) — compact --- */
+.pagination-nav {
+  margin-top: 2.5rem;
+}
+
+.pagination-nav__sublabel {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--waplify-muted-fg);
+}
+
+.pagination-nav__label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* --- Navbar height --- */
+.navbar {
+  height: 56px;
+  padding: 0 1.25rem;
+}
+
+.navbar__logo img {
+  height: 28px;
+}
+
+/* --- Hide "Pages" plugin pages link if visible --- */
+.theme-doc-sidebar-item-link-level-1 {
+  font-weight: 500;
+}
+
+/* ============================================
+   10. CHANGELOG (Blog) — Clean minimal style
+   ============================================ */
+
+/* --- LIST PAGE --- */
+
+/* Container width for list */
+.blog-list-page main > .container {
+  max-width: 780px;
+}
+
+/* Each changelog entry card on list page */
+.blog-list-page article[class*="blogPost"] {
+  border: 1px solid var(--waplify-border);
+  border-radius: var(--waplify-radius-lg);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 0.75rem;
+  background: var(--waplify-card-bg);
+}
+
+[data-theme='dark'] .blog-list-page article[class*="blogPost"] {
+  background: #141414;
+}
+
+/* Remove default separator */
+.blog-list-page article[class*="blogPost"]::after {
+  display: none;
+}
+
+/* List page title */
+.blog-list-page article[class*="blogPost"] header h2,
+.blog-list-page article[class*="blogPost"] header h2 a {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--waplify-fg);
+}
+
+.blog-list-page article[class*="blogPost"] header h2 a:hover {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+/* List page summary text */
+.blog-list-page article[class*="blogPost"] .markdown p {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--waplify-muted-fg);
+}
+
+/* "Read more" link */
+a[class*="readMore"] {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--ifm-color-primary);
+}
+
+/* --- DETAIL PAGE --- */
+
+/* Wider container for sidebar + content */
+.blog-post-page main > .container {
+  max-width: 960px;
+}
+
+/* No card border on detail page */
+.blog-post-page article[class*="blogPost"] {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.blog-post-page article[class*="blogPost"]::after {
+  display: none;
+}
+
+/* Detail page title (h1) */
+.blog-post-page header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+}
+
+/* Detail page content */
+.blog-post-page .markdown p {
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.blog-post-page .markdown h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--waplify-border);
+}
+
+.blog-post-page .markdown h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-top: 1.25rem;
+}
+
+.blog-post-page .markdown li {
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+
+/* Detail page prev/next nav */
+.blog-post-page nav[class*="blogPostNav"] {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--waplify-border);
+}
+
+.blog-post-page nav[class*="blogPostNav"] a {
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--waplify-fg);
+  transition: color 0.15s;
+}
+
+.blog-post-page nav[class*="blogPostNav"] a:hover {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+/* --- SHARED — Date, Tags, Sidebar --- */
+
+/* Date */
+time {
+  font-size: 0.78rem;
+  color: var(--waplify-muted-fg);
+}
+
+/* Tags */
+.tag {
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.15rem 0.55rem;
+  border-radius: 20px;
+  border: 1px solid var(--waplify-border);
+  background: var(--waplify-muted);
+  color: var(--waplify-muted-fg);
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.tag:hover {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+[data-theme='dark'] .tag {
+  background: #1e1e1e;
+}
+
+/* Blog sidebar (Recent Updates) */
+nav[class*="blogSidebar"] {
+  font-size: 0.82rem;
+  padding-top: 0.5rem;
+}
+
+nav[class*="blogSidebar"] h3 {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--waplify-muted-fg);
+  margin-bottom: 0.5rem;
+}
+
+nav[class*="blogSidebar"] ul {
+  padding: 0;
+  list-style: none;
+}
+
+nav[class*="blogSidebar"] a {
+  font-size: 0.82rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: var(--waplify-radius-sm);
+  color: var(--waplify-muted-fg);
+  display: block;
+  transition: color 0.15s, background-color 0.15s;
+}
+
+nav[class*="blogSidebar"] a:hover {
+  color: var(--waplify-fg);
+  background-color: var(--waplify-muted);
+  text-decoration: none;
+}
+
+nav[class*="blogSidebar"] a[aria-current="page"] {
+  color: #148b40;
+  background-color: #f0fdf4;
+  font-weight: 600;
+}
+
+[data-theme='dark'] nav[class*="blogSidebar"] a[aria-current="page"] {
+  color: #42d478;
+  background-color: rgba(30, 204, 94, 0.1);
 }

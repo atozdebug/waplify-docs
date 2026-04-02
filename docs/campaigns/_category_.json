@@ -1,0 +1,8 @@
+{
+  "label": "Campaigns",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Create, schedule, and track WhatsApp broadcast campaigns."
+  }
+}

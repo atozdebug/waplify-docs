@@ -1,0 +1,186 @@
+/* Footer — replicating waplify.io design */
+
+.footer {
+  background-color: #ffffff;
+  border-top: 1px solid #e5e5e5;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+:global([data-theme='dark']) .footer {
+  background-color: #111111;
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+.footerInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 0;
+}
+
+/* Top section: brand + link columns */
+.footerTop {
+  display: flex;
+  gap: 4rem;
+  padding-bottom: 2.5rem;
+}
+
+.brandColumn {
+  flex: 0 0 280px;
+  max-width: 280px;
+}
+
+.footerLogo {
+  height: 32px;
+  width: auto;
+  margin-bottom: 1rem;
+}
+
+.brandDescription {
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: #737373;
+  margin-bottom: 1.25rem;
+}
+
+:global([data-theme='dark']) .brandDescription {
+  color: #a1a1a1;
+}
+
+/* Social icons row */
+.socialLinks {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  color: #525252;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.socialIcon:hover {
+  background-color: #1ecc5e;
+  color: #ffffff;
+}
+
+:global([data-theme='dark']) .socialIcon {
+  background-color: #262626;
+  color: #a1a1a1;
+}
+
+:global([data-theme='dark']) .socialIcon:hover {
+  background-color: #1ecc5e;
+  color: #ffffff;
+}
+
+/* Link columns */
+.linkColumns {
+  flex: 1;
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+}
+
+.linkColumn {
+  min-width: 0;
+}
+
+.columnTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0e0e0e;
+  margin-bottom: 1rem;
+}
+
+:global([data-theme='dark']) .columnTitle {
+  color: #fafafa;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footerLink {
+  font-size: 0.875rem;
+  color: #525252;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footerLink:hover {
+  color: #1ecc5e;
+  text-decoration: none;
+}
+
+:global([data-theme='dark']) .footerLink {
+  color: #a1a1a1;
+}
+
+:global([data-theme='dark']) .footerLink:hover {
+  color: #42d478;
+}
+
+/* Bottom section */
+.footerBottom {
+  border-top: 1px solid #e5e5e5;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+:global([data-theme='dark']) .footerBottom {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+.madeWith {
+  font-size: 0.85rem;
+  color: #737373;
+  margin-bottom: 0.35rem;
+}
+
+.heart {
+  color: #ef4444;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: #a1a1a1;
+  margin: 0;
+}
+
+:global([data-theme='dark']) .madeWith,
+:global([data-theme='dark']) .copyright {
+  color: #737373;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .footerTop {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .brandColumn {
+    flex: none;
+    max-width: 100%;
+  }
+
+  .linkColumns {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .linkColumn {
+    flex: 1 1 140px;
+  }
+}

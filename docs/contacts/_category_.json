@@ -1,0 +1,8 @@
+{
+  "label": "Contacts",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Add, import, organize, and manage your WhatsApp contacts and groups."
+  }
+}

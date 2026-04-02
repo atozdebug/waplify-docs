@@ -1,12 +1,5 @@
 // @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
-
 import {themes as prismThemes} from 'prism-react-renderer';
-
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -14,37 +7,103 @@ const config = {
   tagline: 'Everything you need to get the most out of Waplify',
   favicon: 'img/favicon.ico',
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true,
   },
 
-  // Set the production url of your site here
   url: 'https://docs.waplify.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'waplify', // Usually your GitHub org/user name.
-  projectName: 'waplify-docs', // Usually your repo name.
+  organizationName: 'waplify',
+  projectName: 'waplify-docs',
 
   onBrokenLinks: 'throw',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
+
+  headTags: [
+    // Google Fonts — Inter
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preconnect',
+        href: 'https://fonts.googleapis.com',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossorigin: 'anonymous',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap',
+      },
+    },
+    // JSON-LD — Organization structured data
+    {
+      tagName: 'script',
+      attributes: {
+        type: 'application/ld+json',
+      },
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'Waplify',
+        url: 'https://waplify.io',
+        logo: 'https://docs.waplify.com/img/waplify-logo.png',
+        description: 'WhatsApp marketing and automation platform for small businesses.',
+        sameAs: [
+          'https://www.facebook.com/waplify',
+          'https://x.com/waplify',
+          'https://www.linkedin.com/company/waplify',
+          'https://www.youtube.com/@waplify',
+          'https://www.instagram.com/waplify',
+        ],
+      }),
+    },
+    // JSON-LD — WebSite structured data (enables sitelinks search)
+    {
+      tagName: 'script',
+      attributes: {
+        type: 'application/ld+json',
+      },
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: 'Waplify Help Center',
+        url: 'https://docs.waplify.com',
+        publisher: {
+          '@type': 'Organization',
+          name: 'Waplify',
+        },
+      }),
+    },
+  ],
 
   plugins: [
     ['docusaurus-plugin-llms', {
       generateLLMsTxt: true,
       generateLLMsFullTxt: true,
     }],
+    // Second docs instance for API Reference
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'api',
+        path: 'api-docs',
+        routeBasePath: 'api',
+        sidebarPath: './sidebarsApi.js',
+      },
+    ],
   ],
 
   presets: [
@@ -54,29 +113,25 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+          path: 'changelog',
+          routeBasePath: 'changelog',
+          blogTitle: 'Changelog',
+          blogDescription: 'Latest updates, new features, and improvements to Waplify',
+          blogSidebarTitle: 'Recent Updates',
+          blogSidebarCount: 10,
+          showReadingTime: false,
         },
         theme: {
           customCss: './src/css/custom.css',
         },
+        ...(process.env.NODE_ENV === 'production' && {
+          gtag: {
+            trackingID: 'G-34T6MZLM35',
+            anonymizeIP: true,
+          },
+        }),
       }),
     ],
   ],
@@ -84,80 +139,65 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/waplify-logo.png',
+      metadata: [
+        {name: 'description', content: 'Waplify Help Center — guides, tutorials, and documentation for WhatsApp marketing and automation for small businesses.'},
+        {name: 'keywords', content: 'Waplify, WhatsApp marketing, WhatsApp automation, WhatsApp API, broadcast messages, WhatsApp chatbot, help center, documentation'},
+        {property: 'og:type', content: 'website'},
+        {property: 'og:site_name', content: 'Waplify Help Center'},
+        {property: 'og:image', content: 'https://docs.waplify.com/img/waplify-logo.png'},
+        {name: 'twitter:card', content: 'summary_large_image'},
+        {name: 'twitter:site', content: '@waplify'},
+      ],
       colorMode: {
+        defaultMode: 'light',
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'My Site',
+        title: '',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Waplify Logo',
+          src: 'img/waplify-logo.png',
+          srcDark: 'img/waplify-logo-light.png',
         },
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'docsSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Guides',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            type: 'docSidebar',
+            sidebarId: 'apiSidebar',
+            docsPluginId: 'api',
+            position: 'left',
+            label: 'API Docs',
+          },
+          {
+            to: '/changelog',
+            label: 'Changelog',
+            position: 'left',
+          },
+          {
+            href: 'https://waplify.io',
+            label: 'Website',
             position: 'right',
+            className: 'navbar__link--website',
+          },
+          {
+            href: 'https://app.waplify.io',
+            label: 'Login',
+            position: 'right',
+            className: 'navbar__link--login',
           },
         ],
       },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-      },
+      // Footer is handled by custom component: src/theme/Footer/index.js
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
+        additionalLanguages: ['bash', 'json', 'python', 'javascript'],
       },
     }),
 };

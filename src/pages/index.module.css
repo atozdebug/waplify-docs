@@ -1,23 +1,470 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
-.heroBanner {
-  padding: 4rem 0;
+/* =====================
+   1. HERO
+   ===================== */
+.hero {
+  padding: 4.5rem 0 3.5rem;
   text-align: center;
-  position: relative;
-  overflow: hidden;
+  background-color: #ffffff;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+:global([data-theme='dark']) .hero {
+  background-color: #0a0a0a;
 }
 
-.buttons {
+.heroTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #0e0e0e;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.75rem;
+}
+
+:global([data-theme='dark']) .heroTitle {
+  color: #fafafa;
+}
+
+.heroSubtitle {
+  font-size: 1rem;
+  color: #737373;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+:global([data-theme='dark']) .heroSubtitle {
+  color: #a1a1a1;
+}
+
+.heroButtons {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.6rem;
+  margin-top: 2rem;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  background-color: #0e0e0e;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.55rem 1.4rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: opacity 0.2s;
+  text-decoration: none;
+}
+
+.btnPrimary:hover {
+  opacity: 0.85;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+:global([data-theme='dark']) .btnPrimary {
+  background-color: #fafafa;
+  color: #0e0e0e;
+}
+
+:global([data-theme='dark']) .btnPrimary:hover {
+  opacity: 0.85;
+  color: #0e0e0e;
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  background-color: transparent;
+  color: #525252;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 0.55rem 1.4rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: border-color 0.15s, color 0.15s;
+  text-decoration: none;
+}
+
+.btnSecondary:hover {
+  border-color: #b0b0b0;
+  color: #0e0e0e;
+  text-decoration: none;
+}
+
+:global([data-theme='dark']) .btnSecondary {
+  color: #a1a1a1;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+:global([data-theme='dark']) .btnSecondary:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #fafafa;
+}
+
+/* =====================
+   2. SECTION CARDS
+   ===================== */
+.sections {
+  padding: 2.5rem 0;
+  background-color: #fafafa;
+  border-top: 1px solid #e5e5e5;
+}
+
+:global([data-theme='dark']) .sections {
+  background-color: #0a0a0a;
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+.sectionGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.sectionCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.sectionCard:hover {
+  border-color: #1ecc5e;
+  box-shadow: 0 4px 16px rgba(30, 204, 94, 0.08);
+  text-decoration: none;
+  color: inherit;
+}
+
+:global([data-theme='dark']) .sectionCard {
+  background: #141414;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+:global([data-theme='dark']) .sectionCard:hover {
+  border-color: #1ecc5e;
+  box-shadow: 0 4px 16px rgba(30, 204, 94, 0.1);
+}
+
+.sectionIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #f0fdf4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #148b40;
+  flex-shrink: 0;
+}
+
+:global([data-theme='dark']) .sectionIcon {
+  background-color: rgba(30, 204, 94, 0.1);
+  color: #42d478;
+}
+
+.sectionTitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0 0 2px;
+}
+
+.sectionDesc {
+  font-size: 0.8rem;
+  color: #737373;
+  line-height: 1.45;
+  margin: 0;
+}
+
+:global([data-theme='dark']) .sectionDesc {
+  color: #a1a1a1;
+}
+
+.sectionArrow {
+  margin-left: auto;
+  font-size: 1rem;
+  color: #d4d4d4;
+  flex-shrink: 0;
+}
+
+:global([data-theme='dark']) .sectionArrow {
+  color: #525252;
+}
+
+.sectionCard:hover .sectionArrow {
+  color: #1ecc5e;
+}
+
+/* =====================
+   3. GUIDE TIERS
+   ===================== */
+.guides {
+  padding: 3rem 0;
+  background-color: #ffffff;
+}
+
+:global([data-theme='dark']) .guides {
+  background-color: #0a0a0a;
+}
+
+.guidesHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.guidesHeader h2 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.3rem;
+}
+
+.guidesHeader p {
+  font-size: 0.88rem;
+  color: #737373;
+  margin: 0;
+}
+
+:global([data-theme='dark']) .guidesHeader p {
+  color: #a1a1a1;
+}
+
+.tier {
+  margin-bottom: 1.75rem;
+}
+
+.tier:last-child {
+  margin-bottom: 0;
+}
+
+.tierLabel {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #737373;
+  margin: 0 0 0.6rem 0.25rem;
+}
+
+:global([data-theme='dark']) .tierLabel {
+  color: #a1a1a1;
+}
+
+.guidesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.6rem;
+}
+
+.guideCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0.8rem 1rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+
+.guideCard:hover {
+  border-color: #1ecc5e;
+  background-color: #fafffe;
+  text-decoration: none;
+  color: inherit;
+}
+
+:global([data-theme='dark']) .guideCard {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+:global([data-theme='dark']) .guideCard:hover {
+  border-color: #1ecc5e;
+  background-color: rgba(30, 204, 94, 0.03);
+}
+
+.guideIcon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0fdf4;
+  border-radius: 8px;
+  color: #148b40;
+}
+
+:global([data-theme='dark']) .guideIcon {
+  background: rgba(30, 204, 94, 0.1);
+  color: #42d478;
+}
+
+.guideTitle {
+  display: block;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #0e0e0e;
+  line-height: 1.3;
+}
+
+:global([data-theme='dark']) .guideTitle {
+  color: #fafafa;
+}
+
+.guideDesc {
+  display: block;
+  font-size: 0.76rem;
+  color: #737373;
+  line-height: 1.35;
+}
+
+:global([data-theme='dark']) .guideDesc {
+  color: #a1a1a1;
+}
+
+/* =====================
+   4. DEVELOPER SECTION
+   ===================== */
+.devSection {
+  padding: 2.5rem 0 3rem;
+  background-color: #fafafa;
+  border-top: 1px solid #e5e5e5;
+}
+
+:global([data-theme='dark']) .devSection {
+  background-color: #0e0e0e;
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+.devInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.devTitle {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.devDesc {
+  font-size: 0.84rem;
+  color: #737373;
+  margin: 0;
+}
+
+:global([data-theme='dark']) .devDesc {
+  color: #a1a1a1;
+}
+
+.devLinks {
+  display: flex;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.devLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #525252;
+  text-decoration: none;
+  transition: border-color 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.devLink:hover {
+  border-color: #1ecc5e;
+  color: #148b40;
+  text-decoration: none;
+}
+
+:global([data-theme='dark']) .devLink {
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #a1a1a1;
+}
+
+:global([data-theme='dark']) .devLink:hover {
+  border-color: #42d478;
+  color: #42d478;
+}
+
+.devArrow {
+  font-size: 0.85rem;
+  opacity: 0.5;
+}
+
+.devLink:hover .devArrow {
+  opacity: 1;
+}
+
+/* =====================
+   5. RESPONSIVE
+   ===================== */
+@media screen and (max-width: 996px) {
+  .sectionGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .guidesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .devInner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .devLinks {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 3rem 1.25rem 2.5rem;
+  }
+
+  .heroTitle {
+    font-size: 1.75rem;
+  }
+
+  .heroSubtitle {
+    font-size: 0.9rem;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+  }
+
+  .guidesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .devLinks {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .devLink {
+    justify-content: center;
+  }
 }
