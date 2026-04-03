@@ -25,6 +25,14 @@ const config = {
   },
 
   headTags: [
+    // Algolia site verification
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'algolia-site-verification',
+        content: '949FD1D0E96B1767',
+      },
+    },
     // Google Fonts — Inter
     {
       tagName: 'link',
