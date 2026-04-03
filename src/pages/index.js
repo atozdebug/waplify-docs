@@ -50,6 +50,16 @@ const Icons = {
       <rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/>
     </svg>
   ),
+  verify: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/>
+    </svg>
+  ),
+  settings: (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/>
+    </svg>
+  ),
 };
 
 // --- Section 1: Hero ---
@@ -140,6 +150,7 @@ const GUIDE_TIERS = [
     guides: [
       { title: 'Getting Started', desc: 'Sign up and set up your account', link: '/docs/getting-started/sign-up-and-login', icon: Icons.rocket },
       { title: 'Connect WhatsApp', desc: 'Link your business number', link: '/docs/getting-started/connect-whatsapp', icon: Icons.whatsapp },
+      { title: 'Verify Business', desc: 'Get your business verified', link: '/docs/getting-started/verify-your-business', icon: Icons.verify },
       { title: 'Your First Campaign', desc: 'End-to-end walkthrough', link: '/docs/getting-started/your-first-campaign', icon: Icons.send },
     ],
   },
@@ -158,6 +169,7 @@ const GUIDE_TIERS = [
       { title: 'Automation Flows', desc: 'Build visual chatbots', link: '/docs/automation/conversational-flows', icon: Icons.automation },
       { title: 'Team Management', desc: 'Invite members and set roles', link: '/docs/team/managing-your-team', icon: Icons.team },
       { title: 'Billing & Plans', desc: 'Subscriptions, payments, invoices', link: '/docs/billing/subscription-plans', icon: Icons.billing },
+      { title: 'Account Settings', desc: 'Manage your profile and preferences', link: '/docs/account/account-settings', icon: Icons.settings },
     ],
   },
 ];

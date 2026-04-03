@@ -194,6 +194,13 @@ const config = {
         ],
       },
       // Footer is handled by custom component: src/theme/Footer/index.js
+      algolia: {
+        appId: '569Z5F01ZF',
+        apiKey: 'e9fb84068cac4c9a4920bd7c75954275',
+        indexName: 'waplify-docs',
+        contextualSearch: true,
+        searchPagePath: 'search',
+      },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
