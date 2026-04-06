@@ -1,7 +1,8 @@
 ---
 title: Conversational Flows
-description: Automate WhatsApp conversations with pre-built message flows
+description: Automate WhatsApp conversations with drag-and-drop message flows — welcome messages, FAQs, and more
 sidebar_position: 1
+keywords: [WhatsApp automation, WhatsApp chatbot, automated WhatsApp messages, WhatsApp conversation flow]
 ---
 
 ## What are Conversational Flows?

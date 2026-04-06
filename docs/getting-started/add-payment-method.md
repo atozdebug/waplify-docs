@@ -1,7 +1,8 @@
 ---
 title: Add Payment Method on Meta
-description: Set up your billing on Meta to cover WhatsApp messaging costs
+description: How to add a payment method on Meta Business Manager to cover WhatsApp API messaging costs with Waplify
 sidebar_position: 3
+keywords: [Meta payment method, WhatsApp messaging billing, Meta business payment setup, WhatsApp API charges]
 ---
 
 ## What is Add Payment Method?
@@ -42,6 +43,7 @@ This is a **post-paid** billing model — Meta charges you only for what you use
 - Make sure your GST number is entered correctly to avoid tax-related issues later
 - You can check your Meta billing and usage anytime from Meta's billing hub
 - The payment method on Meta is separate from your Waplify subscription — they are two different charges
+- After adding your payment method, [verify your business](./verify-your-business.md) to increase your daily messaging limit, then [send your first campaign](./your-first-campaign.md)
 
 ## Frequently asked questions
 

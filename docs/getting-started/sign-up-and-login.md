@@ -1,7 +1,8 @@
 ---
 title: Sign Up & Log In
-description: Create your Waplify account and log in to get started
+description: How to sign up for Waplify with email or Google, log in, and reset your password to start WhatsApp marketing
 sidebar_position: 1
+keywords: [Waplify sign up, create Waplify account, Waplify login, WhatsApp marketing registration]
 ---
 
 ## What is Sign Up & Log In?
@@ -12,7 +13,7 @@ Waplify lets you create an account using your email or Google account. Once sign
 
 ### Create a new account
 
-1. Go to [app.waplify.com](https://app.waplify.com) and click **Sign Up**
+1. Go to [app.waplify.io](https://app.waplify.io) and click **Sign Up**
 <!-- screenshot: Sign up page with email and Google options -->
 2. Enter your **full name**, **email address**, and create a **password**
 3. You will receive a **verification code** on your email — enter it to verify your account
@@ -27,7 +28,7 @@ Waplify lets you create an account using your email or Google account. Once sign
 
 ### Log in to your account
 
-1. Go to [app.waplify.com](https://app.waplify.com) and click **Log In**
+1. Go to [app.waplify.io](https://app.waplify.io) and click **Log In**
 2. Enter your **email** and **password**, then click **Log In**
 3. Or click **Continue with Google** to log in with your Google account
 
@@ -45,6 +46,7 @@ Waplify lets you create an account using your email or Google account. Once sign
 - If you sign up with Google, you can still set a password later from your account settings
 - If you manage multiple businesses, Waplify supports multiple organizations — you can switch between them from the sidebar
 - Keep your email address up to date so you can always recover your account
+- Once you're signed in, your next step is to [connect your WhatsApp number](./connect-whatsapp.md) so you can start messaging customers
 
 ## Frequently asked questions
 
@@ -66,4 +68,4 @@ Yes. Waplify uses encrypted connections and secure authentication to protect you
 
 ### Can I invite my team members?
 
-Yes! Once your account is set up, you can invite team members from the **Team** section. They will receive an email invitation to join your organization.
+Yes! Once your account is set up, you can invite team members from the **Team** section. They will receive an email invitation to join your organization. Once your team is ready, check out how to [send your first campaign](./your-first-campaign.md).

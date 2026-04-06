@@ -1,7 +1,8 @@
 ---
 title: Import Contacts
-description: Bulk upload contacts from CSV or Excel files into Waplify
+description: How to bulk import WhatsApp contacts from CSV or Excel files into Waplify — format guide and troubleshooting
 sidebar_position: 2
+keywords: [import WhatsApp contacts, bulk upload contacts CSV, import contacts Excel, WhatsApp contact list upload]
 ---
 
 ## What is Import Contacts?
@@ -46,7 +47,8 @@ You can upload up to **10,000 contacts per batch**. There is no limit on total c
 - Include the **country code** in phone numbers (e.g., 91 for India, 1 for US) without the "+" sign
 - **Duplicates are auto-updated** — if a phone number already exists, the contact info will be updated instead of creating a duplicate
 - Clean your data before uploading — remove blank rows and fix formatting issues
-- You can also add contacts one by one using the **Add Contact** button on the Contacts page
+- You can also add contacts one by one using the **Add Contact** button on the Contacts page — see [Managing Contacts](./managing-contacts.md) for details
+- After importing, consider organizing your contacts into [Contact Groups](./contact-groups.md) so you can target them in campaigns
 
 ## Frequently asked questions
 

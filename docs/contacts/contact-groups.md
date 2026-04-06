@@ -1,7 +1,8 @@
 ---
 title: Contact Groups
-description: Organize contacts into groups for targeted campaign messaging
+description: How to create and manage contact groups in Waplify for targeted WhatsApp broadcast campaigns
 sidebar_position: 3
+keywords: [WhatsApp contact groups, segment contacts, targeted WhatsApp messaging, contact list segmentation]
 ---
 
 ## What are Contact Groups?
@@ -63,6 +64,8 @@ Removing a contact from a group does **not** delete the contact from your accoun
 - Use groups when creating campaigns to easily target the right audience
 - Keep group names descriptive so your team can easily find the right one
 - Regularly review and clean up groups that are no longer needed
+- Need to add many contacts at once? Use [Import Contacts](./import-contacts.md) to bulk upload them from a CSV or Excel file
+- Once your groups are ready, head to [Creating Campaigns](../campaigns/creating-campaigns.md) to start messaging them
 
 ## Frequently asked questions
 

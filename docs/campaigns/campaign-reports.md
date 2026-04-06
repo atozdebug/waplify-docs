@@ -1,7 +1,8 @@
 ---
 title: Campaign Reports
-description: Track delivery metrics and performance for your WhatsApp campaigns
+description: How to track WhatsApp campaign delivery, read rates, and reply metrics in Waplify campaign reports
 sidebar_position: 4
+keywords: [WhatsApp campaign analytics, campaign delivery report, WhatsApp broadcast metrics, message delivery tracking]
 ---
 
 ## What are Campaign Reports?
@@ -47,7 +48,7 @@ After sending a campaign, Waplify tracks how each message performs in real time.
 ## Tips & best practices
 
 - Check campaign reports **within a few hours** of sending — most delivery and read statuses are updated within minutes
-- Pay attention to **failed messages** — if many messages fail, it could indicate invalid numbers, billing issues, or quality problems
+- Pay attention to **failed messages** — if many messages fail, it could indicate invalid numbers, billing issues, or quality problems. You may want to [create a new campaign](./creating-campaigns.md) targeting only those contacts
 - A high **read rate** indicates your messaging time and content are working well
 - If your **delivery rate** is low, check that your Meta payment method is active and your quality rating is healthy
 - Export reports for your records, especially if you need to share results with your team
@@ -72,4 +73,4 @@ Stats update in **real time**. Sent and delivered statuses usually appear within
 
 ### Can I resend to contacts whose messages failed?
 
-Currently, you would need to create a new campaign targeting only the contacts whose messages failed. You can identify them from the campaign export.
+Currently, you would need to create a new campaign targeting only the contacts whose messages failed. You can identify them from the campaign export. To send at a better time, try [scheduling the follow-up campaign](./scheduling-campaigns.md).

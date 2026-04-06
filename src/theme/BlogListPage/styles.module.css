@@ -1,0 +1,318 @@
+/* ============================================
+   Changelog Timeline — Header
+   Matches homepage hero patterns from index.module.css
+   ============================================ */
+
+.header {
+  padding: 4.5rem 0 3.5rem;
+  text-align: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+:global([data-theme='dark']) .header {
+  background-color: #0a0a0a;
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.headerInner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.headerBadge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #148b40;
+  background: #f0fdf4;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  margin-bottom: 0.75rem;
+}
+
+:global([data-theme='dark']) .headerBadge {
+  color: #42d478;
+  background: rgba(30, 204, 94, 0.1);
+}
+
+.headerTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.25;
+  margin: 0 0 0.75rem;
+  color: #0e0e0e;
+}
+
+:global([data-theme='dark']) .headerTitle {
+  color: #fafafa;
+}
+
+.headerSubtitle {
+  font-size: 1rem;
+  color: #737373;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+:global([data-theme='dark']) .headerSubtitle {
+  color: #a1a1a1;
+}
+
+/* ============================================
+   Changelog Timeline — Timeline
+   ============================================ */
+
+.timelineSection {
+  padding: 3rem 0;
+  background-color: #ffffff;
+}
+
+:global([data-theme='dark']) .timelineSection {
+  background-color: #0a0a0a;
+}
+
+.timeline {
+  max-width: 820px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* ============================================
+   Timeline Entry
+   ============================================ */
+
+.timelineEntry {
+  display: grid;
+  grid-template-columns: 150px 40px 1fr;
+  gap: 0;
+  min-height: 80px;
+  position: relative;
+}
+
+/* --- Date column --- */
+
+.timelineDate {
+  text-align: right;
+  padding-top: 0.2rem;
+  padding-right: 0;
+}
+
+.timelineDate time {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #737373;
+  white-space: nowrap;
+}
+
+:global([data-theme='dark']) .timelineDate time {
+  color: #a1a1a1;
+}
+
+/* --- Center line + dot --- */
+
+.timelineLine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Vertical line */
+.timelineLine::after {
+  content: '';
+  position: absolute;
+  top: 28px;
+  bottom: 0;
+  width: 1.5px;
+  background: #e5e5e5;
+}
+
+:global([data-theme='dark']) .timelineLine::after {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Hide line on last entry */
+.timelineEntry:last-child .timelineLine::after {
+  display: none;
+}
+
+/* Dot with + icon */
+.timelineDot {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1ecc5e;
+  color: #fff;
+  flex-shrink: 0;
+  z-index: 1;
+  box-shadow: 0 0 0 4px #ffffff;
+}
+
+:global([data-theme='dark']) .timelineDot {
+  box-shadow: 0 0 0 4px #0a0a0a;
+}
+
+/* --- Content column --- */
+
+.timelineContent {
+  padding: 0 0 2.5rem 0;
+}
+
+.timelineTitle {
+  text-decoration: none;
+  color: inherit;
+}
+
+.timelineTitle:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.timelineTitle h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.4rem;
+  color: #0e0e0e;
+  transition: color 0.15s;
+}
+
+:global([data-theme='dark']) .timelineTitle h2 {
+  color: #fafafa;
+}
+
+.timelineTitle:hover h2 {
+  color: #1ecc5e;
+}
+
+.timelineDescription {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #737373;
+  margin: 0 0 0.75rem;
+}
+
+:global([data-theme='dark']) .timelineDescription {
+  color: #a1a1a1;
+}
+
+/* --- Tags --- */
+
+.timelineTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.tag {
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.15rem 0.55rem;
+  border-radius: 20px;
+  border: 1px solid #e5e5e5;
+  background: #f5f5f5;
+  color: #737373;
+  transition: border-color 0.15s, color 0.15s;
+  text-decoration: none;
+}
+
+.tag:hover {
+  border-color: #1ecc5e;
+  color: #148b40;
+  text-decoration: none;
+}
+
+:global([data-theme='dark']) .tag {
+  background: #1e1e1e;
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #a1a1a1;
+}
+
+:global([data-theme='dark']) .tag:hover {
+  border-color: #42d478;
+  color: #42d478;
+}
+
+/* --- Read more --- */
+
+.readMore {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #1ecc5e;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.readMore:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+:global([data-theme='dark']) .readMore {
+  color: #42d478;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+
+@media (max-width: 996px) {
+  .timelineEntry {
+    grid-template-columns: 130px 36px 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 3rem 1.25rem 2.5rem;
+  }
+
+  .headerTitle {
+    font-size: 1.75rem;
+  }
+
+  .headerSubtitle {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .timelineEntry {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .timelineDate {
+    text-align: left;
+    padding-right: 0;
+    padding-bottom: 0.25rem;
+  }
+
+  .timelineLine {
+    display: none;
+  }
+
+  .timelineContent {
+    padding-bottom: 2rem;
+    border-left: 2px solid #e5e5e5;
+    padding-left: 1rem;
+    margin-left: 0;
+  }
+
+  :global([data-theme='dark']) .timelineContent {
+    border-left-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .timelineEntry:last-child .timelineContent {
+    border-left-color: transparent;
+  }
+}

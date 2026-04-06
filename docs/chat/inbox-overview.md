@@ -1,7 +1,8 @@
 ---
 title: Inbox Overview
-description: View and manage all your WhatsApp conversations in one place
+description: Manage all your WhatsApp customer conversations in one inbox — filter, assign, and reply in real time
 sidebar_position: 1
+keywords: [WhatsApp inbox, WhatsApp chat management, team inbox WhatsApp, WhatsApp business inbox]
 ---
 
 ## What is the Inbox?
@@ -44,9 +45,9 @@ At the top of the inbox, you can see a summary of your conversations by status �
 ## Tips & best practices
 
 - Check your inbox regularly — quick responses to customer messages improve satisfaction and can help your WhatsApp quality rating
-- **Open conversations** (within the 24-hour window) are the best time to engage — you can send free-form text without needing a template
+- **Open conversations** (within the 24-hour window) are the best time to engage — you can [send free-form text](./sending-messages.md) without needing a template
 - If a conversation is closed, send a template message to re-engage the contact
-- Use the inbox to handle customer support queries, follow up on campaign responses, and build relationships
+- Use the inbox to handle customer support queries, follow up on campaign responses, and build relationships. Save time on repetitive replies with [Quick Responses](./quick-responses.md)
 
 ## Frequently asked questions
 

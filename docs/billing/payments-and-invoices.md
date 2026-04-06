@@ -1,7 +1,8 @@
 ---
 title: Payments & Invoices
-description: View payment history, download invoices, and manage billing for your Waplify account
+description: How to view payment history, download invoices, and manage your Waplify subscription billing
 sidebar_position: 2
+keywords: [Waplify payment history, download invoice Waplify, Waplify billing, WhatsApp marketing invoices]
 ---
 
 ## What are Payments & Invoices?
@@ -49,7 +50,7 @@ Your Waplify payment history only shows the platform subscription charges. Meta 
 - Keep your payment method updated to avoid failed payments and service interruptions
 - Download invoices promptly if you need them for accounting or tax purposes
 - If a payment fails, check with your bank first — most failures are due to card declines or insufficient balance
-- Remember that your Waplify subscription and WhatsApp messaging costs are billed separately by different companies
+- Remember that your Waplify subscription and WhatsApp messaging costs are billed separately by different companies — see [Subscription Plans](./subscription-plans.md) for details on what each plan includes
 
 ## Frequently asked questions
 
@@ -59,7 +60,7 @@ Waplify uses Razorpay, which supports credit cards, debit cards, UPI, net bankin
 
 ### Can I get a GST invoice?
 
-Invoice details depend on your account information. Make sure your business details are correctly set up in your account settings.
+Invoice details depend on your account information. Make sure your business details are correctly set up in your [Account Settings](../account/account-settings.md).
 
 ### What happens if my payment fails?
 

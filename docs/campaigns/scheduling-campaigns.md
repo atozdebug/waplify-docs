@@ -1,7 +1,8 @@
 ---
 title: Scheduling Campaigns
-description: Schedule WhatsApp campaigns to send at a specific date and time
+description: How to schedule WhatsApp broadcast campaigns for a specific date and time — best times and timezone tips
 sidebar_position: 3
+keywords: [schedule WhatsApp campaign, WhatsApp broadcast scheduling, timed WhatsApp messages, campaign scheduler]
 ---
 
 ## What is Scheduling Campaigns?

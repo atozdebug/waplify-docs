@@ -1,7 +1,8 @@
 ---
 title: Verify Your Business
-description: Complete Meta Business Verification to unlock higher WhatsApp messaging limits
+description: How to verify your business on Meta to unlock higher WhatsApp messaging limits and trusted sender status
 sidebar_position: 4
+keywords: [Meta business verification, verify WhatsApp business, WhatsApp messaging limits, Facebook business verification]
 ---
 
 ## What is Business Verification?
@@ -46,6 +47,8 @@ Meta states verification takes up to **48 hours**, but it usually completes soon
 - If your document has your phone number on it, use that same number during the verification process for faster approval
 - You can check the status of your verification anytime from Meta Security Center
 - Start this step early — even while setting up templates and contacts — since it involves a waiting period
+- Make sure you have already [connected your WhatsApp number](./connect-whatsapp.md) before starting verification
+- Once verified, you're ready to [create your first campaign](../campaigns/creating-campaigns.md) and reach more customers
 
 ## Frequently asked questions
 

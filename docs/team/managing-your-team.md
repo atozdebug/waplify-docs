@@ -1,7 +1,8 @@
 ---
 title: Managing Your Team
-description: Invite team members, manage roles, and collaborate on your Waplify workspace
+description: How to invite team members, assign roles, and collaborate on WhatsApp customer support in Waplify
 sidebar_position: 1
+keywords: [WhatsApp team management, invite team members, Waplify workspace, WhatsApp multi-agent]
 ---
 
 ## What is Team Management?
@@ -57,10 +58,10 @@ Deactivated members cannot log in or access any features, but their account rema
 
 ## Tips & best practices
 
-- **Start with clear roles** — assign the right role from the beginning to avoid giving too much or too little access
+- **Start with clear roles** — assign the right role from the beginning to avoid giving too much or too little access. See [Roles & Permissions](./roles-and-permissions.md) for a full breakdown of what each role can do
 - **Use Agent role for support staff** — agents can handle chats without accidentally modifying campaigns or contacts
 - **Keep at least one Admin** besides the Owner — this ensures someone can manage the workspace if the Owner is unavailable
-- **Review team access periodically** — deactivate members who no longer need access
+- **Review team access periodically** — deactivate members who no longer need access. You can also update workspace-level preferences in [Account Settings](../account/account-settings.md)
 - Each team member uses their own email to log in, keeping activity traceable
 
 ## Frequently asked questions

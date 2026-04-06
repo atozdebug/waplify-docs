@@ -1,7 +1,8 @@
 ---
 title: Using Templates in Campaigns
-description: How to select a template, personalize it with contact details, and add media when creating a campaign
+description: How to choose and personalize a WhatsApp template with contact variables and media for your campaign
 sidebar_position: 2
+keywords: [campaign template selection, personalize WhatsApp campaign, WhatsApp broadcast template, campaign variables]
 ---
 
 ## What is Campaign Templates & Personalization?
@@ -62,6 +63,7 @@ If your selected template has a **media header** (image, video, or document):
 - **Prepare media in advance** — have your image or document ready before creating the campaign
 - **Keep media lightweight** — smaller files load faster on the recipient's phone, especially on slow connections
 - If a variable mapping is wrong, messages might look odd — double-check each variable mapping
+- Need to build a new template first? See [Creating Templates](../templates/creating-templates.md) and [Template Variables and Media](../templates/template-variables-and-media.md) for a full walkthrough
 
 ## Frequently asked questions
 
@@ -83,4 +85,4 @@ No. If the template requires a media header, you must upload a file. Choose a te
 
 ### Can I change the template after creating the campaign?
 
-You can change the template while the campaign is still in **draft** status. Once sent, it cannot be changed.
+You can change the template while the campaign is still in **draft** status. Once sent, it cannot be changed. For a full guide on setting up the rest of your campaign, see [Creating Campaigns](./creating-campaigns.md).

@@ -1,7 +1,8 @@
 ---
 title: Welcome to Waplify
-description: Get started with Waplify — your WhatsApp marketing and automation platform
+description: Get started with Waplify — set up WhatsApp marketing, send campaigns, automate chats, and grow your business
 sidebar_position: 1
+keywords: [WhatsApp marketing platform, Waplify help center, WhatsApp business automation, WhatsApp bulk messaging tool]
 ---
 
 # Welcome to Waplify

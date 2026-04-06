@@ -1,7 +1,8 @@
 ---
 title: Connect Your WhatsApp Number
-description: Link your WhatsApp Business number to Waplify using Meta's WhatsApp Business API
+description: How to connect your WhatsApp Business number to Waplify through Meta's Embedded Signup — step-by-step guide
 sidebar_position: 2
+keywords: [connect WhatsApp to Waplify, WhatsApp Business API setup, link WhatsApp number, WhatsApp API integration]
 ---
 
 ## What is Connect WhatsApp?
@@ -38,6 +39,7 @@ Your personal WhatsApp chats are **not affected**. The process takes about 2-3 m
 - If you have multiple business numbers, you can connect additional numbers later from the **Settings > WhatsApp** page
 - Keep your Meta Business Portfolio access handy — you will need it for several setup steps
 - After connecting, you can check your number's status, quality rating, and messaging tier from the dashboard
+- Once connected, make sure to [add a payment method on Meta](./add-payment-method.md) and [verify your business](./verify-your-business.md) to unlock higher messaging limits
 
 ## Frequently asked questions
 
@@ -51,7 +53,7 @@ Yes, you can connect multiple WhatsApp Business numbers to your Waplify account.
 
 ### What if the Meta popup doesn't open?
 
-Make sure you have **pop-ups enabled** in your browser for app.waplify.com. Also try using Google Chrome or Microsoft Edge for the best experience.
+Make sure you have **pop-ups enabled** in your browser for app.waplify.io. Also try using Google Chrome or Microsoft Edge for the best experience.
 
 ### Do I need a Facebook page to connect?
 

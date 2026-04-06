@@ -1,7 +1,8 @@
 ---
 title: Quick Responses
-description: Create reusable reply templates to speed up your chat conversations
+description: How to create and use quick responses — reusable reply templates that speed up WhatsApp customer chats
 sidebar_position: 3
+keywords: [WhatsApp quick replies, canned responses WhatsApp, WhatsApp reply templates, fast WhatsApp responses]
 ---
 
 ## What are Quick Responses?
@@ -44,6 +45,7 @@ Quick Responses are pre-written message templates you can use in the chat inbox.
 - You can include **placeholders** in your messages (like `{name}` or `{order_id}`) that you fill in each time you use the response
 - Quick responses with media (images, documents) are useful for sending price lists, menus, or brochures repeatedly
 - Keep your quick response library organized — delete outdated ones to keep the list manageable
+- Once your quick responses are ready, head to the [Inbox](./inbox-overview.md) to start using them while [sending messages](./sending-messages.md) to customers
 
 ## Frequently asked questions
 

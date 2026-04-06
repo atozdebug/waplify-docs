@@ -1,7 +1,8 @@
 ---
 title: Account Settings
-description: Manage your profile, business information, and account preferences
+description: How to update your Waplify profile, business details, password, and notification preferences
 sidebar_position: 1
+keywords: [Waplify account settings, update Waplify profile, change password Waplify, business profile settings]
 ---
 
 ## What are Account Settings?
@@ -60,8 +61,8 @@ If you belong to multiple Waplify organizations (e.g., managing multiple busines
 
 - Keep your **email address up to date** — this is how you recover your account if you forget your password
 - Use a **professional profile picture** if your team uses the shared inbox — customers may see it during conversations
-- Review your settings after any organizational changes (like a business name change)
-- If you manage multiple businesses, use separate organizations to keep data separate
+- Review your settings after any organizational changes (like a business name change). You should also check your [WhatsApp Account Info](./whatsapp-account-info.md) to make sure your connected numbers are still in good standing
+- If you manage multiple businesses, use separate organizations to keep data separate. You can [manage team members](../team/managing-your-team.md) for each organization independently
 
 ## Frequently asked questions
 

@@ -1,7 +1,8 @@
 ---
 title: Managing Contacts
-description: Add, edit, search, filter, and organize your WhatsApp contacts
+description: How to add, edit, search, filter, and organize your WhatsApp contacts and lists in Waplify
 sidebar_position: 1
+keywords: [WhatsApp contacts management, manage WhatsApp contacts, Waplify contact list, organize WhatsApp contacts]
 ---
 
 ## What is Managing Contacts?

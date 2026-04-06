@@ -1,7 +1,8 @@
 ---
 title: Send Your First Campaign
-description: A complete walkthrough to send your first WhatsApp broadcast campaign
+description: Step-by-step guide to creating and sending your first WhatsApp broadcast campaign with Waplify
 sidebar_position: 5
+keywords: [first WhatsApp campaign, WhatsApp broadcast tutorial, send bulk WhatsApp messages, WhatsApp campaign guide]
 ---
 
 ## What is Your First Campaign?

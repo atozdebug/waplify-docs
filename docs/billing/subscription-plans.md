@@ -1,7 +1,8 @@
 ---
 title: Subscription Plans
-description: Choose and manage your Waplify subscription plan
+description: Compare Waplify subscription plans and pricing — quarterly, yearly, and lifetime options for WhatsApp marketing
 sidebar_position: 1
+keywords: [Waplify pricing, Waplify subscription plans, WhatsApp marketing pricing, Waplify plans comparison]
 ---
 
 ## What are Subscription Plans?
@@ -68,7 +69,7 @@ Waplify offers different subscription plans to access the platform's features. Y
 - Your Waplify subscription and Meta messaging costs are **separate charges**:
   - **Waplify subscription** = platform access (paid to Waplify)
   - **Messaging costs** = per-conversation charges (paid to Meta)
-- Keep your payment method up to date to avoid service interruption
+- Keep your [payment method](../getting-started/add-payment-method.md) up to date to avoid service interruption
 - If your plan expires, your data is safe — you just cannot access the platform until you renew
 - Check if any **coupon codes** are available before subscribing to save money
 
@@ -92,4 +93,4 @@ Waplify offers a trial period for new accounts. After the trial, a paid subscrip
 
 ### What payment methods are accepted?
 
-Waplify uses Razorpay for payments, which supports credit cards, debit cards, UPI, net banking, and other payment methods available in your region.
+Waplify uses Razorpay for payments, which supports credit cards, debit cards, UPI, net banking, and other payment methods available in your region. You can also review your past transactions on the [Payments & Invoices](./payments-and-invoices.md) page.

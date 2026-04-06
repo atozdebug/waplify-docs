@@ -1,7 +1,8 @@
 ---
 title: Flow Builder Guide
-description: Learn how to use the visual flow builder to create automated conversations
+description: How to use Waplify's visual flow builder to create automated WhatsApp chatbot conversations step by step
 sidebar_position: 2
+keywords: [WhatsApp flow builder, visual chatbot builder, drag and drop WhatsApp bot, WhatsApp automation builder]
 ---
 
 ## What is the Flow Builder?

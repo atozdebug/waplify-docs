@@ -1,7 +1,8 @@
 ---
 title: Creating Campaigns
-description: Create and send WhatsApp broadcast campaigns to your contacts
+description: How to create a WhatsApp broadcast campaign — select contacts, pick a template, and send bulk messages
 sidebar_position: 1
+keywords: [create WhatsApp campaign, WhatsApp broadcast, bulk WhatsApp messaging, WhatsApp marketing campaign]
 ---
 
 ## What is a Campaign?
@@ -44,7 +45,7 @@ A campaign (also called a broadcast) lets you send a WhatsApp message to many co
 
 ### Viewing campaign results
 
-After sending, the campaign details page shows real-time delivery stats:
+After sending, the campaign details page shows real-time delivery stats (see [Campaign Reports](./campaign-reports.md) for a detailed breakdown):
 - **Sent** — messages sent to WhatsApp servers
 - **Delivered** — messages that reached the contact's phone
 - **Read** — messages that were opened and read
@@ -56,6 +57,7 @@ You can also **export** the contact list with delivery status to a CSV file.
 ## Tips & best practices
 
 - **Test first**: Send to a small group of 5-10 contacts before blasting your full list
+- Learn how to [choose and personalize templates](./campaign-templates.md) for your campaigns
 - **Personalize**: Use template variables to include the contact's name — personalized messages get better engagement
 - **Timing matters**: Schedule campaigns for when your audience is likely to check their phone (mornings and early evenings tend to work well)
 - **Check your quality**: Keep an eye on your WhatsApp quality rating on the dashboard — low quality can reduce your messaging limits

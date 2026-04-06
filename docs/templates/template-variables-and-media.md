@@ -1,7 +1,8 @@
 ---
 title: Template Variables & Media
-description: Use variables for personalization and add media to your WhatsApp templates
+description: How to use variables for personalized messages and add images, videos, or documents to WhatsApp templates
 sidebar_position: 3
+keywords: [WhatsApp template variables, personalized WhatsApp messages, WhatsApp template media, dynamic message templates]
 ---
 
 ## What are Template Variables & Media?
@@ -62,6 +63,8 @@ Buttons are defined when creating the template on Meta and cannot be changed dur
 - **Test with yourself first** — create a test campaign to see how variables and media look on an actual phone
 - For media headers, use **high-quality images** but keep file sizes reasonable for quick loading
 - Make sure your media file is ready before creating the campaign — you cannot send a template with a media header without uploading the file
+- Need to create a new template first? See [Creating Templates](./creating-templates.md) for a step-by-step guide
+- Once your template is ready, head to [Creating Campaigns](../campaigns/creating-campaigns.md) to send it to your contacts
 
 ## Frequently asked questions
 

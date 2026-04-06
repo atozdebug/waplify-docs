@@ -1,7 +1,8 @@
 ---
 title: Message Templates Overview
-description: Understand WhatsApp message templates and how to manage them in Waplify
+description: Learn how WhatsApp message templates work — create, sync, and manage approved templates in Waplify
 sidebar_position: 1
+keywords: [WhatsApp message templates, WhatsApp template approval, business message templates, WhatsApp API templates]
 ---
 
 ## What are Message Templates?

@@ -1,7 +1,8 @@
 ---
 title: Sending Messages
-description: Send text and media messages to individual contacts from the inbox
+description: How to send text, images, videos, and documents to WhatsApp contacts directly from the Waplify inbox
 sidebar_position: 2
+keywords: [send WhatsApp message, WhatsApp direct message, reply WhatsApp customer, WhatsApp business chat]
 ---
 
 ## What is Sending Messages?

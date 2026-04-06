@@ -11,7 +11,7 @@ const config = {
     v4: true,
   },
 
-  url: 'https://docs.waplify.com',
+  url: 'https://docs.waplify.io',
   baseUrl: '/',
 
   organizationName: 'waplify',
@@ -67,7 +67,7 @@ const config = {
         '@type': 'Organization',
         name: 'Waplify',
         url: 'https://waplify.io',
-        logo: 'https://docs.waplify.com/img/waplify-logo.png',
+        logo: 'https://docs.waplify.io/img/waplify-logo.png',
         description: 'WhatsApp marketing and automation platform for small businesses.',
         sameAs: [
           'https://www.facebook.com/waplify',
@@ -88,7 +88,7 @@ const config = {
         '@context': 'https://schema.org',
         '@type': 'WebSite',
         name: 'Waplify Help Center',
-        url: 'https://docs.waplify.com',
+        url: 'https://docs.waplify.io',
         publisher: {
           '@type': 'Organization',
           name: 'Waplify',
@@ -153,7 +153,7 @@ const config = {
         {name: 'keywords', content: 'Waplify, WhatsApp marketing, WhatsApp automation, WhatsApp API, broadcast messages, WhatsApp chatbot, help center, documentation'},
         {property: 'og:type', content: 'website'},
         {property: 'og:site_name', content: 'Waplify Help Center'},
-        {property: 'og:image', content: 'https://docs.waplify.com/img/waplify-logo.png'},
+        {property: 'og:image', content: 'https://docs.waplify.io/img/waplify-logo.png'},
         {name: 'twitter:card', content: 'summary_large_image'},
         {name: 'twitter:site', content: '@waplify'},
       ],

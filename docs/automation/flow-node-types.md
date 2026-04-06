@@ -1,7 +1,8 @@
 ---
 title: Flow Node Types
-description: Detailed guide to all node types available in the Waplify Flow Builder
+description: Guide to all flow builder node types — send message, ask question, condition, delay, and more
 sidebar_position: 3
+keywords: [WhatsApp flow nodes, chatbot node types, flow builder actions, WhatsApp bot triggers]
 ---
 
 ## What are Flow Node Types?
@@ -92,7 +93,7 @@ The API Node requires some technical knowledge. If you are not comfortable with 
 
 ## Tips & best practices
 
-- **Start simple** — begin with Start → Message → Text Button flows before adding complex nodes like Condition and API
+- **Start simple** — begin with Start → Message → Text Button flows before adding complex nodes like Condition and API. See the [Flow Builder Guide](./flow-builder-guide.md) for a step-by-step walkthrough
 - **Use Text Buttons for 2-3 options** and **Lists for 4+ options** — buttons are more visible, but lists scale better
 - **Always provide a fallback path** — use Condition nodes to handle unexpected replies gracefully
 - **Keep Ask Node responses in mind** — customers may type anything, so be prepared to handle unexpected input
@@ -115,7 +116,7 @@ If the external API is unreachable or returns an error, the flow may stop at tha
 
 ### Can I mix different node types in one flow?
 
-Absolutely. Most flows use a combination of Message, Text Button, and Condition nodes. Use whatever combination makes sense for your use case.
+Absolutely. Most flows use a combination of Message, Text Button, and Condition nodes. Use whatever combination makes sense for your use case. For inspiration, check out [Conversational Flows](./conversational-flows.md) to see how complete flows come together.
 
 ### Is the API Node secure?
 

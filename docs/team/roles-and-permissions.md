@@ -1,7 +1,8 @@
 ---
 title: Roles & Permissions
-description: Understand the different team roles and what each one can access
+description: Learn the difference between Owner, Admin, and Agent roles and what each can access in Waplify
 sidebar_position: 2
+keywords: [WhatsApp team roles, Waplify permissions, team access control, WhatsApp agent roles]
 ---
 
 ## What are Roles & Permissions?

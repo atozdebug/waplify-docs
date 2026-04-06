@@ -1,7 +1,8 @@
 ---
 title: WhatsApp Account Info
-description: View your WhatsApp Business Account details, quality rating, and messaging limits
+description: Check your WhatsApp Business Account quality rating, messaging limits, and phone number status in Waplify
 sidebar_position: 2
+keywords: [WhatsApp account quality, WhatsApp messaging limits, WhatsApp business rating, WABA status]
 ---
 
 ## What is WhatsApp Account Info?

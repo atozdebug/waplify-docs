@@ -637,58 +637,7 @@ table th {
    10. CHANGELOG (Blog) — Clean minimal style
    ============================================ */
 
-/* --- LIST PAGE --- */
-
-/* Container width for list */
-.blog-list-page main > .container {
-  max-width: 780px;
-}
-
-/* Each changelog entry card on list page */
-.blog-list-page article[class*="blogPost"] {
-  border: 1px solid var(--waplify-border);
-  border-radius: var(--waplify-radius-lg);
-  padding: 1.25rem 1.5rem;
-  margin-bottom: 0.75rem;
-  background: var(--waplify-card-bg);
-}
-
-[data-theme='dark'] .blog-list-page article[class*="blogPost"] {
-  background: #141414;
-}
-
-/* Remove default separator */
-.blog-list-page article[class*="blogPost"]::after {
-  display: none;
-}
-
-/* List page title */
-.blog-list-page article[class*="blogPost"] header h2,
-.blog-list-page article[class*="blogPost"] header h2 a {
-  font-size: 1.05rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  color: var(--waplify-fg);
-}
-
-.blog-list-page article[class*="blogPost"] header h2 a:hover {
-  color: var(--ifm-color-primary);
-  text-decoration: none;
-}
-
-/* List page summary text */
-.blog-list-page article[class*="blogPost"] .markdown p {
-  font-size: 0.875rem;
-  line-height: 1.55;
-  color: var(--waplify-muted-fg);
-}
-
-/* "Read more" link */
-a[class*="readMore"] {
-  font-size: 0.82rem;
-  font-weight: 500;
-  color: var(--ifm-color-primary);
-}
+/* List page is fully handled by custom BlogListPage component + CSS module */
 
 /* --- DETAIL PAGE --- */
 

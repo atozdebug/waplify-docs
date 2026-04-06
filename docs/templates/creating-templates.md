@@ -1,7 +1,8 @@
 ---
 title: Creating Templates
-description: Step-by-step guide to creating WhatsApp message templates
+description: How to create WhatsApp message templates in Waplify — choose a category, write content, and submit for approval
 sidebar_position: 2
+keywords: [create WhatsApp template, WhatsApp template builder, design message template, WhatsApp approved templates]
 ---
 
 ## What is Creating Templates?
@@ -22,16 +23,16 @@ This is the easiest way — you fill in the template details right inside Waplif
    - **Utility** — order confirmations, shipping updates, reminders
    - **Authentication** — one-time passwords (OTP), login verification
 <!-- screenshot: Meta template category selection -->
-5. Enter a **template name** (use lowercase with underscores, e.g., `welcome_offer`)
-6. Select the **language** for your template
-7. Write your **message body** — this is the main content of your message
-8. Optionally add:
+4. Enter a **template name** (use lowercase with underscores, e.g., `welcome_offer`)
+5. Select the **language** for your template
+6. Write your **message body** — this is the main content of your message
+7. Optionally add:
    - A **header** (text, image, video, or document)
    - A **footer** (small text at the bottom)
    - **Buttons** (quick reply, URL, phone number, or copy code)
 <!-- screenshot: Meta template builder with body, header, footer, and buttons -->
-9. Add **sample content** if your template uses variables — Meta uses this to review your template
-10. Click **Submit** — Waplify will send your template to Meta for approval
+8. Add **sample content** if your template uses variables — Meta uses this to review your template
+9. Click **Submit** — Waplify will send your template to Meta for approval
 
 ### Option 2: Create on Meta's website
 
@@ -57,6 +58,8 @@ If you created templates directly on Meta's website, you need to sync them:
 - **Include opt-out text** in marketing templates (e.g., "Reply STOP to unsubscribe") — this is recommended by Meta and improves approval chances
 - **Test your template** by creating a small campaign to yourself before sending it to customers
 - **Sync regularly** — if you create or edit templates on Meta, click Sync in Waplify to keep them up to date
+- New to templates? Read the [Message Templates Overview](./message-templates.md) to understand how templates and approvals work
+- Want to add personalization or images? See [Template Variables & Media](./template-variables-and-media.md) to learn about variables and media headers
 
 ## Frequently asked questions
 
