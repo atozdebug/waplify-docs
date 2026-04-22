@@ -15,7 +15,25 @@ const sidebars = {
       items: [
         'messages/send-template-message',
         'messages/send-free-form-message',
-        'templates',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Templates',
+      items: [
+        'templates/list-templates',
+        'templates/create-template',
+        'templates/create-carousel-template',
+        'templates/sync-templates',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Campaigns',
+      items: [
+        'campaigns/create-campaign',
+        'campaigns/send-campaign',
+        'campaigns/campaign-stats',
       ],
     },
     {

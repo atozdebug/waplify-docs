@@ -30,9 +30,10 @@ https://server.waplify.io/api/v1/messages/send
 | Feature | Description |
 |---------|-------------|
 | [**Send Messages**](./messages/send-template-message.md) | Send template messages and free-form messages via WhatsApp |
+| [**Templates**](./templates/list-templates.md) | List, create, and sync WhatsApp message templates (including carousel) |
+| [**Campaigns**](./campaigns/create-campaign.md) | Create bulk broadcasts, send them in the background, and track delivery stats |
 | [**Manage Contacts**](./contacts/list-contacts.md) | Create, list, get, and delete contacts |
 | [**Manage Groups**](./groups/list-create-groups.md) | Create and manage contact groups |
-| [**List Templates**](./templates.md) | Retrieve your approved WhatsApp message templates |
 | [**Webhooks**](./webhooks/overview.md) | Receive real-time notifications for message events |
 
 ## Quick start

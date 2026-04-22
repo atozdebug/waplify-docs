@@ -1,0 +1,8 @@
+{
+  "label": "Campaigns",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Create campaigns, send them in the background, and track delivery stats."
+  }
+}

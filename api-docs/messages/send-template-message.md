@@ -32,7 +32,7 @@ If the contact phone number doesn't exist in your Waplify account, the contact w
 Templates use placeholders like `{{1}}`, `{{2}}` for personalized content. You fill these in via `body_data` when sending.
 
 **How to know which variables your template needs:**
-1. Call the [List Templates](/api/templates) endpoint
+1. Call the [List Templates](/api/templates/list-templates) endpoint
 2. Look at the `body` field — it shows the template text with placeholders
 3. Look at `header_format` — if it's `IMAGE`, `VIDEO`, or `DOCUMENT`, you need a `media_url`
 4. Look at `requires_media` — if `true`, a `media_url` is required

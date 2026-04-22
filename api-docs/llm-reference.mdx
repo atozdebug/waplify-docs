@@ -141,7 +141,7 @@ Send a text or media message without a template. Only works within 24-hour windo
 
 ## 3. List Templates
 
-Get all approved WhatsApp message templates.
+Get all WhatsApp message templates on the account (approved and otherwise).
 
 **GET** `/api/v1/templates/`
 
@@ -159,6 +159,9 @@ Get all approved WhatsApp message templates.
       "header_format": "IMAGE",
       "body": "Hello {{1}}, your order {{2}} is confirmed for {{3}}.",
       "requires_media": true,
+      "variable_count": 3,
+      "parameter_format": "POSITIONAL",
+      "is_carousel": false,
       "created_at": "2024-06-15T10:00:00Z"
     }
   ],
@@ -166,11 +169,293 @@ Get all approved WhatsApp message templates.
 }
 ```
 
-**Key fields:** `header_format` (NONE/TEXT/IMAGE/VIDEO/DOCUMENT), `requires_media` (true = need media_url), `body` (parse `{{1}}` etc. for variable count)
+**Key fields per template:** `status` (APPROVED/PENDING/REJECTED), `header_format` (NONE/TEXT/IMAGE/VIDEO/DOCUMENT/LOCATION), `requires_media` (true = need `media_url`), `body` (parse `{{1}}`/`{{name}}` for variables), `parameter_format` (POSITIONAL or NAMED), `is_carousel` (true = use `carousel_data` when sending), `carousel_cards` (card definitions), `limited_time_offer` + `offer_code` (LTO templates need `expiration_time_ms` when sending).
 
 ---
 
-## 4. List Contacts
+## 4. Create Template
+
+Create a new text/media-header template and submit it to Meta. Use endpoint 5 for carousel templates.
+
+**POST** `/api/v1/templates/create`
+
+**Request:**
+```json
+{
+  "name": "order_update",
+  "category": "UTILITY",
+  "language": "en_US",
+  "waba_phone_id": "123456789012345",
+  "header": { "format": "TEXT", "text": "Order Update" },
+  "media_url": "https://example.com/banner.jpg",
+  "body": {
+    "text": "Hello {{1}}, your order {{2}} has been shipped!",
+    "examples": { "1": "John", "2": "ORD-12345" }
+  },
+  "footer": { "text": "Thank you" },
+  "buttons": [
+    { "type": "URL", "text": "Track", "url": "https://example.com/{{1}}", "url_example": "ORD-12345" },
+    { "type": "QUICK_REPLY", "text": "Contact us" }
+  ],
+  "limited_time_offer": { "text": "Limited offer", "has_expiration": true },
+  "offer_code": "FLASH40",
+  "add_security_recommendation": false,
+  "code_expiration_minutes": 10,
+  "message_send_ttl_seconds": 3600
+}
+```
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| `name` | Yes | Lowercase alphanumeric + underscores only |
+| `category` | Yes | `MARKETING`, `UTILITY`, or `AUTHENTICATION` |
+| `language` | No | Defaults to `en_US` |
+| `waba_phone_id` | No | Target WABA phone ID. Falls back to the first number linked to your account. |
+| `header` | No | `{ format, text?, text_example? }`. Formats: TEXT/IMAGE/VIDEO/DOCUMENT/LOCATION |
+| `media_url` | Conditional | Required if header format is IMAGE/VIDEO/DOCUMENT — public URL, downloaded and uploaded to Meta |
+| `body` | Conditional | Required for MARKETING/UTILITY. `{ text, examples? }`. Max 1024 chars. |
+| `footer` | No | `{ text }` (max 60 chars, no variables) |
+| `buttons` | No | Up to 10. Types: QUICK_REPLY (max 10), URL (max 2), PHONE_NUMBER (max 1), COPY_CODE (max 1), FLOW |
+| `limited_time_offer` | No | MARKETING-only. Requires `offer_code` + COPY_CODE button at index 0, no footer, body ≤ 600 chars |
+| `offer_code` | Conditional | Required for LTO templates (max 15 chars) |
+| `add_security_recommendation` | No | AUTHENTICATION only — adds security text |
+| `code_expiration_minutes` | No | AUTHENTICATION only (1–90) |
+| `message_send_ttl_seconds` | No | TTL for messages sent with this template |
+
+**Response (201):**
+```json
+{
+  "status": "success",
+  "message": "Template 'order_update' created and submitted for review",
+  "template_id": "507f1f77bcf86cd799439012",
+  "meta_template_id": "1234567890123456",
+  "meta_status": "PENDING"
+}
+```
+
+**Constraints:**
+- Cannot mix numbered (`{{1}}`) and named (`{{name}}`) variables in the same template
+- WhatsApp domains (`whatsapp.com`, `wa.me`) are rejected in URL buttons
+- Templates start as `PENDING`; call endpoint 6 (sync) or endpoint 3 (list) to refresh approval status
+
+**Errors:** 422 (validation — name format, mixed variables, missing body), 400 (media download fail, duplicate name), 401 (invalid key), 429 (rate limit)
+
+---
+
+## 5. Create Carousel Template
+
+Create a media-card carousel template (always MARKETING, 2–10 cards, same header format and button structure across cards).
+
+**POST** `/api/v1/templates/create-carousel`
+
+**Request:**
+```json
+{
+  "name": "product_showcase",
+  "language": "en_US",
+  "waba_phone_id": "123456789012345",
+  "body": { "text": "Hi {{1}}, check out our top picks!", "examples": { "1": "John" } },
+  "cards": [
+    {
+      "header_format": "IMAGE",
+      "media_url": "https://example.com/product1.jpg",
+      "body_text": "Product 1 - Amazing.",
+      "buttons": [
+        { "type": "URL", "text": "Shop", "url": "https://example.com/{{1}}", "url_example": "p1" },
+        { "type": "QUICK_REPLY", "text": "More like this" }
+      ]
+    },
+    {
+      "header_format": "IMAGE",
+      "media_url": "https://example.com/product2.jpg",
+      "body_text": "Product 2 - Best seller.",
+      "buttons": [
+        { "type": "URL", "text": "Shop", "url": "https://example.com/{{1}}", "url_example": "p2" },
+        { "type": "QUICK_REPLY", "text": "More like this" }
+      ]
+    }
+  ],
+  "message_send_ttl_seconds": 3600
+}
+```
+
+**Card rules:** 2–10 cards; all cards must share the same `header_format` (IMAGE or VIDEO); all cards must have the same button types in the same order; either all or no cards carry `body_text` (max 160 chars each); each card needs 1–2 buttons.
+
+**Response (201):** Same shape as Create Template (`status`, `template_id`, `meta_template_id`, `meta_status`).
+
+---
+
+## 6. Sync Templates with Meta
+
+Pull the latest template state from Meta into Waplify. Creates missing templates locally, updates changed ones, removes deleted ones. Runs across every WABA phone linked to the account.
+
+**POST** `/api/v1/templates/sync`
+
+No request body.
+
+**Response (200):**
+```json
+{
+  "status": "success",
+  "message": "Template sync completed",
+  "summary": {
+    "total_meta_templates": 12,
+    "synced": 12,
+    "created": 1,
+    "updated": 3,
+    "skipped": 8,
+    "deleted": 0
+  }
+}
+```
+
+**Use after:** creating a template (to pick up Meta's APPROVED/REJECTED decision), or editing templates in the Meta Business Manager.
+
+---
+
+## 7. Create Campaign
+
+Create a WhatsApp campaign from a list of phone numbers using an approved template. Phone numbers are normalized + upserted as contacts automatically.
+
+**POST** `/api/v1/campaigns/`
+
+**Request:**
+```json
+{
+  "name": "Summer Sale Blast",
+  "description": "Announce the summer sale",
+  "template_name": "summer_sale_promo",
+  "contacts": [
+    { "phone": "911234567890", "name": "John Doe" },
+    { "phone": "919876543210", "name": "Priya Singh" }
+  ],
+  "body_data": { "1": "Loyalty member", "2": "40%" },
+  "header_data": { "1": "Summer" },
+  "media_url": "https://example.com/banner.jpg",
+  "filename": "promo.pdf",
+  "waba_phone_id": "123456789012345",
+  "scheduled_at": "2026-05-15T09:30:00Z",
+  "scheduled_timezone": "Asia/Kolkata",
+  "expiration_time_ms": 1209600000,
+  "carousel_data": [
+    { "media_url": "https://example.com/c1.jpg", "url_button_params": ["p1"], "button_payloads": ["more-like-this"] },
+    { "media_url": "https://example.com/c2.jpg", "url_button_params": ["p2"], "button_payloads": ["more-like-this"] }
+  ]
+}
+```
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| `name` | Yes | Campaign name |
+| `template_name` | Yes | Must be APPROVED and owned by the user |
+| `contacts` | Yes | 1–10,000 entries `{ phone, name? }`. Phones normalized + upserted. |
+| `body_data` | No | Applied to every recipient (same format as Send Template) |
+| `header_data` | No | TEXT-header variables |
+| `media_url` | Conditional | Required if template has IMAGE/VIDEO/DOCUMENT header |
+| `filename` | No | For DOCUMENT media |
+| `waba_phone_id` | No | Falls back to template's, then user's first |
+| `scheduled_at` | No | ISO 8601. Omit to create as `draft`. |
+| `scheduled_timezone` | No | IANA string, e.g. `Asia/Kolkata` |
+| `expiration_time_ms` | Conditional | Required for limited-time offer templates |
+| `carousel_data` | Conditional | Required for carousel templates; one entry per card, in order |
+
+**Response (200):**
+```json
+{
+  "status": "success",
+  "message": "Campaign created successfully",
+  "campaign_id": "507f1f77bcf86cd799439060",
+  "name": "Summer Sale Blast",
+  "status_value": "draft",
+  "total_contacts": 2,
+  "invalid_phones": [],
+  "timestamp": "2024-06-15T10:00:00Z"
+}
+```
+
+- `status_value`: `draft` (needs manual send) or `scheduled` (auto-sends at `scheduled_at`)
+- `invalid_phones`: phones that failed normalization and were skipped
+- Duplicate phones are deduplicated automatically
+
+**Not supported via this endpoint:** ORDER_DETAILS and FLOW buttons; per-contact variable overrides (body_data is applied to every recipient).
+
+**Errors:** 404 (template not found), 400 (template not APPROVED, missing body variables, media unreachable, no valid phones, LTO needs `expiration_time_ms`), 403 (no access to WABA phone), 429 (rate limit)
+
+---
+
+## 8. Send Campaign
+
+Run prechecks on a draft campaign and queue it in the background worker. Asynchronous — returns immediately with a task ID.
+
+**POST** `/api/v1/campaigns/{campaign_id}/send`
+
+No body.
+
+**Response (202):**
+```json
+{
+  "status": "accepted",
+  "message": "Campaign send queued and will run in background",
+  "campaign_id": "507f1f77bcf86cd799439060",
+  "task_id": "f5a1f9d4-2c5c-4c9f-9d1b-3e2d1a1f9d4f",
+  "timestamp": "2024-06-15T10:00:00Z"
+}
+```
+
+**When to call:** only for `draft` campaigns. Scheduled campaigns auto-send at `scheduled_at` and don't need this endpoint.
+
+**Errors:** 400 (invalid `campaign_id`, precheck failed — template no longer approved, insufficient credits, etc.), 404 (campaign not found), 429 (rate limit)
+
+**After queueing:** track per-message delivery via webhooks (`message.sent`, `message.delivered`, `message.read`, `message.failed`) and aggregate stats via endpoint 9.
+
+---
+
+## 9. Campaign Stats
+
+Return aggregate per-contact delivery stats for a campaign.
+
+**GET** `/api/v1/campaigns/{campaign_id}/stats`
+
+**Response (200):**
+```json
+{
+  "status": "success",
+  "campaign_id": "507f1f77bcf86cd799439060",
+  "name": "Summer Sale Blast",
+  "campaign_status": "completed",
+  "total_contacts": 2000,
+  "sent_count": 1998,
+  "delivered_count": 1932,
+  "read_count": 1204,
+  "clicked_count": 312,
+  "failed_count": 2,
+  "replied_count": 41,
+  "success_count": 1998,
+  "created_at": "2024-06-15T10:00:00Z",
+  "scheduled_at": null,
+  "started_at": "2024-06-15T10:05:00Z",
+  "completed_at": "2024-06-15T10:45:00Z"
+}
+```
+
+| Field | Meaning |
+|-------|---------|
+| `campaign_status` | `draft`, `scheduled`, `running`, `completed`, `cancelled`, `failed` |
+| `sent_count` | WhatsApp accepted the send |
+| `delivered_count` | Reached the contact's phone |
+| `read_count` | Contact opened the message |
+| `clicked_count` | Contact clicked a URL / quick-reply button |
+| `failed_count` | Send/delivery failed at any stage |
+| `replied_count` | Contact sent a reply back |
+| `success_count` | `total_contacts - failed_count` |
+
+**Funnel:** `total_contacts → sent → delivered → read → clicked`. Counters update continuously as the worker progresses.
+
+**Errors:** 400 (invalid campaign_id), 404 (not found), 429 (rate limit)
+
+---
+
+## 10. List Contacts
 
 **GET** `/api/v1/contacts/?page=1&limit=20&search=john`
 
@@ -206,7 +491,7 @@ Get all approved WhatsApp message templates.
 
 ---
 
-## 5. Create Contact
+## 11. Create Contact
 
 **POST** `/api/v1/contacts/`
 
@@ -235,7 +520,7 @@ Fields: `phone_number` (required), `first_name` (required), `last_name` (optiona
 
 ---
 
-## 6. Get Contact
+## 12. Get Contact
 
 **GET** `/api/v1/contacts/{contact_id}`
 
@@ -243,7 +528,7 @@ Fields: `phone_number` (required), `first_name` (required), `last_name` (optiona
 
 ---
 
-## 7. Delete Contact
+## 13. Delete Contact
 
 **DELETE** `/api/v1/contacts/{contact_id}`
 
@@ -260,7 +545,7 @@ Note: Soft delete — contact deactivated, not permanently removed.
 
 ---
 
-## 8. List Groups
+## 14. List Groups
 
 **GET** `/api/v1/groups/?page=1&limit=20&search=vip`
 
@@ -286,7 +571,7 @@ Note: Soft delete — contact deactivated, not permanently removed.
 
 ---
 
-## 9. Create Group
+## 15. Create Group
 
 **POST** `/api/v1/groups/`
 
@@ -313,13 +598,13 @@ Fields: `name` (required, unique per account), `description` (optional), `tags` 
 
 ---
 
-## 10. Get Group
+## 16. Get Group
 
 **GET** `/api/v1/groups/{group_id}`
 
 ---
 
-## 11. Delete Group
+## 17. Delete Group
 
 **DELETE** `/api/v1/groups/{group_id}`
 
@@ -327,7 +612,7 @@ Note: Contacts are NOT deleted — only removed from the group.
 
 ---
 
-## 12. Add Contacts to Group
+## 18. Add Contacts to Group
 
 **POST** `/api/v1/groups/{group_id}/contacts`
 
@@ -352,7 +637,7 @@ Duplicates are silently skipped.
 
 ---
 
-## 13. Remove Contacts from Group
+## 19. Remove Contacts from Group
 
 **DELETE** `/api/v1/groups/{group_id}/contacts`
 
