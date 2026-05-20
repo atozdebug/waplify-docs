@@ -28,11 +28,8 @@ When you open the Flow Builder, you will see:
    - **Text Button** — show a message with button options
    - **Media Button** — show an image/video with buttons
    - **List** — show an interactive list menu
-   - **Ask** — ask the customer for input
-   - **Condition** — branch based on the customer's reply
-   - **API** — call an external API
    (See [Flow Node Types](./flow-node-types.md) for details on each)
-<!-- screenshot: Sidebar showing all available node types -->
+<!-- screenshot: Sidebar showing the available node types -->
 3. **Connect nodes** — drag a line from one node's output to another node's input to define the conversation flow
 4. **Configure each node** — click on a node to set its message content, button labels, or other settings
 <!-- screenshot: Node configuration panel -->
@@ -83,4 +80,4 @@ Currently, you would need to create a new flow and rebuild it. Consider saving a
 
 ### What happens if a customer sends a message that doesn't match any button?
 
-The flow may end or the customer may see an error message, depending on how you designed the flow. Use the **Condition** node to handle unexpected inputs gracefully.
+The flow may end, depending on how you designed it. Building your flow around **buttons and lists** — rather than free-typed replies — keeps customers on a path your flow can handle.

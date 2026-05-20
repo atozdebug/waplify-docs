@@ -39,7 +39,7 @@ curl -X GET "https://server.waplify.io/api/v1/groups/?page=1&limit=20" \
       "description": "High-value customers",
       "tags": ["vip"],
       "contact_count": 42,
-      "created_at": "2024-06-15T10:00:00Z"
+      "created_at": "2026-06-15T10:00:00Z"
     }
   ],
   "total": 1,
@@ -94,7 +94,15 @@ curl -X POST https://server.waplify.io/api/v1/groups/ \
     "description": "High-value customers",
     "tags": ["vip"],
     "contact_count": 2,
-    "created_at": "2024-06-15T10:00:00Z"
+    "created_at": "2026-06-15T10:00:00Z"
   }
 }
 ```
+
+## Errors
+
+| Status | When |
+|--------|------|
+| 401 | Invalid or missing API key |
+| 422 | Validation failed — the required `name` field is missing (Create) |
+| 429 | Rate limit exceeded |

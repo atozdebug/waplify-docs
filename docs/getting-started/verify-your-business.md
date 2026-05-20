@@ -7,7 +7,7 @@ keywords: [Meta business verification, verify WhatsApp business, WhatsApp messag
 
 ## What is Business Verification?
 
-Business verification is a process by Meta (Facebook) to confirm that your business is real and legitimate. Once verified, your WhatsApp messaging limit increases significantly — from 250 messages per day to 2,000 and beyond.
+Business verification is a process by Meta (Facebook) to confirm that your business is real and legitimate. Once verified, your WhatsApp messaging limit increases significantly — from messaging just 250 customers per day to 1,000 and beyond.
 
 ## How to use it
 
@@ -54,7 +54,7 @@ Meta states verification takes up to **48 hours**, but it usually completes soon
 
 ### Why do I need to verify my business?
 
-Meta limits unverified businesses to **250 messages per day**. After verification, your limit increases to **2,000 messages per day** and grows automatically as you maintain good quality.
+Meta limits unverified businesses to messaging **250 customers per day**. After verification, your limit moves up to **1,000 per day**, then keeps climbing automatically — through 10,000 and 100,000 — as you maintain a good quality rating. See [WhatsApp Account Info](../account/whatsapp-account-info.md) for the full list of tiers.
 
 ### What if my verification is rejected?
 

@@ -1,6 +1,6 @@
 ---
 title: Account Settings
-description: How to update your Waplify profile, business details, password, and notification preferences
+description: How to update your Waplify profile and business details, manage your password, and stay on top of notifications
 sidebar_position: 1
 keywords: [Waplify account settings, update Waplify profile, change password Waplify, business profile settings]
 ---
@@ -57,6 +57,16 @@ If you belong to multiple Waplify organizations (e.g., managing multiple busines
 2. Click to see your available organizations
 3. Select the one you want to work in
 
+### Notifications
+
+Waplify keeps you informed with in-app notifications. Click the **bell icon** in the top bar to open your notification center.
+
+- A badge on the bell shows how many notifications you haven't read yet
+- Notifications cover important account events — such as changes to your WhatsApp Business account status or quality rating
+- Each notification has an urgency level, so you can see at a glance what needs your attention
+- Click a notification to mark it as read, or mark them all as read at once
+<!-- screenshot: notification bell and notification center -->
+
 ## Tips & best practices
 
 - Keep your **email address up to date** — this is how you recover your account if you forget your password
@@ -77,6 +87,10 @@ Yes, organization details can be updated from the Settings page. For major chang
 ### How do I change my password?
 
 Go to the Settings page and look for the password change option. You can also use the **Forgot Password** link on the login screen to reset your password via email.
+
+### Why am I getting notifications about my WhatsApp account?
+
+Waplify alerts you when something needs attention on your WhatsApp Business account — for example, a drop in quality rating or a change to your messaging limits. Acting on these quickly helps protect your ability to send messages.
 
 ### Can I delete my account?
 

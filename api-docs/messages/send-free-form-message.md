@@ -110,7 +110,7 @@ curl -X POST https://server.waplify.io/api/v1/messages/send-message \
   "message_id": "wamid.HBgNOTE4MDMxMjM0NTY3OA==",
   "contact_id": "507f1f77bcf86cd799439012",
   "message_type": "text",
-  "timestamp": "2024-06-15T10:00:00Z"
+  "timestamp": "2026-06-15T10:00:00Z"
 }
 ```
 
@@ -138,7 +138,7 @@ This endpoint returns errors in a `detail` field (not the `error`/`message` form
 ```json
 // 403 Forbidden
 {
-  "detail": "Cannot send free-form message: The 24-hour customer service window has expired. Last inbound message was at 2024-06-14T08:00:00+00:00. Use the template-based /send endpoint instead."
+  "detail": "Cannot send free-form message: The 24-hour customer service window has expired. Last inbound message was at 2026-06-14T08:00:00+00:00. Use the template-based /send endpoint instead."
 }
 ```
 

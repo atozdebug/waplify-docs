@@ -79,7 +79,7 @@ You can edit a campaign that is still in **draft** status. Once a campaign has b
 
 ### How many contacts can I send to in one campaign?
 
-There is no hard limit from Waplify's side. However, your daily sending limit depends on your Meta verification status and quality rating (250/day unverified, 2,000+/day verified).
+There is no hard limit from Waplify's side. However, your daily sending limit depends on your Meta verification status and quality rating — 250 customers per day when unverified, rising to 1,000 and beyond once verified. See [WhatsApp Account Info](../account/whatsapp-account-info.md) for the tier breakdown.
 
 ### Can I send different messages to different contacts?
 

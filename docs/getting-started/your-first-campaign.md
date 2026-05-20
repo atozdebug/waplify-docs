@@ -24,16 +24,16 @@ Before you can send a campaign, make sure you have completed these steps:
 Without a payment method on Meta, your messages will **fail to deliver** even if everything else is set up correctly.
 :::
 
-### Step 1: Create a message template on Meta
+### Step 1: Create a message template
 
-1. From the Waplify dashboard, click **Create on Meta** in the onboarding checklist — this opens Meta's Template Manager
-<!-- screenshot: Meta template manager page -->
+1. Go to the **Templates** page in Waplify and click **Create Template**
+<!-- screenshot: Templates page with the Create Template button -->
 2. Choose the template type — **Marketing**, **Utility**, or **Authentication** — based on your use case
-3. Write your message content and submit for review
-4. Wait for approval — for verified businesses, this takes a few hours; for new businesses, it can take up to 24 hours
-5. Once approved, come back to Waplify and go to the **Templates** page
-6. Click **Sync Templates** to import your approved templates into Waplify
-<!-- screenshot: Templates page with Sync button highlighted -->
+3. Write your message content, add any media or buttons, and submit for review
+4. Wait for approval — for verified businesses this takes a few hours; for new businesses it can take up to 24 hours
+5. Once approved, the template appears on your Templates page automatically, ready to use
+
+For more detail — including special types like carousels — see [Creating Templates](../templates/creating-templates.md).
 
 :::tip
 Use lowercase names with underscores for your template names (e.g., `welcome_offer`). Include an opt-out option in marketing templates.
@@ -99,7 +99,7 @@ Once a campaign has started sending, it cannot be stopped. That is why we recomm
 
 ### How many messages can I send per day?
 
-Your daily limit depends on your Meta verification status and quality rating. Unverified businesses can send up to 250 messages per day. Verified businesses start at 2,000 and the limit increases automatically.
+Your daily limit depends on your Meta verification status and quality rating. Unverified businesses can message up to 250 customers per day. Verified businesses start at 1,000 per day, and the limit increases automatically through 10,000, 100,000, and beyond as you maintain a good quality rating. See [WhatsApp Account Info](../account/whatsapp-account-info.md).
 
 ### Can I send media (images, videos) with my campaign?
 

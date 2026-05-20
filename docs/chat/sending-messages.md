@@ -39,6 +39,20 @@ This is useful when the 24-hour window has closed and you need to re-engage the 
 <!-- screenshot: Media attachment options -->
 3. The file will be uploaded and sent to the contact
 
+### Reacting and replying to messages
+
+Hover over any message in a conversation to reveal quick actions:
+
+- **React** — add an emoji reaction (👍 ❤️ 😂 and more). Click the smile icon and choose one. Reactions can only be added while the 24-hour window is open.
+- **Reply** — quote a specific message so the customer sees exactly what you are responding to.
+- **Copy text** — copy a message's text to your clipboard.
+- **Retry send** — if one of your messages failed, open its actions menu and choose **Retry send**.
+<!-- screenshot: message hover actions with the emoji reaction picker -->
+
+### Link previews
+
+When a message contains a website link, Waplify automatically shows a **preview card** below it, with the page's image, title, and a short description. This works for links you send and links your customers send you — there is nothing to set up. If a link has no preview information available, no card is shown.
+
 ### Understanding message status indicators
 
 Each message shows a delivery status:
@@ -74,6 +88,10 @@ You can send audio files through the attachment feature. Real-time voice recordi
 ### What file types can I send?
 
 You can send images (JPG, PNG), videos (MP4), documents (PDF, DOC), and audio files. WhatsApp has file size limits for each type.
+
+### Can customers see my reactions?
+
+Yes. An emoji reaction you add appears on the message in the customer's WhatsApp, exactly like a reaction in a normal chat. You can change or remove it while the 24-hour window is open.
 
 ### Can I delete a sent message?
 

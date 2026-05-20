@@ -41,10 +41,10 @@ curl -X GET https://server.waplify.io/api/v1/campaigns/507f1f77bcf86cd799439060/
   "failed_count": 2,
   "replied_count": 41,
   "success_count": 1998,
-  "created_at": "2024-06-15T10:00:00Z",
+  "created_at": "2026-06-15T10:00:00Z",
   "scheduled_at": null,
-  "started_at": "2024-06-15T10:05:00Z",
-  "completed_at": "2024-06-15T10:45:00Z"
+  "started_at": "2026-06-15T10:05:00Z",
+  "completed_at": "2026-06-15T10:45:00Z"
 }
 ```
 

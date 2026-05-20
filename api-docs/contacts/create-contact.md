@@ -56,7 +56,7 @@ curl -X POST https://server.waplify.io/api/v1/contacts/ \
     "tags": ["vip", "newsletter"],
     "opted_in": true,
     "source": "api",
-    "created_at": "2024-06-15T10:00:00Z"
+    "created_at": "2026-06-15T10:00:00Z"
   }
 }
 ```
@@ -64,3 +64,13 @@ curl -X POST https://server.waplify.io/api/v1/contacts/ \
 :::info
 Contacts created via the API have their `source` field set to `api` automatically.
 :::
+
+## Errors
+
+| Status | When |
+|--------|------|
+| 401 | Invalid or missing API key |
+| 422 | Validation failed — a required field (`phone_number` or `first_name`) is missing or malformed |
+| 429 | Rate limit exceeded — you've sent more requests than your per-minute limit allows |
+
+A phone number that already exists in your account returns an error instead of creating a duplicate.

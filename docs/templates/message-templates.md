@@ -21,28 +21,32 @@ WhatsApp requires all business-initiated messages to use **pre-approved template
    - **Language** — the language of the template
    - **Status** — whether it is synced and approved
 
-### Creating a template on Meta
+### Creating a template
 
-1. From the Templates page, click **Create on Meta** — this opens Meta's Template Manager in a new tab
-<!-- screenshot: Meta's WhatsApp template manager -->
-2. Choose a template **category** based on what you want to send:
-   - **Marketing** — use this for promotions, discount offers, product announcements, newsletters, or seasonal greetings
-   - **Utility** — use this for order confirmations, shipping updates, appointment reminders, or account notifications
-   - **Authentication** — use this for one-time passwords or login verification codes (most small businesses don't need this)
-3. Write your message content, add any media or buttons
-4. Submit the template for review
+You can create templates two ways — both submit to Meta for approval:
+
+- **Inside Waplify (recommended)** — click **Create Template** on the Templates page and build it with the visual editor. This is the easiest option, and it supports special types like [carousel templates](./carousel-templates.md).
+- **On Meta's website** — click **Create on Meta** to open Meta's Template Manager in a new tab and build it there.
+<!-- screenshot: Create Template button on the Templates page -->
+
+Either way, choose a template **category** based on what you want to send:
+
+- **Marketing** — promotions, discount offers, product announcements, newsletters, or seasonal greetings
+- **Utility** — order confirmations, shipping updates, appointment reminders, or account notifications
+- **Authentication** — one-time passwords or login verification codes
+
+For a step-by-step walkthrough, see [Creating Templates](./creating-templates.md).
 
 :::info
 Template approval time varies. Verified businesses usually get approved within a few hours. New businesses may wait up to 24 hours.
 :::
 
-### Syncing templates to Waplify
+### Keeping templates in sync with Meta
 
-1. After your template is approved on Meta, go back to the **Templates** page in Waplify
-2. Click **Sync Templates**
-<!-- screenshot: Sync Templates button on the templates page -->
-3. Waplify will pull all your approved templates from Meta and display them in the list
-4. Your templates are now ready to use in campaigns
+Templates you create or change on Meta appear in Waplify **automatically** — there's no manual import step. The list also updates on its own as Meta approves, rejects, or pauses your templates.
+
+If you want to refresh the list right away, click **Sync Templates** on the Templates page to pull the latest state straight from Meta.
+<!-- screenshot: Sync Templates button on the Templates page -->
 
 ### Deleting a template
 
@@ -55,7 +59,7 @@ Template approval time varies. Verified businesses usually get approved within a
 - Use **lowercase names with underscores** for template names (e.g., `welcome_offer`, `order_update`)
 - Include an **opt-out option** in marketing templates (e.g., "Reply STOP to unsubscribe") — this improves approval chances
 - Keep your message clear and concise — WhatsApp may reject vague or misleading content
-- Click **Sync Templates** regularly to keep Waplify in sync with any templates you create or edit on Meta
+- Templates created or edited on Meta sync to Waplify automatically — use **Sync Templates** only when you want an immediate refresh
 - You can create templates with **variables** (like customer name) that get filled in when you send a campaign — see [Template Variables & Media](./template-variables-and-media.md)
 
 ## Frequently asked questions
@@ -74,7 +78,7 @@ Check the rejection reason in Meta's Template Manager. Common reasons include un
 
 ### Can I edit an approved template?
 
-No. Once a template is approved, it cannot be edited. You need to create a new template with the changes and submit it for approval again.
+Yes. Edit it from the **Templates** page — your changes are sent to Meta for a fresh review, and the template returns to **Pending** until it is re-approved. Carousel templates are the exception: they can't be edited, so create a new one instead. See [Creating Templates](./creating-templates.md).
 
 ### What is the difference between Marketing, Utility, and Authentication templates?
 

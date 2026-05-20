@@ -27,11 +27,13 @@ Waplify lets you invite team members to your workspace so multiple people can ma
 <!-- screenshot: Invite member dialog -->
 2. Enter the person's **email address**
 3. Select a **role** for them:
-   - **Admin** — full access to all features
-   - **Manager** — can manage campaigns, contacts, and chat
-   - **Agent** — limited to chat and viewing campaigns
-4. Click **Send Invitation**
-5. The person will receive an email with a link to join your workspace
+   - **Admin** — manages the team, settings, and messaging — everything except billing
+   - **Manager** — runs campaigns, contacts, and templates, and replies to chats
+   - **Agent** — handles customer chats in the inbox
+   - For a full breakdown, see [Roles & Permissions](./roles-and-permissions.md)
+4. If you chose **Agent**, set their **view scope** — all conversations, or only the ones assigned to them
+5. Click **Send Invitation**
+6. The person will receive an email with a link to join your workspace
 
 ### Managing pending invitations
 
@@ -62,6 +64,7 @@ Deactivated members cannot log in or access any features, but their account rema
 - **Use Agent role for support staff** — agents can handle chats without accidentally modifying campaigns or contacts
 - **Keep at least one Admin** besides the Owner — this ensures someone can manage the workspace if the Owner is unavailable
 - **Review team access periodically** — deactivate members who no longer need access. You can also update workspace-level preferences in [Account Settings](../account/account-settings.md)
+- **Set up your team inbox** — once you have agents, decide how conversations are shared in [Inbox Style & Auto-Assignment](./inbox-setup.md), and see [Working as a Team in the Inbox](../chat/team-inbox.md) for the day-to-day workflow
 - Each team member uses their own email to log in, keeping activity traceable
 
 ## Frequently asked questions

@@ -1,13 +1,15 @@
 ---
 title: Flow Node Types
-description: Guide to all flow builder node types — send message, ask question, condition, delay, and more
+description: Guide to the building blocks of a Waplify conversational flow — the node types you use to design automated chats
 sidebar_position: 3
 keywords: [WhatsApp flow nodes, chatbot node types, flow builder actions, WhatsApp bot triggers]
 ---
 
 ## What are Flow Node Types?
 
-Nodes are the building blocks of a conversational flow. Each node type performs a different action — from sending messages to making decisions. You combine them to create the conversation experience you want.
+Nodes are the building blocks of a conversational flow. Each node type does a different job — sending a message, offering buttons, or presenting a menu. You combine them to create the conversation experience you want.
+
+Every flow begins with a **Start Node**, created automatically. You add the other nodes and connect them on the visual canvas — see the [Flow Builder Guide](./flow-builder-guide.md) for the how-to. The reference below explains what each node type does.
 
 ## How to use it
 
@@ -56,47 +58,11 @@ Sends an **interactive list** with multiple sections and items. Customers tap to
 - Use lists when you have more than 3 options (buttons are limited to 3)
 <!-- screenshot: List node configuration with sections and items -->
 
-### Ask Node
-
-**Asks the customer for input** — like their name, email, or order number.
-
-- Set the question text (e.g., "What is your name?")
-- The customer's reply is saved and can be inserted into later messages in the flow — for example, you can greet them by the name they just typed
-- Connect to the next node that processes the response
-- Use a **Condition Node** after an Ask Node to send different replies based on what the customer typed
-
-### Condition Node
-
-Creates **logic branches** based on conditions. The flow takes different paths depending on the customer's reply or other data.
-
-- Set conditions (e.g., if the reply contains "yes", go to path A; otherwise, go to path B)
-- Connect each condition output to a different node
-- Use this to handle different customer responses intelligently
-<!-- screenshot: Condition node with branching paths -->
-
-### API Node
-
-Connects to an **external system** (like your website, CRM, or order management tool) to fetch or send data automatically during a conversation.
-
-**Example use cases:**
-- A customer types their order number → the API Node looks it up in your system → the next message shows "Your order is out for delivery"
-- A customer asks about pricing → the API Node fetches the latest price from your website
-
-**How to set it up:**
-- Enter the URL of the external system you want to connect to
-- Choose the method: GET (to fetch data) or POST (to send data)
-- The response from the external system can be shown to the customer in the next message
-
-:::info
-The API Node requires some technical knowledge. If you are not comfortable with APIs, ask your developer or tech-savvy team member to help configure this node. You can build the rest of the flow yourself and just have them set up the API connection.
-:::
-
 ## Tips & best practices
 
-- **Start simple** — begin with Start → Message → Text Button flows before adding complex nodes like Condition and API. See the [Flow Builder Guide](./flow-builder-guide.md) for a step-by-step walkthrough
+- **Start simple** — a Start Node leading into a single Text Button node that answers one common question is a great first flow. See the [Flow Builder Guide](./flow-builder-guide.md) for a step-by-step walkthrough
 - **Use Text Buttons for 2-3 options** and **Lists for 4+ options** — buttons are more visible, but lists scale better
-- **Always provide a fallback path** — use Condition nodes to handle unexpected replies gracefully
-- **Keep Ask Node responses in mind** — customers may type anything, so be prepared to handle unexpected input
+- **Guide customers with buttons and lists** — giving people clear options to tap keeps them on a path your flow can handle, instead of typing something unexpected
 - **Test each path** — use the simulation feature to walk through every possible conversation path
 - **Label your nodes clearly** — when your flow gets complex, descriptive node names help you stay organized
 
@@ -104,20 +70,16 @@ The API Node requires some technical knowledge. If you are not comfortable with 
 
 ### How many buttons can I add to a Text Button node?
 
-WhatsApp allows up to **3 regular buttons** per message. For quick-reply buttons, you can add up to 10. If you need more visible options at a glance, use a **List Node** instead.
+WhatsApp allows up to **3 buttons** per message. If you need more options at a glance, use a **List Node** instead — a list can hold many more items.
 
-### Can I use data from an Ask Node in later messages?
+### When should I use a List node instead of buttons?
 
-Yes. The customer's reply to an Ask Node can be referenced in subsequent Message nodes, allowing you to personalize the conversation based on their input.
+Use **Text Button** or **Media Button** nodes when you have 2–3 choices — buttons are big and easy to tap. Switch to a **List Node** when you have 4 or more options, since a list keeps a long menu tidy.
 
-### What happens if the API Node call fails?
+### Do I have to add a Start Node?
 
-If the external API is unreachable or returns an error, the flow may stop at that node. Consider adding a Condition node after the API call to handle both success and failure scenarios.
+No — every flow already has one. The Start Node is created automatically and defines the trigger keywords that launch the flow. You just connect it to your first node.
 
 ### Can I mix different node types in one flow?
 
-Absolutely. Most flows use a combination of Message, Text Button, and Condition nodes. Use whatever combination makes sense for your use case. For inspiration, check out [Conversational Flows](./conversational-flows.md) to see how complete flows come together.
-
-### Is the API Node secure?
-
-API calls are made from Waplify's servers. Make sure you only connect to trusted API endpoints and do not include sensitive data (like passwords) in the API configuration.
+Absolutely. Most flows combine Message, Text Button, Media Button, and List nodes. Use whatever combination makes sense for your conversation. For inspiration, see [Conversational Flows](./conversational-flows.md).

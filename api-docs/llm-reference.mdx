@@ -69,7 +69,7 @@ Send a WhatsApp message using an approved template. Works anytime (no 24-hour wi
   "message_id": "wamid.HBgNOTE4MDMxMjM0NTY3OA==",
   "contact_id": "507f1f77bcf86cd799439012",
   "template_name": "order_confirmation",
-  "timestamp": "2024-06-15T10:00:00Z"
+  "timestamp": "2026-06-15T10:00:00Z"
 }
 ```
 
@@ -127,7 +127,7 @@ Send a text or media message without a template. Only works within 24-hour windo
   "message_id": "wamid.HBgNOTE4MDMxMjM0NTY3OA==",
   "contact_id": "507f1f77bcf86cd799439012",
   "message_type": "text",
-  "timestamp": "2024-06-15T10:00:00Z"
+  "timestamp": "2026-06-15T10:00:00Z"
 }
 ```
 
@@ -162,7 +162,7 @@ Get all WhatsApp message templates on the account (approved and otherwise).
       "variable_count": 3,
       "parameter_format": "POSITIONAL",
       "is_carousel": false,
-      "created_at": "2024-06-15T10:00:00Z"
+      "created_at": "2026-06-15T10:00:00Z"
     }
   ],
   "total": 1
@@ -369,7 +369,7 @@ Create a WhatsApp campaign from a list of phone numbers using an approved templa
   "status_value": "draft",
   "total_contacts": 2,
   "invalid_phones": [],
-  "timestamp": "2024-06-15T10:00:00Z"
+  "timestamp": "2026-06-15T10:00:00Z"
 }
 ```
 
@@ -398,7 +398,7 @@ No body.
   "message": "Campaign send queued and will run in background",
   "campaign_id": "507f1f77bcf86cd799439060",
   "task_id": "f5a1f9d4-2c5c-4c9f-9d1b-3e2d1a1f9d4f",
-  "timestamp": "2024-06-15T10:00:00Z"
+  "timestamp": "2026-06-15T10:00:00Z"
 }
 ```
 
@@ -431,10 +431,10 @@ Return aggregate per-contact delivery stats for a campaign.
   "failed_count": 2,
   "replied_count": 41,
   "success_count": 1998,
-  "created_at": "2024-06-15T10:00:00Z",
+  "created_at": "2026-06-15T10:00:00Z",
   "scheduled_at": null,
-  "started_at": "2024-06-15T10:05:00Z",
-  "completed_at": "2024-06-15T10:45:00Z"
+  "started_at": "2026-06-15T10:05:00Z",
+  "completed_at": "2026-06-15T10:45:00Z"
 }
 ```
 
@@ -480,7 +480,7 @@ Return aggregate per-contact delivery stats for a campaign.
       "tags": ["vip"],
       "opted_in": true,
       "source": "api",
-      "created_at": "2024-06-15T10:00:00Z"
+      "created_at": "2026-06-15T10:00:00Z"
     }
   ],
   "total": 1,
@@ -560,7 +560,7 @@ Note: Soft delete — contact deactivated, not permanently removed.
       "description": "High-value customers",
       "tags": ["vip"],
       "contact_count": 42,
-      "created_at": "2024-06-15T10:00:00Z"
+      "created_at": "2026-06-15T10:00:00Z"
     }
   ],
   "total": 1,
@@ -683,7 +683,7 @@ Register endpoints at **Developers > Webhooks** in the dashboard.
 ```json
 {
   "event": "message.delivered",
-  "timestamp": "2024-06-15T10:05:00",
+  "timestamp": "2026-06-15T10:05:00",
   "campaign_id": "507f1f77bcf86cd799439060",
   "campaign_name": "Summer Promo",
   "message": {
@@ -692,7 +692,7 @@ Register endpoints at **Developers > Webhooks** in the dashboard.
     "contact_name": "John Doe",
     "status": "delivered",
     "previous_status": "sent",
-    "status_timestamp": "2024-06-15T10:05:00"
+    "status_timestamp": "2026-06-15T10:05:00"
   }
 }
 ```
@@ -704,14 +704,14 @@ For `message.failed`, adds: `error_message` (string), `error_code` (number).
 ```json
 {
   "event": "message.received",
-  "timestamp": "2024-06-15T10:15:00",
+  "timestamp": "2026-06-15T10:15:00",
   "message": {
     "message_id": "wamid.HBgNOTE4MDMxMjM0NTY3OQ==",
     "contact_phone": "911234567890",
     "contact_name": "John Doe",
     "content": "Hi, I have a question",
     "message_type": "text",
-    "timestamp": "2024-06-15T10:15:00",
+    "timestamp": "2026-06-15T10:15:00",
     "waba_phone_id": "123456789012345",
     "is_reply": false,
     "is_from_ad": false
@@ -724,14 +724,14 @@ For `message.failed`, adds: `error_message` (string), `error_code` (number).
 ```json
 {
   "event": "message.reply",
-  "timestamp": "2024-06-15T10:10:00",
+  "timestamp": "2026-06-15T10:10:00",
   "campaign_id": "507f1f77bcf86cd799439060",
   "campaign_name": "Summer Promo",
   "original_message": {
     "message_id": "507f1f77bcf86cd799439070",
     "contact_phone": "911234567890",
     "contact_name": "John Doe",
-    "sent_at": "2024-06-15T10:00:00"
+    "sent_at": "2026-06-15T10:00:00"
   },
   "reply": {
     "message_id": "507f1f77bcf86cd799439071",
@@ -739,7 +739,7 @@ For `message.failed`, adds: `error_message` (string), `error_code` (number).
     "contact_name": "John Doe",
     "content": "Yes, I'd like to know more!",
     "message_type": "text",
-    "timestamp": "2024-06-15T10:10:00"
+    "timestamp": "2026-06-15T10:10:00"
   }
 }
 ```

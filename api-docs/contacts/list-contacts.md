@@ -43,7 +43,7 @@ curl -X GET "https://server.waplify.io/api/v1/contacts/?page=1&limit=20&search=j
       "tags": ["vip"],
       "opted_in": true,
       "source": "api",
-      "created_at": "2024-06-15T10:00:00Z"
+      "created_at": "2026-06-15T10:00:00Z"
     }
   ],
   "total": 1,

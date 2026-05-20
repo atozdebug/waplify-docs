@@ -41,7 +41,7 @@ curl -X POST https://server.waplify.io/api/v1/campaigns/507f1f77bcf86cd799439060
   "message": "Campaign send queued and will run in background",
   "campaign_id": "507f1f77bcf86cd799439060",
   "task_id": "f5a1f9d4-2c5c-4c9f-9d1b-3e2d1a1f9d4f",
-  "timestamp": "2024-06-15T10:00:00Z"
+  "timestamp": "2026-06-15T10:00:00Z"
 }
 ```
 

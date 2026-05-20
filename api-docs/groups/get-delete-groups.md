@@ -23,7 +23,7 @@ GET /api/v1/groups/{group_id}
     "description": "High-value customers",
     "tags": ["vip"],
     "contact_count": 42,
-    "created_at": "2024-06-15T10:00:00Z"
+    "created_at": "2026-06-15T10:00:00Z"
   }
 }
 ```
@@ -123,3 +123,14 @@ curl -X DELETE https://server.waplify.io/api/v1/groups/507f1f77bcf86cd799439050/
   "contact_ids": ["507f1f77bcf86cd799439012"]
 }
 ```
+
+## Errors
+
+| Status | When |
+|--------|------|
+| 401 | Invalid or missing API key |
+| 404 | No contact group exists with the given ID |
+| 422 | Validation failed — `contact_ids` is missing or empty |
+| 429 | Rate limit exceeded |
+
+When adding contacts, IDs that are invalid or don't exist don't fail the whole request — the response reports which ones succeeded and which were skipped.

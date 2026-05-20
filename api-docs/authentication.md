@@ -64,7 +64,7 @@ When you exceed the limit, you get a `429` response:
   "error": "rate_limit_exceeded",
   "message": "Rate limit exceeded. Limit: 100 requests per minute",
   "request_id": "550e8400-e29b-41d4-a716-446655440000",
-  "timestamp": "2024-06-15T10:00:32Z"
+  "timestamp": "2026-06-15T10:00:32Z"
 }
 ```
 

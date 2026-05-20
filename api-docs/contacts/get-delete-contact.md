@@ -34,7 +34,7 @@ curl -X GET https://server.waplify.io/api/v1/contacts/507f1f77bcf86cd799439012 \
     "tags": ["vip"],
     "opted_in": true,
     "source": "api",
-    "created_at": "2024-06-15T10:00:00Z"
+    "created_at": "2026-06-15T10:00:00Z"
   }
 }
 ```
@@ -68,7 +68,10 @@ curl -X DELETE https://server.waplify.io/api/v1/contacts/507f1f77bcf86cd79943901
 
 ## Errors
 
+These apply to both the Get and Delete operations above.
+
 | Status | When |
 |--------|------|
-| 404 | Contact with the given ID does not exist |
 | 401 | Invalid or missing API key |
+| 404 | No contact exists with the given ID |
+| 429 | Rate limit exceeded |

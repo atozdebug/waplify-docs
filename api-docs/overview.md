@@ -109,7 +109,7 @@ print(response.json())
   "message_id": "wamid.HBgNOTE4MDMxMjM0NTY3OA==",
   "contact_id": "507f1f77bcf86cd799439012",
   "template_name": "hello_world",
-  "timestamp": "2024-06-15T10:00:00Z"
+  "timestamp": "2026-06-15T10:00:00Z"
 }
 ```
 
@@ -153,7 +153,7 @@ All responses return JSON. Every response includes these headers:
   "error": "bad_request",
   "message": "Human-readable error description",
   "request_id": "550e8400-e29b-41d4-a716-446655440000",
-  "timestamp": "2024-06-15T10:00:00Z"
+  "timestamp": "2026-06-15T10:00:00Z"
 }
 ```
 

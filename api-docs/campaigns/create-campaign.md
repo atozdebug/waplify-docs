@@ -201,7 +201,7 @@ curl -X POST https://server.waplify.io/api/v1/campaigns/ \
   "status_value": "draft",
   "total_contacts": 2,
   "invalid_phones": [],
-  "timestamp": "2024-06-15T10:00:00Z"
+  "timestamp": "2026-06-15T10:00:00Z"
 }
 ```
 

@@ -76,7 +76,7 @@ curl -X GET https://server.waplify.io/api/v1/templates/ \
       "variable_count": 3,
       "parameter_format": "POSITIONAL",
       "is_carousel": false,
-      "created_at": "2024-06-15T10:00:00Z"
+      "created_at": "2026-06-15T10:00:00Z"
     },
     {
       "id": "507f1f77bcf86cd799439013",
@@ -90,7 +90,7 @@ curl -X GET https://server.waplify.io/api/v1/templates/ \
       "variable_count": 1,
       "parameter_format": "POSITIONAL",
       "is_carousel": false,
-      "created_at": "2024-06-10T08:00:00Z"
+      "created_at": "2026-06-10T08:00:00Z"
     }
   ],
   "total": 2

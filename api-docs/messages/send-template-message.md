@@ -194,7 +194,7 @@ curl -X POST https://server.waplify.io/api/v1/messages/send \
       "1": "John"
     },
     "media_url": "https://example.com/invoice-june.pdf",
-    "filename": "Invoice June 2024.pdf"
+    "filename": "Invoice June 2026.pdf"
   }'
 ```
 
@@ -207,7 +207,7 @@ curl -X POST https://server.waplify.io/api/v1/messages/send \
   "message_id": "wamid.HBgNOTE4MDMxMjM0NTY3OA==",
   "contact_id": "507f1f77bcf86cd799439012",
   "template_name": "order_confirmation",
-  "timestamp": "2024-06-15T10:00:00Z"
+  "timestamp": "2026-06-15T10:00:00Z"
 }
 ```
 

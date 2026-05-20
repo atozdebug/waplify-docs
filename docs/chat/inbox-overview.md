@@ -19,17 +19,32 @@ The Waplify Inbox is where you see and manage all your WhatsApp conversations. W
 3. Click on any conversation to open it and see the full **message history**
 4. On the right, you will see the **message area** with the conversation thread
 
-### Understanding conversation status
+### Working as a team
 
-Each conversation can have one of two statuses:
+If more than one person handles your WhatsApp messages, the inbox is organized into tabs so the work can be shared:
 
-| Status | Meaning |
-|--------|---------|
-| **Open** | There is an active messaging window — you can send any message freely |
-| **Closed** | The 24-hour window has expired — you can only send approved template messages |
+- **Mine** — conversations assigned to you
+- **Unassigned** — conversations waiting for someone to pick them up
+- **Open** — conversations your teammates are handling
+- **Resolved** — conversations marked as finished
+
+You can **assign** a conversation to a teammate, **resolve** it when it's done, and **reopen** it later. For the full workflow, see [Working as a Team in the Inbox](./team-inbox.md).
+
+If your inbox shows only **Inbox** and **Resolved** tabs, your workspace is using the Simple layout — an owner or admin can change this in [Inbox Style & Auto-Assignment](../team/inbox-setup.md).
+
+### Understanding the messaging window
+
+WhatsApp lets you send free-form messages only within a **24-hour window** after the customer's last message. Each conversation shows where it stands:
+
+| Window | What it means |
+|--------|---------------|
+| **Open** | The 24-hour window is active — you can send any message freely |
+| **Closed** | The window has expired — you can only send approved template messages |
+
+A colored ring next to the customer's name counts down the time remaining in the window.
 
 :::info
-WhatsApp allows free-form messaging only within a **24-hour window** after the customer's last message. After that, you need to use a template message to restart the conversation.
+The 24-hour window is a WhatsApp policy, not a Waplify limitation. After it closes, you need an approved template message to restart the conversation.
 :::
 
 ### Searching for conversations
@@ -57,7 +72,7 @@ Yes. New messages appear in real time in the inbox. If you have the Waplify tab 
 
 ### Can multiple team members use the inbox?
 
-Yes. If you have team members with the right permissions, they can all access the inbox and respond to conversations.
+Yes. Team members can share the inbox, with conversations assigned to specific people so no two agents reply to the same customer. See [Working as a Team in the Inbox](./team-inbox.md) and [Roles & Permissions](../team/roles-and-permissions.md).
 
 ### What is the 24-hour messaging window?
 
