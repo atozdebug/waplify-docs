@@ -21,7 +21,31 @@ Quick Responses are pre-written message templates you can use in the chat inbox.
    - **Message** — the actual text you want to send
    - **Type** — choose text, image, video, audio, or document
 4. If you chose a media type, upload the media file
-5. Click **Save**
+5. For a **text** quick response, you can optionally add **buttons** — see [Adding buttons](#adding-buttons-to-a-quick-response) below
+6. Click **Save**
+
+### Adding buttons to a quick response
+
+A **text** quick response can include tappable buttons, just like the buttons on campaign messages. They're a simple way to guide a customer to the next step.
+
+You can add **one** of these (not both):
+
+- **Up to 3 reply buttons** — the customer taps one and their choice comes straight back to you as a reply (for example: *Yes* / *No*)
+- **One website button** — opens a link you choose (for example: *Visit our store*)
+
+To add buttons:
+
+1. Create or edit a **text** quick response
+2. In the **Buttons** section, click **Add a button**
+<!-- screenshot: Buttons section of the quick response editor -->
+3. Choose **Custom reply** for reply buttons, or **Visit website** for a website button
+4. Type a short button label (up to 20 characters)
+5. For a website button, also enter the full web address (starting with `https://`)
+6. Check the live **Preview** to see how the message will look, then click **Save**
+
+:::note
+Buttons can only be added to **text** quick responses. When a quick response has buttons, its message text is limited to 1,024 characters.
+:::
 
 ### Using quick responses in chat
 
@@ -29,8 +53,11 @@ Quick Responses are pre-written message templates you can use in the chat inbox.
 2. In the message input area, click the **Quick Response** icon
 <!-- screenshot: Quick Response picker in chat -->
 3. Browse or search for the response you want
-4. Click on it to insert the text into the message input
-5. Edit if needed, then send
+4. Click on it. What happens next depends on the quick response:
+   - **Text** — the message drops into the input box, ready for you to edit and send
+   - **Image, video, or document** — a window opens so you can add or change the caption before sending
+   - **With buttons** — a confirmation window opens showing the message and its buttons; review it (edit the text if you like), then click **Send**
+5. A quick response is **never sent automatically** — you always review it first
 
 ### Editing or deleting a quick response
 
@@ -64,6 +91,10 @@ No. Quick responses are only for one-on-one chat conversations. For campaigns, y
 ### Can I include images or documents in a quick response?
 
 Yes. When creating a quick response, you can choose a type other than text and upload media. This makes it easy to send product images, PDF menus, or other files with a single click.
+
+### Can I add buttons to a quick response?
+
+Yes. A text quick response can include up to 3 reply buttons (the customer taps to reply instantly) or one website button (opens a link). When you use it in chat, a confirmation window lets you review the message and buttons before sending. See [Adding buttons](#adding-buttons-to-a-quick-response) above.
 
 ### Can I search for a quick response?
 

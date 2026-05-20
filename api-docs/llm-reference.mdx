@@ -118,6 +118,7 @@ Send a text or media message without a template. Only works within 24-hour windo
 | `caption` | No | Caption for image/video/document |
 | `filename` | No | For document type |
 | `waba_phone_id` | No | Defaults to user's primary number |
+| `buttons` | No | Interactive buttons object — `text` only. See below |
 
 **Response (200):**
 ```json
@@ -136,6 +137,25 @@ Send a text or media message without a template. Only works within 24-hour windo
 **Note:** 403 errors use `detail` field: `{"detail": "Cannot send free-form message: ..."}`
 
 **Media limits:** Image 5MB (JPEG/PNG), Video 16MB (MP4), Audio 16MB (AAC/MP3/M4A/AMR/OGG), Document 100MB (PDF/DOC/DOCX/PPT/PPTX/TXT)
+
+**Interactive buttons:** Add a `buttons` object to a `text` message — up to 3 reply buttons OR one website button (never both). Requires `message_type: text`, `message` ≤ 1,024 chars, and an open 24-hour window.
+
+```json
+{
+  "contact_phone": "911234567890",
+  "message_type": "text",
+  "message": "Did this answer your question?",
+  "buttons": {
+    "type": "reply",
+    "reply_buttons": [
+      { "id": "yes", "title": "Yes, thanks" },
+      { "id": "no", "title": "No, I need help" }
+    ]
+  }
+}
+```
+
+`buttons.type`: `reply` → `reply_buttons[]` of `{ id, title }` (1–3 items; `title` ≤ 20 chars, unique). `cta_url` → `url_button` of `{ display_text, url }` (`display_text` ≤ 20 chars; `url` must start with `http(s)://`).
 
 ---
 
