@@ -1,6 +1,6 @@
 {
   "label": "Automation",
-  "position": 7,
+  "position": 8,
   "link": {
     "type": "generated-index",
     "description": "Build automated WhatsApp conversation flows with a visual drag-and-drop builder."

@@ -12,6 +12,7 @@ Waplify is a WhatsApp marketing and automation platform built for small business
 ## What can you do with Waplify?
 
 - **Send WhatsApp Broadcasts** — Reach thousands of customers with personalized messages
+- **Run Drip Sequences** — Follow up automatically with a series of messages over days or weeks
 - **Automate Conversations** — Set up chatbots and auto-replies that work 24/7
 - **Manage Contacts** — Import, organize, and segment your audience
 - **Create Templates** — Build WhatsApp-approved message templates
@@ -37,6 +38,7 @@ New to Waplify? Follow these steps to get up and running:
 | [**Contacts**](./contacts/managing-contacts.md) | Add, import, organize, and segment your audience |
 | [**Message Templates**](./templates/message-templates.md) | Create and manage WhatsApp-approved templates |
 | [**Campaigns**](./campaigns/creating-campaigns.md) | Send broadcasts, schedule messages, track delivery |
+| [**Sequences**](./sequences/what-are-sequences.md) | Automate multi-step WhatsApp follow-ups over days or weeks |
 | [**Chat & Inbox**](./chat/inbox-overview.md) | Real-time one-on-one messaging with customers |
 | [**Automation**](./automation/conversational-flows.md) | Build chatbot flows with a visual drag-and-drop builder |
 | [**Team Management**](./team/managing-your-team.md) | Invite members and assign roles |
