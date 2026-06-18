@@ -160,6 +160,85 @@ Fires when a contact replies to one of your outbound messages: `message.reply`.
 
 ---
 
+## Conversation assignment events
+
+Fire when the ownership of a chat changes: `conversation.assigned`, `conversation.unassigned`, `conversation.resolved`, `conversation.reopened`. They share one payload shape (with an `actor` describing who or what made the change), so a CRM can keep its own "who's handling this lead" view in sync.
+
+```json
+{
+  "event": "conversation.assigned",
+  "timestamp": "2026-06-17T10:05:00.123456+00:00",
+  "conversation": {
+    "contact_phone": "911234567890",
+    "waba_phone_id": "123456789012345",
+    "status": "open",
+    "assigned_to": "507f1f77bcf86cd799439011",
+    "assigned_to_name": "Priya Sharma",
+    "previous_assignee_id": "507f1f77bcf86cd799439022",
+    "previous_assignee_name": "Rahul Verma",
+    "is_reassignment": true,
+    "note": "Escalated from tier 1",
+    "reason": null,
+    "actor": {
+      "user_id": "507f1f77bcf86cd799439033",
+      "name": "Anita Desai",
+      "source": "manual"
+    }
+  }
+}
+```
+
+### Fields
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `event` | string | `conversation.assigned`, `conversation.unassigned`, `conversation.resolved`, or `conversation.reopened` |
+| `timestamp` | string | ISO 8601 timestamp, UTC with a `+00:00` offset |
+| `conversation.contact_phone` | string | The customer's phone number (digits only). Identifies the conversation. |
+| `conversation.waba_phone_id` | string \| null | The WhatsApp number that owns this conversation |
+| `conversation.status` | string \| null | Conversation status at the time of the event (`open` / `resolved`) |
+| `conversation.assigned_to` | string \| null | `user_id` of the agent the chat is now assigned to (`null` for unassigned) |
+| `conversation.assigned_to_name` | string \| null | Display name of the new assignee |
+| `conversation.previous_assignee_id` | string \| null | `user_id` of the prior assignee (for reassignments / unassign) |
+| `conversation.previous_assignee_name` | string \| null | Display name of the prior assignee |
+| `conversation.is_reassignment` | boolean | `true` when an already-assigned chat moved to a different agent |
+| `conversation.note` | string \| null | Free-text handoff note, when one was provided |
+| `conversation.reason` | string \| null | Optional reason (e.g. on resolve) |
+| `conversation.actor` | object | Who or what made the change — see below |
+
+### The `actor` object
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `actor.user_id` | string \| null | The acting user's ID. For automatic changes this is literally the string `"system"`. |
+| `actor.name` | string \| null | Human-readable actor name (e.g. the agent's name, or `System (round-robin)`) |
+| `actor.source` | string | Where the change came from — use this to suppress echo loops |
+
+`actor.source` values:
+
+| Source | Meaning |
+|--------|---------|
+| `manual` | Someone changed it from the inbox |
+| `api` | Changed via the [assignment API](/api/conversations/assign-conversation) |
+| `auto_reply` | Auto-assigned to an agent when they sent the first reply |
+| `auto_inbound` | Auto-assigned by round-robin routing on an inbound message |
+| `auto_reopen` | A resolved chat was reopened automatically by a customer reply |
+
+### When each event fires
+
+| Event | Fires when |
+|-------|------------|
+| `conversation.assigned` | A chat is assigned or reassigned to an agent (manually, via the API, or by auto-routing) |
+| `conversation.unassigned` | A chat is released back to the unassigned pool |
+| `conversation.resolved` | A chat is marked resolved |
+| `conversation.reopened` | A resolved chat is reopened — manually, via the API, or automatically when the customer replies |
+
+:::note Timestamp format
+`conversation.*` timestamps are timezone-aware and carry a `+00:00` offset. The `message.*` payloads above use a naive UTC timestamp with no offset — treat both as UTC.
+:::
+
+---
+
 ## Test event
 
 Sent when you click **Test** in the dashboard: `webhook.test`.

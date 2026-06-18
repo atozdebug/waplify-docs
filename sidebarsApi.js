@@ -55,6 +55,17 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Conversations & Assignment',
+      items: [
+        'conversations/list-agents',
+        'conversations/assign-conversation',
+        'conversations/unassign-conversation',
+        'conversations/reopen-conversation',
+        'conversations/get-assignment-state',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Webhooks',
       items: [
         'webhooks/overview',

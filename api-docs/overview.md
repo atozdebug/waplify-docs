@@ -34,7 +34,8 @@ https://server.waplify.io/api/v1/messages/send
 | [**Campaigns**](./campaigns/create-campaign.md) | Create bulk broadcasts, send them in the background, and track delivery stats |
 | [**Manage Contacts**](./contacts/list-contacts.md) | Create, list, get, and delete contacts |
 | [**Manage Groups**](./groups/list-create-groups.md) | Create and manage contact groups |
-| [**Webhooks**](./webhooks/overview.md) | Receive real-time notifications for message events |
+| [**Conversations & Assignment**](./conversations/list-agents.md) | List your agents and assign, unassign, or reopen the conversation behind a contact |
+| [**Webhooks**](./webhooks/overview.md) | Receive real-time notifications for message and conversation events |
 
 ## Quick start
 

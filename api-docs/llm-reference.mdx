@@ -672,6 +672,190 @@ Contacts are NOT deleted from your account — only removed from this group.
 
 ---
 
+## 20. List Agents
+
+List the team members you can assign conversations to. Returns each agent's `user_id` (used by endpoint 21).
+
+**GET** `/api/v1/agents/` *(keep the trailing slash)*
+
+| Param | Default | Description |
+|-------|---------|-------------|
+| `page` | 1 | Page number |
+| `limit` | 50 | Per page (max 100) |
+| `role` | — | Filter: `owner`, `admin`, `manager`, `agent` |
+| `status` | `active` | Filter: `active` or `deactivated` |
+| `search` | — | Match name or email |
+
+**Response (200):**
+```json
+{
+  "status": "success",
+  "agents": [
+    {
+      "user_id": "665f1c2e8a1b2c3d4e5f6a7b",
+      "full_name": "Priya Sharma",
+      "email": "priya@acme.com",
+      "role": "agent",
+      "status": "active"
+    }
+  ],
+  "total": 1,
+  "page": 1,
+  "limit": 50
+}
+```
+
+**Errors:** 400 (invalid `role`/`status`, or no organisation on the key), 401 (invalid key), 429 (rate limit)
+
+---
+
+## 21. Assign Conversation
+
+Assign or reassign the conversation behind a contact to an agent. Assignment belongs to the conversation (your WhatsApp number + the contact's phone), not the contact record.
+
+**POST** `/api/v1/conversations/{contact_phone}/assign`
+
+`contact_phone` is digits only, no `+`.
+
+**Request:**
+```json
+{
+  "user_id": "665f1c2e8a1b2c3d4e5f6a7b",
+  "note": "VIP lead from website form",
+  "waba_phone_id": "123456789012345"
+}
+```
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| `user_id` | Yes | Agent to assign to (from endpoint 20). Must be an active org member. |
+| `note` | No | Handoff note (max 2000 chars), recorded on reassignment |
+| `waba_phone_id` | No | Disambiguates which WhatsApp number's conversation, for multi-number accounts |
+
+**Response (200):**
+```json
+{
+  "status": "success",
+  "message": "Conversation assigned to Priya Sharma.",
+  "data": {
+    "phone_number": "12125551234",
+    "waba_phone_id": "123456789012345",
+    "status": null,
+    "assigned_to": "665f1c2e8a1b2c3d4e5f6a7b",
+    "assigned_to_name": "Priya Sharma",
+    "assigned_at": "2026-06-17T09:30:00.123456+00:00",
+    "is_reassignment": false,
+    "previous_assignee_id": null,
+    "previous_assignee_name": null,
+    "note": null,
+    "no_op": null
+  }
+}
+```
+
+- On a reassignment, `is_reassignment` is `true` and `previous_assignee_id`/`previous_assignee_name`/`note` are populated.
+- Assigning the same agent again is a no-op: `data.no_op: true`, nothing changes.
+- `data.status` is not populated here — use endpoint 24 for the live `open`/`resolved` status.
+- Fires a `conversation.assigned` webhook with `actor.source: "api"`.
+
+**Errors:** 400 (conversation is resolved — reopen first; invalid phone/`user_id`; no WhatsApp number configured), 401 (invalid key), 403 (`waba_phone_id` not in your org), 404 (`user_id` not an active org member), 422 (missing `user_id`), 429 (rate limit)
+
+---
+
+## 22. Unassign Conversation
+
+Release a conversation back to the unassigned pool. Idempotent.
+
+**POST** `/api/v1/conversations/{contact_phone}/unassign`
+
+Body optional: `{ "waba_phone_id": "..." }`.
+
+**Response (200):**
+```json
+{
+  "status": "success",
+  "message": "Conversation unassigned.",
+  "data": {
+    "phone_number": "12125551234",
+    "waba_phone_id": "123456789012345",
+    "status": null,
+    "assigned_to": null,
+    "assigned_to_name": null,
+    "assigned_at": null,
+    "is_reassignment": null,
+    "previous_assignee_id": null,
+    "previous_assignee_name": null,
+    "note": null,
+    "no_op": null
+  }
+}
+```
+
+Fires a `conversation.unassigned` webhook. **Errors:** 400 (invalid phone, no WhatsApp number), 401, 403 (`waba_phone_id` not in your org), 429
+
+---
+
+## 23. Reopen Conversation
+
+Reopen a resolved conversation. The API key's account becomes the new owner. Idempotent (reopening an open chat is a no-op, not an error). This is how you clear the `400` from endpoint 21 on a resolved chat.
+
+**POST** `/api/v1/conversations/{contact_phone}/reopen`
+
+Body optional: `{ "waba_phone_id": "..." }`.
+
+**Response (200):**
+```json
+{
+  "status": "success",
+  "message": "Conversation reopened.",
+  "data": {
+    "phone_number": "12125551234",
+    "waba_phone_id": "123456789012345",
+    "status": "open",
+    "assigned_to": "701a2b3c4d5e6f7a8b9c0d1e",
+    "assigned_to_name": "API Key Owner",
+    "assigned_at": null,
+    "is_reassignment": null,
+    "previous_assignee_id": null,
+    "previous_assignee_name": null,
+    "note": null,
+    "no_op": null
+  }
+}
+```
+
+Fires a `conversation.reopened` webhook. **Errors:** 400 (invalid phone, no WhatsApp number), 401, 403 (`waba_phone_id` not in your org), 429
+
+---
+
+## 24. Get Assignment State
+
+Read the current owner and status of a contact's conversation (read-before-write). Never returns 404 — a contact with no chat thread yet returns `has_conversation: false`.
+
+**GET** `/api/v1/conversations/{contact_phone}/assignment`
+
+Optional query param `waba_phone_id` (a query param here, not a body field).
+
+**Response (200):**
+```json
+{
+  "status": "success",
+  "data": {
+    "phone_number": "12125551234",
+    "waba_phone_id": "123456789012345",
+    "has_conversation": true,
+    "status": "open",
+    "assigned_to": "665f1c2e8a1b2c3d4e5f6a7b",
+    "assigned_to_name": "Priya Sharma",
+    "assigned_at": "2026-06-17T09:30:00.123456+00:00"
+  }
+}
+```
+
+When no thread exists yet, `has_conversation` is `false` and `status`/`assigned_*` are `null`. **Errors:** 400 (invalid phone), 401, 403 (`waba_phone_id` not in your org), 429
+
+---
+
 ## Webhooks
 
 ### Configuration
@@ -697,6 +881,10 @@ Register endpoints at **Developers > Webhooks** in the dashboard.
 | `button.clicked` | Button interaction |
 | `message.received` | New inbound message |
 | `message.reply` | Reply to your outbound message |
+| `conversation.assigned` | Chat assigned/reassigned to an agent |
+| `conversation.unassigned` | Chat released to the unassigned pool |
+| `conversation.resolved` | Chat marked resolved |
+| `conversation.reopened` | Resolved chat reopened |
 
 ### Payload — Message Status
 
@@ -763,6 +951,36 @@ For `message.failed`, adds: `error_message` (string), `error_code` (number).
   }
 }
 ```
+
+### Payload — Conversation Assignment
+
+Shared by `conversation.assigned`, `conversation.unassigned`, `conversation.resolved`, `conversation.reopened`. Timestamps are tz-aware (`+00:00`), unlike the message payloads above.
+
+```json
+{
+  "event": "conversation.assigned",
+  "timestamp": "2026-06-17T10:05:00.123456+00:00",
+  "conversation": {
+    "contact_phone": "911234567890",
+    "waba_phone_id": "123456789012345",
+    "status": "open",
+    "assigned_to": "507f1f77bcf86cd799439011",
+    "assigned_to_name": "Priya Sharma",
+    "previous_assignee_id": "507f1f77bcf86cd799439022",
+    "previous_assignee_name": "Rahul Verma",
+    "is_reassignment": true,
+    "note": "Escalated from tier 1",
+    "reason": null,
+    "actor": {
+      "user_id": "507f1f77bcf86cd799439033",
+      "name": "Anita Desai",
+      "source": "manual"
+    }
+  }
+}
+```
+
+`actor.source` is one of `manual` (inbox), `api` (assignment API), `auto_reply`, `auto_inbound` (round-robin), `auto_reopen` (customer reply). For automatic changes `actor.user_id` is the literal string `"system"`. Use `actor.source` to avoid echo loops when your CRM writes assignments back via the API.
 
 ### Signature Verification
 

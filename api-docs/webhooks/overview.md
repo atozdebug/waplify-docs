@@ -41,6 +41,12 @@ Webhooks let you receive real-time HTTP notifications on your server whenever so
 | `button.clicked` | Recipient clicked a quick-reply or call-to-action button |
 | `message.received` | New inbound message from a contact |
 | `message.reply` | Contact replied to one of your outbound messages |
+| `conversation.assigned` | A chat was assigned or reassigned to an agent |
+| `conversation.unassigned` | A chat was released back to the unassigned pool |
+| `conversation.resolved` | A chat was marked resolved |
+| `conversation.reopened` | A resolved chat was reopened |
+
+The `conversation.*` events let your CRM mirror who is handling each chat. They fire no matter how the change happened — from the inbox, from the [assignment API](/api/conversations/assign-conversation), or from automatic routing — so check `conversation.actor.source` to avoid echo loops when your CRM is the one writing the change back. See [Webhook Events](./events.md) for the payload.
 
 ## Delivery behavior
 
