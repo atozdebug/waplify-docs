@@ -31,7 +31,7 @@ Waplify lets you invite team members to your workspace so multiple people can ma
    - **Manager** — runs campaigns, contacts, and templates, and replies to chats
    - **Agent** — handles customer chats in the inbox
    - For a full breakdown, see [Roles & Permissions](./roles-and-permissions.md)
-4. If you chose **Agent**, set their **view scope** — all conversations, or only the ones assigned to them
+4. If you chose **Agent**, set their **view scope** — *All conversations*, *Assigned + unassigned* (default, includes the shared queue), or *Only their assigned chats* (strictest — they see only their own). See [Roles & Permissions](./roles-and-permissions.md#agent-view-scope) for details
 5. Click **Send Invitation**
 6. The person will receive an email with a link to join your workspace
 

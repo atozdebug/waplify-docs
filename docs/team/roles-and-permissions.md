@@ -111,7 +111,7 @@ Not sure? Start with the **lowest** role that could plausibly do the job. You ca
 **Who it's for:** customer-support representatives who spend most of their day in the chat inbox.
 
 **Can do:**
-- View customer chats — either all conversations or only their assigned ones, depending on their **view scope** (see below)
+- View customer chats — how much they see depends on their **view scope**: all conversations, their assigned chats plus the unassigned queue, or only their assigned chats (see below)
 - Reply to chats (send WhatsApp messages to customers)
 - View the contact list
 - Create a new contact (useful when a customer messages for the first time)
@@ -134,14 +134,17 @@ Not sure? Start with the **lowest** role that could plausibly do the job. You ca
 
 #### Agent view scope
 
-Agents have one extra setting the other roles don't: a **view scope** that controls how much of the inbox they see.
+Agents have one extra setting the other roles don't: a **view scope** that controls how much of the inbox they see. There are three options:
 
 | View scope | What the agent sees |
 |------------|---------------------|
-| **Assigned** (default) | Only conversations assigned to them, plus the **Unassigned** queue so they can pick up new chats |
-| **All** | Every conversation in the workspace, like the rest of the team |
+| **All conversations** | Every conversation in the workspace, like the rest of the team |
+| **Assigned + unassigned** (default) | Conversations assigned to them, plus the **Unassigned** queue so they can pick up new chats |
+| **Only their assigned chats** | Just the conversations assigned to them — no unassigned queue, and nothing assigned to other agents |
 
-You choose this when inviting an agent, and you can change it any time from the **Team** page using the **View scope** toggle on the agent's row. Owners, Admins, and Managers always see all conversations — view scope applies only to Agents. See [Working as a Team in the Inbox](../chat/team-inbox.md).
+Pick **Only their assigned chats** when you want an agent to focus strictly on their own customers and never see the rest of the team's conversations. With this scope the **Unassigned** tab is hidden, and the agent can't open, search, or reply to a chat that isn't theirs.
+
+You choose the scope when inviting an agent, and you can change it any time from the **Team** page using the **View scope** dropdown on the agent's row. The agent picks up the change the next time they refresh or sign in. Owners, Admins, and Managers always see all conversations — view scope applies only to Agents. See [Working as a Team in the Inbox](../chat/team-inbox.md).
 
 ## Full capability matrix
 
@@ -204,7 +207,8 @@ Each row in the matrix falls into one of these categories:
 2. Click **Invite Member** in the top-right.
 3. Enter the person's email address.
 4. Pick a role from the dropdown — Admin, Manager, or Agent. You'll see a short summary of that role's capabilities below the dropdown.
-5. Click **Send Invite**.
+5. If you picked **Agent**, choose a **view scope** — *All conversations*, *Assigned + unassigned* (default), or *Only their assigned chats*. See [Agent view scope](#agent-view-scope) above.
+6. Click **Send Invite**.
 
 The invited person receives an email with a link. When they click it, they can either:
 - sign up with a new password (if they don't have a Waplify account), or
@@ -297,7 +301,13 @@ No. Bulk imports and exports are a Manager-and-above action.
 
 ### Can I limit an agent to only their own chats?
 
-Yes. Each agent has a **view scope** setting. Leave it on **Assigned** (the default) and the agent sees only the conversations assigned to them plus the unassigned queue; switch it to **All** and they see every conversation. Set it from the Team page. Owners, admins, and managers always see everything.
+Yes. Each agent has a **view scope** setting with three options:
+
+- **All conversations** — they see everything, like the rest of the team.
+- **Assigned + unassigned** (default) — they see their own chats plus the shared unassigned queue, so they can pick up new customers.
+- **Only their assigned chats** — they see *only* the conversations assigned to them. No unassigned queue, and nothing belonging to other agents.
+
+Pick **Only their assigned chats** for the strictest setting — the Unassigned tab is hidden and the agent can't open or reply to anyone else's chat. Set or change it from the Team page. Owners, admins, and managers always see everything.
 
 ### Does changing a role take effect immediately?
 
