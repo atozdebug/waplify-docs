@@ -37,6 +37,24 @@ https://server.waplify.io/api/v1/messages/send
 | [**Conversations & Assignment**](./conversations/list-agents.md) | List your agents and assign, unassign, or reopen the conversation behind a contact |
 | [**Webhooks**](./webhooks/overview.md) | Receive real-time notifications for message and conversation events |
 
+## Postman collection
+
+Prefer a visual tool over the command line? Download our ready-made **Postman collection** — every endpoint is included and pre-configured with the base URL and Bearer authentication, so you can start sending real requests in a couple of minutes.
+
+<a className="button button--primary button--lg" href="/files/Waplify_Public_API_v1.postman_collection.json" download>
+  Download Postman collection
+</a>
+
+### Run it in Postman
+
+1. **Import the collection.** In Postman, click **Import**, then either drop in the file you downloaded or choose **Link** and paste `https://docs.waplify.io/files/Waplify_Public_API_v1.postman_collection.json`.
+2. **Add your API key.** Open the **Waplify Public API v1** collection, go to the **Variables** tab, set `api_key` to the key you created under **Developers → API** in the [dashboard](https://app.waplify.io), and click **Save**. The `base_url` variable is already set to `https://server.waplify.io`.
+3. **Send a request.** Authentication is applied at the collection level, so every request automatically uses your key. Open any request — for example one in the **Messages** folder — and click **Send**.
+
+:::tip
+Treat your API key like a password. If it ever leaks, revoke it from **Developers → API** and create a new one.
+:::
+
 ## Quick start
 
 ### 1. Get your API key
@@ -45,7 +63,7 @@ Go to **Developers > API** in your [Waplify dashboard](https://app.waplify.io) a
 
 ### 2. Send your first message
 
-The examples below use `curl` (a command-line tool that comes with most computers). You can also use tools like [Postman](https://www.postman.com/), or any programming language — JavaScript, Python, PHP, etc.
+The examples below use `curl` (a command-line tool that comes with most computers). You can also use tools like [Postman](#postman-collection) (we provide a ready-made collection), or any programming language — JavaScript, Python, PHP, etc.
 
 **Using curl:**
 

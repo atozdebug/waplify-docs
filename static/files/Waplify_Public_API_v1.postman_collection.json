@@ -1,0 +1,1389 @@
+{
+	"info": {
+		"_postman_id": "waplify-public-api-v1",
+		"name": "Waplify Public API v1",
+		"description": "Public API endpoints for Waplify WhatsApp bulk messaging platform.\n\n**Authentication:** All endpoints require a Bearer token in the Authorization header.\n```\nAuthorization: Bearer wapl_your_api_key_here\n```\n\n**Rate Limiting:** Rate limits are enforced per API key. Check response headers:\n- `X-RateLimit-Limit`\n- `X-RateLimit-Remaining`\n- `X-RateLimit-Reset`\n\n**Base URL:** Replace `{{base_url}}` with your server URL (e.g., `https://api.yourdomain.com`).",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{api_key}}",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://server.waplify.io",
+			"type": "string"
+		},
+		{
+			"key": "api_key",
+			"value": "wapl_your_api_key_here",
+			"type": "string"
+		}
+	],
+	"item": [
+		{
+			"name": "Messages",
+			"description": "Endpoints for sending WhatsApp messages",
+			"item": [
+				{
+					"name": "Send Template Message",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Request-ID",
+								"value": "{{$guid}}",
+								"description": "Optional: Custom request ID for tracing",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"template_name\": \"order_confirmation\",\n    \"contact_phone\": \"911234567890\",\n    \"contact_name\": \"John Doe\",\n    \"body_data\": {\n        \"1\": \"John\",\n        \"2\": \"Premium Plan\",\n        \"3\": \"$99\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/messages/send",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"messages",
+								"send"
+							]
+						},
+						"description": "Send a WhatsApp message using an approved template.\n\n**Authentication:** Bearer token in Authorization header (inherited from collection).\n\n**Required fields:**\n- `template_name` — Name of an existing approved template\n- `contact_phone` — Destination phone number with country code (e.g., 911234567890)\n\n**Optional fields:**\n- `contact_name` — Name of the contact\n- `body_data` — Body template variables as key-value pairs\n- `header_data` — Header template variables (for TEXT headers with variables)\n- `media_url` — Publicly accessible URL for media (required if template has a media header)\n- `filename` — Filename for document templates (defaults to 'untitled')\n- `waba_phone_id` — WhatsApp Business Account phone ID to use\n\n**Error codes:** 400, 401, 404, 429, 500"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"status": "OK",
+							"code": 200,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "550e8400-e29b-41d4-a716-446655440000"
+								},
+								{
+									"key": "API-Version",
+									"value": "v1"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								}
+							],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Message sent successfully\",\n    \"message_id\": \"wamid.HBgNOTE...\",\n    \"contact_id\": \"507f1f77bcf86cd799439012\",\n    \"template_name\": \"order_confirmation\",\n    \"timestamp\": \"2024-06-15T10:00:00Z\"\n}"
+						},
+						{
+							"name": "Template Not Found",
+							"status": "Not Found",
+							"code": 404,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"body": "{\n    \"detail\": \"Template 'order_confirmation' not found or does not belong to your account\"\n}"
+						},
+						{
+							"name": "Rate Limit Exceeded",
+							"status": "Too Many Requests",
+							"code": 429,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "0"
+								}
+							],
+							"body": "{\n    \"detail\": \"Rate limit exceeded. Limit: 100 requests per minute\"\n}"
+						},
+						{
+							"name": "Unauthorized",
+							"status": "Unauthorized",
+							"code": 401,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"body": "{\n    \"detail\": \"Not authenticated\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Send Template Message (with header variables)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"template_name\": \"head_test\",\n    \"contact_phone\": \"911234567890\",\n    \"contact_name\": \"John Doe\",\n    \"header_data\": {\n        \"1\": \"Daily Checkup\"\n    },\n    \"body_data\": {\n        \"1\": \"Rahul\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/messages/send",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"messages",
+								"send"
+							]
+						},
+						"description": "Send a template message where the header has its own variables separate from the body.\n\nUse `header_data` for TEXT header variables and `body_data` for body variables."
+					},
+					"response": []
+				},
+				{
+					"name": "Send Template Message (IMAGE header)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"template_name\": \"promo_image\",\n    \"contact_phone\": \"911234567890\",\n    \"contact_name\": \"John Doe\",\n    \"body_data\": {\n        \"1\": \"John\",\n        \"2\": \"50%\"\n    },\n    \"media_url\": \"http://app.waplify.io/logo.png\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/messages/send",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"messages",
+								"send"
+							]
+						},
+						"description": "Send a template message with an IMAGE header. Provide `media_url` for the image. No `header_data` needed."
+					},
+					"response": []
+				},
+				{
+					"name": "Send Template Message (VIDEO header)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"template_name\": \"product_video\",\n    \"contact_phone\": \"911234567890\",\n    \"contact_name\": \"John Doe\",\n    \"body_data\": {\n        \"1\": \"John\"\n    },\n    \"media_url\": \"https://disk.sample.cat/samples/mp4/1416529-sd_640_360_30fps.mp4\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/messages/send",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"messages",
+								"send"
+							]
+						},
+						"description": "Send a template message with a VIDEO header. Provide `media_url` for the video."
+					},
+					"response": []
+				},
+				{
+					"name": "Send Template Message (DOCUMENT header with filename)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"template_name\": \"doc_temp\",\n    \"contact_phone\": \"911234567890\",\n    \"contact_name\": \"John Doe\",\n    \"body_data\": {\n        \"1\": \"John\"\n    },\n    \"media_url\": \"https://sample-files.com/downloads/documents/pdf/basic-text.pdf\",\n    \"filename\": \"Special Report.pdf\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/messages/send",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"messages",
+								"send"
+							]
+						},
+						"description": "Send a template message with a DOCUMENT header. Provide `media_url` for the document and optionally `filename` (defaults to 'untitled')."
+					},
+					"response": []
+				},
+				{
+					"name": "Send Free-Form Message (Text)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Request-ID",
+								"value": "{{$guid}}",
+								"description": "Optional: Custom request ID for tracing",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"contact_phone\": \"911234567890\",\n    \"contact_name\": \"John Doe\",\n    \"message_type\": \"text\",\n    \"message\": \"Hello! How can I help you today?\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/messages/send-message",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"messages",
+								"send-message"
+							]
+						},
+						"description": "Send a free-form text WhatsApp message (no template required).\n\n**Important:** Free-form messages can only be sent within the 24-hour customer service window. If the contact has not messaged you in the last 24 hours, this endpoint returns 403.\n\n**Required fields:**\n- `contact_phone` � Destination phone number with country code\n- `message_type` � `\"text\"`\n- `message` � Text message body (max 4096 chars)\n\n**Optional fields:**\n- `contact_name` � Name of the contact\n- `waba_phone_id` � WhatsApp Business Account phone ID\n\n**Error codes:** 400, 401, 403, 429, 500"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"status": "OK",
+							"code": 200,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "550e8400-e29b-41d4-a716-446655440000"
+								},
+								{
+									"key": "API-Version",
+									"value": "v1"
+								}
+							],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Message sent successfully\",\n    \"message_id\": \"wamid.HBgNOTE...\",\n    \"contact_id\": \"507f1f77bcf86cd799439012\",\n    \"message_type\": \"text\",\n    \"timestamp\": \"2024-06-15T10:00:00Z\"\n}"
+						},
+						{
+							"name": "24h Window Not Open",
+							"status": "Forbidden",
+							"code": 403,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"body": "{\n    \"detail\": \"Cannot send free-form message: No inbound message found from this contact. The 24-hour customer service window is not open. Use the template-based /send endpoint instead.\"\n}"
+						},
+						{
+							"name": "24h Window Expired",
+							"status": "Forbidden",
+							"code": 403,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"body": "{\n    \"detail\": \"Cannot send free-form message: The 24-hour customer service window has expired. Last inbound message was at 2024-06-14T08:00:00+00:00. Use the template-based /send endpoint instead.\"\n}"
+						},
+						{
+							"name": "Unauthorized",
+							"status": "Unauthorized",
+							"code": 401,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"body": "{\n    \"detail\": \"Not authenticated\"\n}"
+						},
+						{
+							"name": "Rate Limit Exceeded",
+							"status": "Too Many Requests",
+							"code": 429,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "0"
+								}
+							],
+							"body": "{\n    \"detail\": \"Rate limit exceeded. Limit: 100 requests per minute\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Send Free-Form Message (Image)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"contact_phone\": \"911234567890\",\n    \"contact_name\": \"John Doe\",\n    \"message_type\": \"image\",\n    \"media_url\": \"http://app.waplify.io/logo.png\",\n    \"caption\": \"Here is your invoice\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/messages/send-message",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"messages",
+								"send-message"
+							]
+						},
+						"description": "Send a free-form image message with optional caption.\n\n**Required fields:**\n- `contact_phone`, `message_type` (`\"image\"`), `media_url`\n\n**Optional fields:**\n- `contact_name`, `caption` (max 1024 chars), `waba_phone_id`\n\n**Note:** Returns 403 if the 24-hour customer service window is not open."
+					},
+					"response": []
+				},
+				{
+					"name": "Send Free-Form Message (Video)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"contact_phone\": \"911234567890\",\n    \"contact_name\": \"John Doe\",\n    \"message_type\": \"video\",\n    \"media_url\": \"https://disk.sample.cat/samples/mp4/1416529-sd_640_360_30fps.mp4\",\n    \"caption\": \"Watch this tutorial\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/messages/send-message",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"messages",
+								"send-message"
+							]
+						},
+						"description": "Send a free-form video message with optional caption.\n\n**Required fields:**\n- `contact_phone`, `message_type` (`\"video\"`), `media_url`\n\n**Optional fields:**\n- `contact_name`, `caption` (max 1024 chars), `waba_phone_id`\n\n**Note:** Returns 403 if the 24-hour customer service window is not open."
+					},
+					"response": []
+				},
+				{
+					"name": "Send Free-Form Message (Audio)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"contact_phone\": \"911234567890\",\n    \"contact_name\": \"John Doe\",\n    \"message_type\": \"audio\",\n    \"media_url\": \"https://download.samplelib.com/mp3/sample-3s.mp3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/messages/send-message",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"messages",
+								"send-message"
+							]
+						},
+						"description": "Send a free-form audio message.\n\n**Required fields:**\n- `contact_phone`, `message_type` (`\"audio\"`), `media_url`\n\n**Optional fields:**\n- `contact_name`, `waba_phone_id`\n\n**Note:** Returns 403 if the 24-hour customer service window is not open."
+					},
+					"response": []
+				},
+				{
+					"name": "Send Free-Form Message (Document)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"contact_phone\": \"911234567890\",\n    \"contact_name\": \"John Doe\",\n    \"message_type\": \"document\",\n    \"media_url\": \"https://sample-files.com/downloads/documents/pdf/basic-text.pdf\",\n    \"caption\": \"Monthly report attached\",\n    \"filename\": \"Special Report.pdf\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/messages/send-message",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"messages",
+								"send-message"
+							]
+						},
+						"description": "Send a free-form document message with optional caption and filename.\n\n**Required fields:**\n- `contact_phone`, `message_type` (`\"document\"`), `media_url`\n\n**Optional fields:**\n- `contact_name`, `caption` (max 1024 chars), `filename`, `waba_phone_id`\n\n**Note:** Returns 403 if the 24-hour customer service window is not open."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Templates",
+			"description": "Endpoints for managing WhatsApp templates",
+			"item": [
+				{
+					"name": "List Templates",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Request-ID",
+								"value": "{{$guid}}",
+								"description": "Optional: Custom request ID for tracing",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/v1/templates/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"templates",
+								""
+							]
+						},
+						"description": "Retrieve all WhatsApp message templates for your account.\n\n**Authentication:** Bearer token in Authorization header (inherited from collection).\n\n**Response includes:**\n- Template name, category, language, approval status\n- Header format (TEXT, IMAGE, VIDEO, DOCUMENT) if present\n- Body text with variable placeholders\n- Whether the template requires a media URL"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"status": "OK",
+							"code": 200,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-Request-ID",
+									"value": "550e8400-e29b-41d4-a716-446655440000"
+								},
+								{
+									"key": "API-Version",
+									"value": "v1"
+								}
+							],
+							"body": "{\n    \"status\": \"success\",\n    \"templates\": [\n        {\n            \"id\": \"507f1f77bcf86cd799439012\",\n            \"name\": \"order_confirmation\",\n            \"category\": \"MARKETING\",\n            \"language\": \"en_US\",\n            \"status\": \"APPROVED\",\n            \"header_format\": \"IMAGE\",\n            \"body\": \"Hello {{1}}, your order {{2}} is confirmed. Total: {{3}}\",\n            \"requires_media\": true,\n            \"created_at\": \"2024-06-01T08:00:00Z\"\n        },\n        {\n            \"id\": \"507f1f77bcf86cd799439013\",\n            \"name\": \"welcome_message\",\n            \"category\": \"UTILITY\",\n            \"language\": \"en_US\",\n            \"status\": \"APPROVED\",\n            \"header_format\": null,\n            \"body\": \"Welcome {{1}}! We're glad to have you.\",\n            \"requires_media\": false,\n            \"created_at\": \"2024-05-15T12:00:00Z\"\n        }\n    ],\n    \"total\": 2\n}"
+						},
+						{
+							"name": "Unauthorized",
+							"status": "Unauthorized",
+							"code": 401,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"body": "{\n    \"detail\": \"Not authenticated\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Contacts",
+			"description": "Endpoints for managing contacts",
+			"item": [
+				{
+					"name": "List Contacts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/contacts/?page=1&limit=20",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contacts",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "Page number (default: 1)"
+								},
+								{
+									"key": "limit",
+									"value": "20",
+									"description": "Items per page (1-100, default: 20)"
+								},
+								{
+									"key": "search",
+									"value": "",
+									"description": "Search by name, phone, or email",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Retrieve a paginated list of contacts for your account.\n\n**Query parameters:**\n- `page` — Page number (default: 1)\n- `limit` — Items per page, max 100 (default: 20)\n- `search` — Search by name, phone, or email"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"status": "OK",
+							"code": 200,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "API-Version",
+									"value": "v1"
+								}
+							],
+							"body": "{\n    \"status\": \"success\",\n    \"contacts\": [\n        {\n            \"id\": \"507f1f77bcf86cd799439012\",\n            \"first_name\": \"John\",\n            \"last_name\": \"Doe\",\n            \"phone_number\": \"911234567890\",\n            \"email\": \"john@example.com\",\n            \"company\": \"Acme Corp\",\n            \"tags\": [\"vip\"],\n            \"opted_in\": true,\n            \"source\": \"api\",\n            \"created_at\": \"2024-06-15T10:00:00Z\"\n        }\n    ],\n    \"total\": 1,\n    \"page\": 1,\n    \"limit\": 20\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Contact",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone_number\": \"911234567890\",\n    \"first_name\": \"John\",\n    \"last_name\": \"Doe\",\n    \"email\": \"john@example.com\",\n    \"company\": \"Acme Corp\",\n    \"tags\": [\"vip\", \"newsletter\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/contacts/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contacts",
+								""
+							]
+						},
+						"description": "Create a new contact.\n\n**Required fields:**\n- `phone_number` — Phone number with country code (e.g., 911234567890)\n- `first_name` — Contact first name\n\n**Optional fields:**\n- `last_name`, `email`, `company`, `tags`, `waba_phone_id`"
+					},
+					"response": [
+						{
+							"name": "Created",
+							"status": "Created",
+							"code": 201,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "API-Version",
+									"value": "v1"
+								}
+							],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Contact created successfully\",\n    \"contact\": {\n        \"id\": \"507f1f77bcf86cd799439012\",\n        \"first_name\": \"John\",\n        \"last_name\": \"Doe\",\n        \"phone_number\": \"911234567890\",\n        \"email\": \"john@example.com\",\n        \"company\": \"Acme Corp\",\n        \"tags\": [\"vip\", \"newsletter\"],\n        \"opted_in\": true,\n        \"source\": \"api\",\n        \"created_at\": \"2024-06-15T10:00:00Z\"\n    }\n}"
+						},
+						{
+							"name": "Duplicate Phone",
+							"status": "Bad Request",
+							"code": 400,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"body": "{\n    \"detail\": \"A contact with this phone number already exists\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Contact",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/contacts/507f1f77bcf86cd799439012",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contacts",
+								"507f1f77bcf86cd799439012"
+							]
+						},
+						"description": "Retrieve a single contact by ID."
+					},
+					"response": [
+						{
+							"name": "Success",
+							"status": "OK",
+							"code": 200,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "API-Version",
+									"value": "v1"
+								}
+							],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Contact retrieved successfully\",\n    \"contact\": {\n        \"id\": \"507f1f77bcf86cd799439012\",\n        \"first_name\": \"John\",\n        \"last_name\": \"Doe\",\n        \"phone_number\": \"911234567890\",\n        \"email\": \"john@example.com\",\n        \"company\": \"Acme Corp\",\n        \"tags\": [\"vip\"],\n        \"opted_in\": true,\n        \"source\": \"api\",\n        \"created_at\": \"2024-06-15T10:00:00Z\"\n    }\n}"
+						},
+						{
+							"name": "Not Found",
+							"status": "Not Found",
+							"code": 404,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"body": "{\n    \"detail\": \"Contact '507f1f77bcf86cd799439012' not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Contact",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/contacts/507f1f77bcf86cd799439012",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contacts",
+								"507f1f77bcf86cd799439012"
+							]
+						},
+						"description": "Delete a contact by ID (soft delete). The contact is deactivated, not permanently removed."
+					},
+					"response": [
+						{
+							"name": "Success",
+							"status": "OK",
+							"code": 200,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "API-Version",
+									"value": "v1"
+								}
+							],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Contact deleted successfully\",\n    \"contact_id\": \"507f1f77bcf86cd799439012\"\n}"
+						},
+						{
+							"name": "Not Found",
+							"status": "Not Found",
+							"code": 404,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"body": "{\n    \"detail\": \"Contact '507f1f77bcf86cd799439012' not found\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Contact Groups",
+			"description": "Endpoints for managing contact groups",
+			"item": [
+				{
+					"name": "List Groups",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/groups/?page=1&limit=20",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"groups",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"description": "Page number (default: 1)"
+								},
+								{
+									"key": "limit",
+									"value": "20",
+									"description": "Items per page (1-100, default: 20)"
+								},
+								{
+									"key": "search",
+									"value": "",
+									"description": "Search by group name or description",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Retrieve a paginated list of contact groups.\n\n**Query parameters:**\n- `page` — Page number (default: 1)\n- `limit` — Items per page, max 100 (default: 20)\n- `search` — Search by group name or description"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"status": "OK",
+							"code": 200,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "API-Version",
+									"value": "v1"
+								}
+							],
+							"body": "{\n    \"status\": \"success\",\n    \"groups\": [\n        {\n            \"id\": \"507f1f77bcf86cd799439050\",\n            \"name\": \"VIP Customers\",\n            \"description\": \"High-value customers\",\n            \"tags\": [\"vip\"],\n            \"contact_count\": 42,\n            \"created_at\": \"2024-06-15T10:00:00Z\"\n        }\n    ],\n    \"total\": 1,\n    \"page\": 1,\n    \"limit\": 20\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Group",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"VIP Customers\",\n    \"description\": \"High-value customers\",\n    \"tags\": [\"vip\"],\n    \"contact_ids\": [\"507f1f77bcf86cd799439012\", \"507f1f77bcf86cd799439013\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/groups/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"groups",
+								""
+							]
+						},
+						"description": "Create a new contact group. Optionally include contact IDs to add to the group immediately.\n\n**Required fields:**\n- `name` — Group name (must be unique per account)\n\n**Optional fields:**\n- `description`, `tags`, `contact_ids`, `waba_phone_id`"
+					},
+					"response": [
+						{
+							"name": "Created",
+							"status": "Created",
+							"code": 201,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "API-Version",
+									"value": "v1"
+								}
+							],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Contact group created successfully\",\n    \"group\": {\n        \"id\": \"507f1f77bcf86cd799439050\",\n        \"name\": \"VIP Customers\",\n        \"description\": \"High-value customers\",\n        \"tags\": [\"vip\"],\n        \"contact_count\": 2,\n        \"created_at\": \"2024-06-15T10:00:00Z\"\n    }\n}"
+						},
+						{
+							"name": "Duplicate Name",
+							"status": "Bad Request",
+							"code": 400,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"body": "{\n    \"detail\": \"A contact group with this name already exists\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Group",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/groups/507f1f77bcf86cd799439050",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"groups",
+								"507f1f77bcf86cd799439050"
+							]
+						},
+						"description": "Retrieve a single contact group by ID."
+					},
+					"response": [
+						{
+							"name": "Success",
+							"status": "OK",
+							"code": 200,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "API-Version",
+									"value": "v1"
+								}
+							],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Contact group retrieved successfully\",\n    \"group\": {\n        \"id\": \"507f1f77bcf86cd799439050\",\n        \"name\": \"VIP Customers\",\n        \"description\": \"High-value customers\",\n        \"tags\": [\"vip\"],\n        \"contact_count\": 42,\n        \"created_at\": \"2024-06-15T10:00:00Z\"\n    }\n}"
+						},
+						{
+							"name": "Not Found",
+							"status": "Not Found",
+							"code": 404,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"body": "{\n    \"detail\": \"Contact group '507f1f77bcf86cd799439050' not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Group",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/groups/507f1f77bcf86cd799439050",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"groups",
+								"507f1f77bcf86cd799439050"
+							]
+						},
+						"description": "Delete a contact group by ID (soft delete). Contacts in the group are **not** deleted."
+					},
+					"response": [
+						{
+							"name": "Success",
+							"status": "OK",
+							"code": 200,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "API-Version",
+									"value": "v1"
+								}
+							],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Contact group deleted successfully\",\n    \"group_id\": \"507f1f77bcf86cd799439050\"\n}"
+						},
+						{
+							"name": "Not Found",
+							"status": "Not Found",
+							"code": 404,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"body": "{\n    \"detail\": \"Contact group '507f1f77bcf86cd799439050' not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Contacts to Group",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"contact_ids\": [\"507f1f77bcf86cd799439012\", \"507f1f77bcf86cd799439013\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/groups/507f1f77bcf86cd799439050/contacts",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"groups",
+								"507f1f77bcf86cd799439050",
+								"contacts"
+							]
+						},
+						"description": "Add one or more contacts to a contact group by their IDs. Duplicate contacts are silently ignored.\n\n**Required fields:**\n- `contact_ids` — Array of contact IDs to add"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"status": "OK",
+							"code": 200,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "API-Version",
+									"value": "v1"
+								}
+							],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"2 contact(s) added to group\",\n    \"group_id\": \"507f1f77bcf86cd799439050\",\n    \"contact_ids\": [\"507f1f77bcf86cd799439012\", \"507f1f77bcf86cd799439013\"]\n}"
+						},
+						{
+							"name": "Group Not Found",
+							"status": "Not Found",
+							"code": 404,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"body": "{\n    \"detail\": \"Contact group '507f1f77bcf86cd799439050' not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Remove Contacts from Group",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"contact_ids\": [\"507f1f77bcf86cd799439012\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/groups/507f1f77bcf86cd799439050/contacts",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"groups",
+								"507f1f77bcf86cd799439050",
+								"contacts"
+							]
+						},
+						"description": "Remove one or more contacts from a contact group. The contacts themselves are **not** deleted.\n\n**Required fields:**\n- `contact_ids` — Array of contact IDs to remove"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"status": "OK",
+							"code": 200,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "API-Version",
+									"value": "v1"
+								}
+							],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"1 contact(s) removed from group\",\n    \"group_id\": \"507f1f77bcf86cd799439050\",\n    \"contact_ids\": [\"507f1f77bcf86cd799439012\"]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Conversations & Assignment",
+			"description": "List the agents you can assign to, and assign / unassign / reopen a contact's conversation. Phone numbers are matched digits-only (no leading '+').",
+			"item": [
+				{
+					"name": "List Agents",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/agents/?page=1&limit=50",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"agents",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "50"
+								},
+								{
+									"key": "role",
+									"value": "agent",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "active",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": "",
+									"disabled": true
+								}
+							]
+						},
+						"description": "List the assignable agents (team members) in your organisation. Use a returned `user_id` when assigning a conversation. Note the TRAILING SLASH on `/agents/`."
+					}
+				},
+				{
+					"name": "Assign Conversation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"user_id\": \"665f1c2e8a1b2c3d4e5f6a7b\",\n  \"note\": \"VIP lead from website form\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/conversations/:contact_phone/assign",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"conversations",
+								":contact_phone",
+								"assign"
+							],
+							"variable": [
+								{
+									"key": "contact_phone",
+									"value": "12125551234",
+									"description": "Digits only, no '+'"
+								}
+							]
+						},
+						"description": "Assign or reassign the contact's conversation to an agent (`user_id` from List Agents). `waba_phone_id` is optional for multi-WABA orgs. Returns 404 if the user is not an active org member, and 400 if the conversation is resolved (reopen it first)."
+					}
+				},
+				{
+					"name": "Unassign Conversation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/conversations/:contact_phone/unassign",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"conversations",
+								":contact_phone",
+								"unassign"
+							],
+							"variable": [
+								{
+									"key": "contact_phone",
+									"value": "12125551234"
+								}
+							]
+						},
+						"description": "Release the conversation back to the unassigned pool. Idempotent. Optional body: {\"waba_phone_id\": \"...\"}."
+					}
+				},
+				{
+					"name": "Reopen Conversation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/conversations/:contact_phone/reopen",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"conversations",
+								":contact_phone",
+								"reopen"
+							],
+							"variable": [
+								{
+									"key": "contact_phone",
+									"value": "12125551234"
+								}
+							]
+						},
+						"description": "Reopen a resolved conversation. The reopener becomes the assignee. Idempotent on already-open chats."
+					}
+				},
+				{
+					"name": "Get Assignment State",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/conversations/:contact_phone/assignment",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"conversations",
+								":contact_phone",
+								"assignment"
+							],
+							"variable": [
+								{
+									"key": "contact_phone",
+									"value": "12125551234"
+								}
+							]
+						},
+						"description": "Read the current assignee and status. `has_conversation` is false when no chat thread exists yet for this contact."
+					}
+				}
+			]
+		}
+	]
+}
