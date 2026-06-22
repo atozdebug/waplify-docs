@@ -32,7 +32,7 @@ Waplify lets you import your existing contacts in bulk using a CSV or Excel file
 7. Confirm the import to add the contacts to your account
 
 :::info
-You can upload up to **10,000 contacts per batch**. There is no limit on total contacts — you can upload as many batches as you need.
+You can upload up to **2,000 contacts per batch**, and the file must be under **5 MB**. There is no limit on total contacts — if your list is larger, just split it into smaller files and upload one after another.
 :::
 
 ### Adding contacts to a group during import
@@ -62,7 +62,7 @@ After uploading, Waplify shows a detailed report of which contacts were imported
 
 ### Is there a limit on how many contacts I can have?
 
-There is no limit on the total number of contacts in your account. The only limit is 10,000 contacts per single upload batch.
+There is no limit on the total number of contacts in your account. The per-upload limits are **2,000 contacts** and **5 MB file size** — if your list is larger, split it into smaller files and upload one after another.
 
 ### What happens if I upload a contact that already exists?
 
