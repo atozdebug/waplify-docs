@@ -5,6 +5,12 @@ sidebar_position: 1
 keywords: [WhatsApp automation, WhatsApp chatbot, automated WhatsApp messages, WhatsApp conversation flow]
 ---
 
+:::tip Meet Flows V2 (Beta)
+There's a newer, more powerful chatbot builder. **[Flows V2](../flows-v2/what-is-flows-v2.md)** can ask customers questions, save their answers, branch on replies, hand off to your team, and connect to other tools — look for **Flows V2** in the sidebar.
+
+This page covers the **original** flow builder, which still works exactly as before.
+:::
+
 ## What are Conversational Flows?
 
 Conversational Flows let you automate WhatsApp conversations. You design a flow once — with messages, menus, and logic — and it runs automatically whenever a customer sends a trigger keyword. Think of it as a chatbot that handles common questions and tasks without you needing to be online.

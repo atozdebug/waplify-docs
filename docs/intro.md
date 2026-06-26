@@ -41,6 +41,7 @@ New to Waplify? Follow these steps to get up and running:
 | [**Sequences**](./sequences/what-are-sequences.md) | Automate multi-step WhatsApp follow-ups over days or weeks |
 | [**Chat & Inbox**](./chat/inbox-overview.md) | Real-time one-on-one messaging with customers |
 | [**Automation**](./automation/conversational-flows.md) | Build chatbot flows with a visual drag-and-drop builder |
+| [**Flows V2**](./flows-v2/what-is-flows-v2.md) | Smarter chatbots that ask questions, branch on replies, and hand off to your team |
 | [**Team Management**](./team/managing-your-team.md) | Invite members and assign roles |
 | [**Billing**](./billing/subscription-plans.md) | Manage your subscription and payments |
 | [**Account Settings**](./account/account-settings.md) | Profile, WhatsApp quality rating, and more |
