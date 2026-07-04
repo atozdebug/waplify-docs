@@ -13,8 +13,8 @@ Connect a Google Sheet to Waplify and a WhatsApp flow starts **on its own** when
 
 Once it's set up, you never touch the code again. All the settings — which tab, which column has the phone number, when to send — live in a simple **popup form** inside your sheet (**⚡ Waplify → Settings**).
 
-:::note One-time setup
-You paste two ready-made files into your sheet **once**. After that, everything is done from the friendly popup — no more code.
+:::tip Two ways to set up
+**Easiest:** make a copy of a ready-made sheet — the script is already inside it, nothing to paste (see **Fastest setup** just below). Prefer to build it yourself? The **manual** steps are further down. Either way, you finish in a friendly popup — no code editing.
 :::
 
 ## Before you start
@@ -26,7 +26,21 @@ You need two things from Waplify. Both take a minute:
 
 Also make sure your sheet's **row 1 has headers**, and one of those columns holds the **phone number** in international format (for example `+14155551234`).
 
-## Set it up (once)
+## Fastest setup: make a copy
+
+The quickest way — the script is already built into a ready-made sheet, so there's **nothing to paste**.
+
+1. Open this link: **[Make a copy of the Waplify sheet »](https://docs.google.com/spreadsheets/d/1TZwR4CsER8DlczE9I0dLaslMEUU2QDd4qS1F3yZfZ-g/copy)**
+2. Click the blue **Make a copy** button. You now have your own sheet with the **⚡ Waplify** menu built in.
+3. Continue to **Configure it** below — paste your Webhook URL and API key, pick your tab and phone column, then Save.
+
+<!-- screenshot: Google's "Copy document?" prompt with the Make a copy button -->
+
+That's it — you can **skip the manual steps** below. (Use them only if you'd rather paste the code into your own existing sheet.)
+
+## Set it up manually (paste the code)
+
+*Skip this if you used **Make a copy** above.* To build it into your own existing sheet, paste the two files by hand:
 
 ### 1. Open the script editor
 
