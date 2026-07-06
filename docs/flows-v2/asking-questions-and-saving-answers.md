@@ -40,6 +40,23 @@ Every Ask block checks the reply:
 Always connect the **invalid** path to something useful — a friendly retry message, or a hand-off to your team. Don't leave it as a dead end.
 :::
 
+## Branch on each button or list option
+
+When you use **Ask Buttons** or **Ask List**, you don't have to send every answer down the same path. Each button or list option has **its own output** on the block, so you can send the conversation somewhere different depending on what the customer picked — *and* the choice is still saved into your variable at the same time.
+
+For example, an "How can we help?" question with buttons *Sales*, *Support*, and *Billing* can route each one straight to the right part of your flow, without needing a separate Condition block.
+
+Alongside the per-option outputs, an Ask Buttons or Ask List block always has two catch-all outputs:
+
+- **Any other answer** — the customer replied with something valid that you didn't wire to its own path (this is the same as the old **success** path).
+- **No valid answer** — the reply couldn't be matched after a few tries (the **invalid** path).
+
+<!-- screenshot: Ask Buttons block showing one output per button plus "Any other answer" and "No valid answer" -->
+
+:::note
+Nothing changes for flows you've already built. If you only connect the **Any other answer** output, the block behaves exactly as before — it captures the answer and continues. Wiring individual options is simply a new option, not a requirement.
+:::
+
 ## Saving answers as variables
 
 When a customer answers, the value is stored in a **variable** — a labeled box you can reuse later. You can also create variables yourself in **flow settings** to hold values you set along the way.

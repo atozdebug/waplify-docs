@@ -29,6 +29,7 @@ The Contacts page is where you manage all the people you want to message on What
    - **Phone Number** with country code (required)
    - **Email** (optional)
    - **Company**, **Industry**, **Website** (optional)
+   - **Custom fields** (optional) — any extra fields your organization has set up, like City or Plan. See [Custom Fields](./custom-fields.md).
 3. Click **Save** to add the contact
 
 ### Editing a contact
@@ -82,4 +83,4 @@ No. Waplify does not limit the number of contacts you can store in your account.
 
 ### Can I add custom fields to contacts?
 
-Currently, contacts support standard fields like name, phone, email, company, industry, and website, plus tags for custom categorization.
+Yes. Alongside the standard fields (name, phone, email, company, industry, website) and tags, you can create your own **custom fields** — like City, Plan, or Lead Score — and fill them in on every contact. You can then filter by them, personalize messages with them, and use them in automations. See [Custom Fields](./custom-fields.md) for the full guide.

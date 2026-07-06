@@ -82,6 +82,10 @@ Usually a **saved answer** (from an Ask block) or a **contact detail**. See [Ask
 
 A **Condition** has two outcomes (true/false). A **Switch** has many, plus a default — use it when a single value can lead to several different paths.
 
+### Do I need a Condition to branch on a button choice?
+
+Often not. **Ask Buttons** and **Ask List** blocks can branch directly — each option has its own output. Reach for a Condition or Switch when you need to branch on something else, like a number range or a contact detail. See [Branch on each button or list option](./asking-questions-and-saving-answers.md#branch-on-each-button-or-list-option).
+
 ### Can the flow wait for a real person, not just a status?
 
 To bring a human in, use **Assign to Agent** — see [Hand off to a human](./handing-off-to-a-human.md). **Wait for Status** is only about whether your *message* was delivered or read.

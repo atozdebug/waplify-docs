@@ -20,6 +20,8 @@ Waplify offers different subscription plans to access the platform's features. Y
    - **Yearly** — pay annually (best value)
    - **Lifetime** — one-time payment for permanent access
 
+The **Quarterly** and **Yearly** plans **renew automatically** so your service never lapses — the page shows the date you'll next be charged. **Lifetime** is a single payment with nothing to renew.
+
 ### Subscribing to a plan
 
 1. On the Subscription page, select the plan you want
@@ -42,6 +44,12 @@ Waplify offers different subscription plans to access the platform's features. Y
 2. Select a higher plan
 3. Complete the payment — the upgrade takes effect immediately
 
+**Upgrade within 15 days and pay only the difference.** If you upgrade within **15 days** of your original purchase, Waplify charges just the **price difference** between your current plan and the new one — you don't pay twice for the same period. After 15 days, an upgrade is charged at the full price of the new plan.
+
+### Renewing early (adding more time)
+
+You can renew the **same** plan before it runs out. When you do, the new period is **added on top** of your remaining days — you never lose the time you've already paid for.
+
 ### Downgrading your plan
 
 1. Go to **Settings > Subscription**
@@ -53,8 +61,10 @@ Waplify offers different subscription plans to access the platform's features. Y
 
 1. Go to **Settings > Subscription**
 2. Click **Cancel Subscription**
-3. Your access will continue until the end of the current billing period
-4. After that, your account will move to an expired state
+3. Your access **continues until the end of the current billing period** — cancelling never cuts you off early, so you keep every day you've paid for
+4. After that date, your account moves to an expired state and auto-renewal stops
+
+You'll see the exact date your access ends, and you can resubscribe any time before then to stay active.
 
 ### Viewing payment history
 
@@ -70,18 +80,27 @@ Waplify offers different subscription plans to access the platform's features. Y
   - **Waplify subscription** = platform access (paid to Waplify)
   - **Messaging costs** = per-conversation charges (paid to Meta)
 - Keep your [payment method](../getting-started/add-payment-method.md) up to date to avoid service interruption
-- If your plan expires, your data is safe — you just cannot access the platform until you renew
+- If your plan expires, your data is safe — you just can't send or manage messaging until you renew (see the FAQ below for exactly what pauses)
+- **Upgrade within 15 days** of buying to pay only the difference, and **renew early** to stack extra time onto your remaining days
 - Check if any **coupon codes** are available before subscribing to save money
 
 ## Frequently asked questions
 
 ### What happens when my trial ends?
 
-After the trial period, you will need to subscribe to a paid plan to continue using Waplify. Your data (contacts, campaigns, templates) will be preserved.
+New accounts get a **7-day free trial**. When it ends, you'll need to subscribe to a paid plan to keep using Waplify. Your data (contacts, campaigns, templates) is preserved.
 
 ### What happens if my subscription expires?
 
-There is a short **grace period** after expiration where you can still access your account. After the grace period, you will need to renew your subscription. Your data is never deleted.
+There's a short **grace period** (about **3 days**) right after expiry where everything keeps working, so a renewal that's mid-processing never locks you out. After that, most of the app pauses until you renew — but you can **always log in and renew**, and **your data is never deleted**.
+
+### What exactly stops working when my plan lapses?
+
+Once you're fully expired (past the grace period), sending and managing messaging is paused: **campaigns, templates, contacts, flows, sequences, and the chat inbox** (both sending and reading) are unavailable, and scheduled sends, sequences, automated flow replies, and API sends won't run. What stays open is everything you need to come back: **logging in, viewing your account, and renewing/paying**. The moment you renew, all of it switches back on.
+
+### Does cancelling stop my plan right away?
+
+No. Cancelling always takes effect at the **end of your current billing period** — you keep full access until then, and auto-renewal simply won't happen again.
 
 ### Can I get a refund?
 

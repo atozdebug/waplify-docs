@@ -49,14 +49,14 @@ A flow only runs when something **triggers** it. Open the **triggers** panel (th
 - **Keyword** — the customer sends a word or phrase you choose (for example, "menu" or "pricing")
 - **Button tap** — the customer taps a button in a message
 - **Fallback** — a catch-all that runs when a message doesn't match anything else
-- **Ad click (Click-to-WhatsApp)** — someone taps a Facebook or Instagram ad that opens WhatsApp
+- **Ad click (Click-to-WhatsApp)** — someone taps a Facebook or Instagram ad that opens WhatsApp — see [More ways to start a flow](./more-ways-to-start.md)
 
 More advanced triggers are also available:
 
 - **Template reply** — the customer taps a button on one of your template messages
-- **Schedule** — the flow starts at a time you choose
-- **Webhook** — another system starts the flow by calling Waplify
-- **Pattern match** — an advanced text-matching rule for flexible triggers
+- **Contact created or updated** — the flow starts when a contact changes in a way you choose (see [More ways to start a flow](./more-ways-to-start.md))
+- **Webhook** — another system starts the flow by calling Waplify (see [Start a Flow from Another Tool](./start-a-flow-from-another-tool.md))
+- **Pattern match** — an advanced text-matching rule, available as an option inside the Keyword trigger
 
 :::tip Use specific keywords
 Give each flow its own clear trigger words (like "menu" or "support") so two flows don't compete for the same message.

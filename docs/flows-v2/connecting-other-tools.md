@@ -7,7 +7,7 @@ keywords: [WhatsApp bot API, flow API call, WhatsApp Google Sheets, connector bl
 
 ## Connect to other tools
 
-**Connector** blocks let your flow talk to systems outside Waplify in the middle of a conversation — to look something up, save a record, or trigger an action elsewhere. There are two connectors: **API Executor** and **Google Sheets**.
+**Connector** blocks let your flow talk to systems outside Waplify in the middle of a conversation — to look something up, save a record, send an email, or trigger an action elsewhere. There are three connectors: **API Executor**, **Google Sheets**, and **Send Email (SMTP)**.
 
 :::note A bit more technical
 Connectors are the most advanced blocks. The Google Sheets connector is friendly enough for most people, but the API Executor usually works best with a little help from a developer.
@@ -52,6 +52,40 @@ The block branches into:
 - **Failure** — something went wrong connecting to the sheet
 
 <!-- screenshot: Google Sheets block with an action chosen and success/not-found/failure outputs -->
+
+## Send an email (Email / SMTP)
+
+The **Send Email** block sends an email from inside your flow — a great way to notify your team of a new lead, send yourself a summary, or email the customer a confirmation while you keep chatting on WhatsApp.
+
+### Connect your email server first
+
+The block sends through your own email provider, so you set that up once:
+
+1. Go to **Settings > Connectors > Email (SMTP)** (or click **Manage servers** from the block).
+2. Add your provider's details — server address, port, username, password, and the "from" name and address.
+3. Save. Your credentials are stored securely and are never shown to a flow.
+
+:::note
+Only **Owners** and **Admins** can add an email server. Once one is connected, anyone building flows can pick it in the Send Email block.
+:::
+
+### Configure the block
+
+- **Email server** — pick one of your connected servers.
+- **To** — the recipient. Use a fixed address, or a saved answer like `{{contact.email}}`.
+- **Subject** and **Message** — both can include saved [variables](./asking-questions-and-saving-answers.md), so each email can be personal.
+- **Advanced (optional)** — add **Cc**, **Bcc**, a **Reply-to** address, or turn on **Send as HTML** for a formatted email.
+
+The block then branches:
+
+- **Success** — the email was sent.
+- **Failure** — it couldn't be sent; the reason is saved so you can react.
+
+<!-- screenshot: Send Email block with server, to, subject, message, and success/failure outputs -->
+
+:::tip
+Keep it reasonable — each email can go to up to **20 recipients** (across To, Cc, and Bcc), and there's an hourly sending limit per business to protect your sending reputation. For messaging lots of customers, use a [campaign](/docs/campaigns/creating-campaigns) or [sequence](/docs/sequences/what-are-sequences) instead.
+:::
 
 ## Tips & best practices
 

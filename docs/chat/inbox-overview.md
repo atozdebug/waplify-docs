@@ -47,6 +47,18 @@ A colored ring next to the customer's name counts down the time remaining in the
 The 24-hour window is a WhatsApp policy, not a Waplify limitation. After it closes, you need an approved template message to restart the conversation.
 :::
 
+### Replying from your WhatsApp Business app too (coexistence)
+
+You don't have to answer every customer from Waplify. If you reply to someone directly in the **WhatsApp Business app** on your phone, Waplify keeps everything in sync:
+
+- Your phone reply **appears in the Waplify inbox** as an outgoing message, so your whole team sees the full conversation — including any photos or files you sent.
+- **Unread counts stay accurate.** When you read or reply on your phone, Waplify clears the unread badge too, so the inbox doesn't pile up with chats you've already handled.
+- **Your chatbot steps aside.** If a flow is running for that contact and you jump in from your phone, the bot **automatically pauses** so it never talks over you.
+
+This "answer from anywhere" behaviour is on by default. Owners and admins can control the auto-pause in [Inbox Style & Auto-Assignment](../team/inbox-setup.md).
+
+<!-- screenshot: A conversation showing a reply that was sent from the WhatsApp Business app -->
+
 ### Searching for conversations
 
 1. Use the **search bar** at the top of the conversation list
@@ -69,6 +81,14 @@ At the top of the inbox, you can see a summary of your conversations by status �
 ### Do I get notified when a customer sends a message?
 
 Yes. New messages appear in real time in the inbox. If you have the Waplify tab open, you will see the conversation update instantly.
+
+### What happens if my connection drops?
+
+Nothing to worry about. If your internet blips or you lock your phone, the inbox shows a quiet **"Reconnecting…"** note and keeps trying on its own — no refresh needed. The moment your network returns or you switch back to the tab, it reconnects instantly and catches up on anything you missed.
+
+### If I reply from my phone's WhatsApp app, will it show in Waplify?
+
+Yes. Replies you send from the **WhatsApp Business app** appear in the Waplify inbox, your unread counts stay in sync, and any running chatbot pauses so it won't reply over you. See [Replying from your WhatsApp Business app too](#replying-from-your-whatsapp-business-app-too-coexistence).
 
 ### Can multiple team members use the inbox?
 
