@@ -39,6 +39,28 @@ This is useful when the 24-hour window has closed and you need to re-engage the 
 <!-- screenshot: Media attachment options -->
 3. The file will be uploaded and sent to the contact
 
+### Sending a voice note
+
+Some things are quicker to say than to type.
+
+1. Click the **microphone** icon in the message area and start talking
+2. A **live waveform** shows while you record, so you know it's picking you up
+3. When you stop, play it back in the **review bar** — send it, re-record, or delete it
+<!-- screenshot: the voice recorder with waveform and review bar -->
+
+Waplify converts the recording to the format WhatsApp expects, so it arrives as a proper voice note on the customer's phone rather than a file attachment. It appears in the chat straight away while it finishes uploading.
+
+### Sending a location
+
+Instead of typing out an address and hoping it makes sense, send a place the customer can tap.
+
+1. Choose the **location** option in the message area
+2. **Search for the place** — shop, landmark, or building — in the map picker
+3. Confirm and send
+<!-- screenshot: the location picker with a searched place selected -->
+
+The customer receives a tappable location that opens in their maps app with directions. Your chatbot can send one too, so a flow can share your showroom or pickup point automatically when someone asks where you are.
+
 ### Reacting and replying to messages
 
 Hover over any message in a conversation to reveal quick actions:
@@ -83,7 +105,11 @@ WhatsApp supports messages up to 4,096 characters. However, shorter messages ten
 
 ### Can I send voice messages?
 
-You can send audio files through the attachment feature. Real-time voice recording is not currently supported.
+Yes. Click the **microphone** icon in the message area to record a voice note, play it back, then send — see [Sending a voice note](#sending-a-voice-note) above. You can also attach an existing audio file.
+
+### Can I send a location?
+
+Yes. Use the **location** option in the message area and search for the place on the map. The customer gets a tappable location that opens directly in their maps app.
 
 ### What file types can I send?
 
