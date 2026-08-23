@@ -26,7 +26,11 @@ Go to **Sequences** from the sidebar and click **New Drip Sequence**. The builde
 - **Drip sequence name** (required) — shown in your list and analytics. Use something you'll recognize, like "Welcome series" or "Cart recovery".
 - **Description** (optional) — a private note for your team. Customers never see it.
 
-**Choose who receives it.** Under **Who receives this sequence**, pick **Send to a fixed list**, then build your audience:
+**Choose who receives it.** Under **Who receives this sequence**, pick one of two modes.
+
+#### Send to a fixed list
+
+Build the audience yourself. Enrollments are created when the sequence launches, and the audience is locked once it starts running.
 
 - **Select contacts** individually
 - **Select groups** to enroll everyone in those groups
@@ -37,8 +41,22 @@ Leave **Send only to opted-in contacts** on (recommended) so you only message pe
 
 <!-- screenshot: Step 1 audience picker with contacts and groups options -->
 
+#### Auto-enroll on event
+
+A live rule instead of a list. Contacts join in real time as they're created or updated to match it, and it keeps running until you pause the sequence. Use it for a welcome series that never has to be relaunched.
+
+1. Choose **when** the rule fires: when a contact is **created**, when one is **updated**, or **either**.
+2. Add **conditions** so only the right people enter, for example *Tag is `lead`* and *City is `Mumbai`*. All conditions must match. These are the same filters the fixed-list audience picker uses, so there's no second rule language to learn.
+3. Save and launch. From then on, a contact that matches is enrolled the moment their record changes.
+
+<!-- screenshot: Auto-enroll rule with the create/update mode and a condition builder -->
+
 :::note
-**Auto-enroll on event** (automatically adding contacts as they're tagged or added to a group) is marked *Coming soon* and isn't available yet.
+A contact can only ever be auto-enrolled in the same sequence **once**, so nobody is messaged twice by it even if their record changes again. Opted-out and inactive contacts are never enrolled, whatever the conditions say.
+:::
+
+:::tip
+Auto-enroll pairs well with tags. Tag a customer `onboarding` from anywhere in Waplify, and a sequence whose rule is *Tag is `onboarding`* picks them up on its own.
 :::
 
 **Set your delivery settings and send window.** Step 1 also includes two delivery toggles and a "When messages are sent" window. These have their own page — see [Send Window & Delivery Settings](./send-window-and-delivery.md).
