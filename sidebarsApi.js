@@ -15,6 +15,7 @@ const sidebars = {
       items: [
         'messages/send-template-message',
         'messages/send-free-form-message',
+        'messages/typing-indicator',
       ],
     },
     {
@@ -43,6 +44,7 @@ const sidebars = {
         'contacts/list-contacts',
         'contacts/create-contact',
         'contacts/get-delete-contact',
+        'contacts/contact-by-phone',
       ],
     },
     {
@@ -51,6 +53,7 @@ const sidebars = {
       items: [
         'groups/list-create-groups',
         'groups/get-delete-groups',
+        'groups/group-members-by-phone',
       ],
     },
     {
