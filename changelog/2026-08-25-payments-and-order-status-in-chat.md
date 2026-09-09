@@ -3,13 +3,13 @@ title: Take Payment and Send Order Updates Inside WhatsApp
 tags: [commerce, automation, templates]
 ---
 
-Two new message types close the loop on a sale: **Review and pay**, which lets a customer pay without leaving the chat, and **Order status**, which tells them when their order is confirmed, shipped or cancelled. Your chatbot can run the whole thing.
+Two new message types close the loop on a sale: **Order details**, which lets a customer pay without leaving the chat, and **Order status**, which tells them when their order is confirmed, shipped or cancelled. Your chatbot can run the whole thing.
 
 <!-- truncate -->
 
-## Review and pay
+## Order details
 
-Send a customer an itemised order with a total and a pay button. They pay inside WhatsApp, the payment lands under **Commerce → Payments**, and the order updates.
+Send a customer an itemised order with a total and a pay button, labelled **Review and Pay** by Meta. They pay inside WhatsApp, the payment lands under **Commerce → Payments**, and the order updates.
 
 ## Order status
 
@@ -17,7 +17,7 @@ Send a proper status update when something changes. Same idea as a shipping emai
 
 ## Your chatbot can do it unattended
 
-Three blocks appear in the flow builder under **Ecommerce**:
+Three blocks appear in the flow builder under **Orders**:
 
 - **Request Payment** sends the itemised order with its pay button.
 - **Wait for Payment** pauses the flow until the money clears, fails, or runs out of time. It has three separate ways out: **captured**, **failed** and **timeout**. Wire all three, or the people who do not pay are left stuck mid-conversation.

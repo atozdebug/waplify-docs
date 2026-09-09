@@ -13,7 +13,7 @@ That means an order can be taken and paid for at two in the morning without anyo
 
 ## The commerce blocks
 
-Three blocks appear in the flow builder under **Ecommerce**, alongside the normal send blocks.
+Three blocks appear in the flow builder under **Orders**, alongside the normal send blocks.
 
 | Block | What it does |
 |---|---|
@@ -23,7 +23,7 @@ Three blocks appear in the flow builder under **Ecommerce**, alongside the norma
 
 You can also use a normal **Send Template** block to send a [product message](/docs/commerce/send-product-messages) - single product, multi-product, or full catalog.
 
-<!-- screenshot: the Ecommerce blocks in the flow builder block list -->
+<!-- screenshot: the Orders group in the flow builder block list -->
 
 :::note
 These blocks need Commerce enabled on your account, and **Request Payment**, **Wait for Payment** and **Update Order Status** additionally need WhatsApp payments approved on your number by Meta. See [Payments & Order Status](/docs/commerce/payments-and-order-status).

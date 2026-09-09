@@ -1,6 +1,6 @@
 ---
 title: Payments & Order Status
-description: Ask for payment inside WhatsApp with a Review and pay message, and keep customers updated as their order moves
+description: Ask for payment inside WhatsApp with an Order details message, and keep customers updated as their order moves
 sidebar_position: 5
 keywords: [WhatsApp payments, review and pay, order details template, order status template, WhatsApp Pay, pay in chat]
 ---
@@ -9,12 +9,14 @@ keywords: [WhatsApp payments, review and pay, order details template, order stat
 
 Two special message types handle the end of a sale:
 
-- **Review and pay** - shows the customer an itemised order with a total and a pay button. They pay without leaving WhatsApp.
+- **Order details** - shows the customer an itemised order with a total and a pay button. They pay without leaving WhatsApp. The button itself reads **Review and Pay**; Meta sets that wording and renders it verbatim, so you cannot change it.
 - **Order status** - tells the customer where their order is: confirmed, shipped, cancelled.
+
+Those two names, **Order details** and **Order status**, are exactly what you pick in the template builder.
 
 Both are templates, so they are approved once by Meta and reused.
 
-<!-- screenshot: a Review and pay message and an Order status message in a WhatsApp chat -->
+<!-- screenshot: an Order details message with its Review and Pay button, and an Order status message, in a WhatsApp chat -->
 
 ## Before you can use them
 
@@ -33,9 +35,15 @@ If payments are not available to you, everything else in Commerce still works. Y
 ### Set up your order templates
 
 1. Go to **Templates → Create Template**.
-2. Choose the order template type you want.
-3. Write the message. Keep it short - the order itself carries the detail.
-4. Submit for approval.
+2. Choose the **Utility** category.
+3. Under it, choose **Commerce** - *"Ask for payment on an order, or tell a customer their order has moved on."*
+4. Pick **Order details** or **Order status**.
+5. Write the message. Keep it short - the order itself carries the detail.
+6. Submit for approval.
+
+:::note
+There are two things called **Commerce** in the template builder, and they do different jobs. The **Commerce message type** builds [product messages](/docs/commerce/send-product-messages) - catalog, single and multi-product. The **Commerce** option under the **Utility** category is the one that builds these two order templates.
+:::
 
 Then go to **Commerce → Settings** and pick which approved template to use for each purpose, so Waplify knows what to send.
 
@@ -43,7 +51,7 @@ Then go to **Commerce → Settings** and pick which approved template to use for
 
 ### Asking for payment
 
-Send a **Review and pay** message against an order. The customer sees the items, the total, and a pay button, and pays inside the chat.
+Send an **Order details** message against an order. The customer sees the items, the total, and a **Review and Pay** button, and pays inside the chat.
 
 When the payment goes through, it appears under **Commerce → Payments**, and the order updates.
 

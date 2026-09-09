@@ -24,7 +24,7 @@ Commerce is **switched on per account by the Waplify team**. It is not part of a
 | **Product catalog** | Connect the catalog you already keep on Meta. Waplify reads it - you keep managing products in Meta's Commerce Manager. |
 | **Product messages** | Send one product, a hand-picked list, or a button that opens your full catalog. |
 | **Cart orders** | A customer fills a cart in the chat and sends it. It arrives in Waplify as an order. |
-| **Payments** | Send a **Review and pay** message so the customer pays inside WhatsApp. Availability depends on your country and your WhatsApp account. |
+| **Payments** | Send an **Order details** message so the customer pays inside WhatsApp. The button they tap says **Review and Pay**. Availability depends on your country and your WhatsApp account. |
 | **Order updates** | Send an **Order status** message when you confirm, ship, or cancel. |
 | **Automation** | Do all of the above from a chatbot flow, so it runs without you. |
 
@@ -52,7 +52,7 @@ Once Commerce is enabled, **Commerce** appears in the left menu. Inside it you g
 - [Connect Your Product Catalog](/docs/commerce/connect-your-catalog) - link your Meta catalog to your number
 - [Sending Products in a Message](/docs/commerce/send-product-messages) - single product, multi-product, and full catalog
 - [Receiving Orders](/docs/commerce/receiving-orders) - what happens when a cart arrives
-- [Payments & Order Status](/docs/commerce/payments-and-order-status) - Review and pay, and keeping customers posted
+- [Payments & Order Status](/docs/commerce/payments-and-order-status) - taking payment, and keeping customers posted
 - [Commerce in Flows](/docs/commerce/commerce-in-flows) - automate the whole thing
 
 ## Tips & best practices

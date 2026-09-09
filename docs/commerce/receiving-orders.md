@@ -32,7 +32,7 @@ A typical order goes:
 
 1. **The cart arrives.** The customer has sent their items.
 2. **You check it.** Confirm stock, delivery, anything you need to ask.
-3. **You ask for payment.** Either with a [Review and pay message](/docs/commerce/payments-and-order-status) inside WhatsApp, or however you normally take payment.
+3. **You ask for payment.** Either with an [Order details message](/docs/commerce/payments-and-order-status) inside WhatsApp, which the customer pays with a **Review and Pay** button, or however you normally take payment.
 4. **You keep them posted.** Send an [order status](/docs/commerce/payments-and-order-status) update when you confirm, ship, or cancel.
 
 Statuses move forward as you work the order, so the list tells you what still needs attention.
@@ -66,7 +66,7 @@ The order still records what they chose. It may not match a current product, so 
 
 ### Can I create an order myself?
 
-No. Orders come from a customer sending a cart. If you want someone to pay for something specific, send them a **Review and pay** message instead.
+No. Orders come from a customer sending a cart. If you want someone to pay for something specific, send them an **Order details** message instead.
 
 ### Who in my team can see orders?
 
