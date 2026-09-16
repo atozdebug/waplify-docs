@@ -62,6 +62,10 @@ This only applies when a *customer* reopens a chat by replying. When *you* manua
 
 Remember to click **Save Changes** after adjusting auto-assignment or reopen behavior.
 
+### Chatbot settings
+
+The same page also decides whether your chatbot goes quiet once a teammate is handling a chat, and whether replies from your phone pause it. See [Pause bot when a human replies](../chat/pause-bot-when-a-human-replies.md).
+
 ## Tips & best practices
 
 - **Most teams should use the Team style** — it prevents two people replying to the same customer. Switch to Simple only if you rarely chat one-to-one.

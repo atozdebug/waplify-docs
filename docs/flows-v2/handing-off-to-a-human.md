@@ -33,7 +33,8 @@ Optionally add a short **confirmation message** that sends when the hand-off hap
 ## What your team sees
 
 - While a bot is handling a conversation, the [inbox](../chat/inbox-overview.md) shows a clear **bot badge**, so your team knows it's automated and can leave it alone.
-- The moment a teammate **replies**, the bot automatically **steps aside (pauses)** — it won't keep sending messages over your agent. The human is now in control of that conversation.
+- After **Assign to Agent** gives a chat to a teammate, the bot stays out of that chat until someone hands it back.
+- On other chats the bot is still handling, your team can click **Take over** to pause the bot and reply. Whether the bot also pauses on its own when a teammate replies or is assigned depends on the [Pause bot when a human replies](../chat/pause-bot-when-a-human-replies.md) setting.
 
 :::tip
 Place the hand-off **after** the bot has gathered the basics (name, reason, order number). Your team starts the conversation already knowing the context, instead of asking from scratch.
@@ -50,7 +51,7 @@ Place the hand-off **after** the bot has gathered the basics (name, reason, orde
 
 ### Does the bot keep running after the hand-off?
 
-No. Once **Assign to Agent** runs, the bot stops for that conversation. And if a teammate replies at any point, the bot pauses so it never talks over a person.
+No. Once **Assign to Agent** gives the chat to a teammate, the bot stays out of that conversation until someone hands it back. If you route the chat to the Unassigned queue instead, the bot can answer again when the customer next messages, so pick those chats up quickly or use **Take over**.
 
 ### Who can the chat be assigned to?
 
@@ -62,4 +63,4 @@ Set a **fallback** (such as the Unassigned queue) so the conversation still land
 
 ### Can the bot take back over later?
 
-The hand-off gives control to your team. To automate again afterward, your team handles the chat in the inbox as usual.
+Yes. When your team is done, click **Hand to bot** at the top of the chat, or unassign it. The bot starts fresh on the customer's next message. See [Pause bot when a human replies](../chat/pause-bot-when-a-human-replies.md#give-a-chat-back-to-the-bot) for all the ways to give a chat back.
