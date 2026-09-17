@@ -53,6 +53,10 @@ Once Meta approves the template you can send it:
 - **From a campaign** - send it to a group or a tag. See [Using Templates in Campaigns](/docs/campaigns/campaign-templates).
 - **From a flow** - let your chatbot send it. See [Commerce in Flows](/docs/commerce/commerce-in-flows).
 
+:::tip
+Inside a chatbot conversation you usually do not need a template at all. The **Send Catalog** block sends products directly while the customer is chatting with you, with no approval step, and can send a whole collection. Templates are for reaching people who have not messaged you. See [Commerce in Flows](/docs/commerce/commerce-in-flows#show-products-with-send-catalog).
+:::
+
 ## Tips & best practices
 
 - **Send yourself the first one.** Product messages look quite different from normal templates, and one test send tells you more than any preview.

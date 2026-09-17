@@ -11,6 +11,7 @@ Most flows start when a customer sends a **keyword** or taps a **button**. But a
 
 - When someone messages you after clicking a **WhatsApp ad**.
 - When a **contact is created or updated** in Waplify.
+- When a customer **sends a cart** from your catalog.
 
 You choose the starter on the **Start** block of your flow, under **Trigger type**. (You can also start a flow from an outside tool — see [Start a Flow from Another Tool](./start-a-flow-from-another-tool.md).)
 
@@ -62,6 +63,12 @@ A contact can be created or updated in many ways — added by hand, imported fro
 :::tip
 Pair this with the [Update Contact](./updating-contacts.md) block and tags: one flow can tag a customer `vip`, and a separate flow that starts on *Tag is `vip`* can send them a thank-you — automatically.
 :::
+
+## Start when a customer sends a cart
+
+The **Order received** start runs a flow the moment a customer sends you a cart from your catalog. Use it to confirm the order with an order summary, request payment, or pass the order to your team. You can run it for every order, or only for orders in a value range or with a minimum number of items.
+
+If the customer was still in another flow that was waiting on a question or a delay, that flow ends so the order is handled straight away. See [Commerce in Flows](../commerce/commerce-in-flows.md#what-happens-when-the-customer-sends-a-cart).
 
 ## Tips & best practices
 
