@@ -51,10 +51,20 @@ Open **Commerce → Products**. If your products are listed, Waplify can read th
 
 To confirm step 2 actually took, send yourself a product message - see [Sending Products in a Message](/docs/commerce/send-product-messages). If the product appears in WhatsApp, the number is properly connected.
 
+### Collections
+
+A **collection** is a set of products you group in Meta Commerce Manager, such as "Bags" or "Summer sale". Meta calls them **sets**. You create them there, by picking products or with a rule like "name contains bag".
+
+Waplify reads your sets each time it syncs your products, and a chatbot can then send a whole set with the [Send Catalog](/docs/commerce/commerce-in-flows#show-products-with-send-catalog) block. Every catalog also has Meta's own **All Products** set.
+
+After you create or change a set in Meta, press **Resync products** on the **Commerce → Products** page (or **Sync products** inside the Send Catalog block) so Waplify sees the change.
+
+<!-- screenshot: the collection picker in the Send Catalog block, showing product and in-stock counts -->
+
 ## Tips & best practices
 
 - **Do step 2 before step 3.** Picking the catalog in Waplify does not connect it to your number - only WhatsApp Manager does that.
-- **One catalog per number.** WhatsApp serves a single catalog for a number. If you sell several ranges, keep them as sets inside one catalog.
+- **One catalog per number.** WhatsApp serves a single catalog for a number. If you sell several ranges, keep them as sets inside one catalog, and send each one as a [collection](#collections).
 - **Give every product an image and a clear title.** That is exactly what the customer sees in the chat.
 - **Keep availability accurate.** Out-of-stock products can still be shown, and customers will still try to order them.
 
@@ -75,6 +85,10 @@ Check that the catalog is in the same Business account as your WhatsApp number, 
 ### Can I change the catalog later?
 
 Yes. Link a different one the same way - update it in WhatsApp Manager first, then change your selection in Waplify so the two agree.
+
+### I created a set in Meta, but it does not show as a collection
+
+Waplify reads sets when it syncs. Press **Resync products** on the **Commerce → Products** page, then open the collection picker again.
 
 ### Do I add products in Waplify?
 
