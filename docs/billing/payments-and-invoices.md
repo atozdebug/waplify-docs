@@ -40,7 +40,7 @@ Waplify has **two separate types of charges**:
 
 | Charge | Paid to | Description |
 |--------|---------|-------------|
-| **Waplify Subscription** | Waplify | Platform access fee (quarterly, yearly, or lifetime) |
+| **Waplify Subscription** | Waplify | Platform access fee (quarterly, yearly, 2-year, or lifetime) |
 | **WhatsApp Messaging** | Meta (Facebook) | Per-conversation charges for messages sent through WhatsApp |
 
 Your Waplify payment history only shows the platform subscription charges. Meta messaging costs are managed separately on Meta's billing portal.
@@ -70,6 +70,6 @@ Your subscription will continue for a short grace period. During this time, you 
 
 No. WhatsApp messaging costs are charged directly by Meta to the payment method you set up on Meta's billing portal. Waplify does not add any markup to messaging costs.
 
-### Can I switch between monthly and yearly billing?
+### Can I switch between quarterly, yearly and 2-year billing?
 
-You can upgrade or downgrade your plan at any time from the Subscription page. Upgrades take effect immediately, while downgrades are scheduled for the end of your current billing period.
+Yes, from the Subscription page. Moving to a higher plan or a longer period takes effect immediately, and you get credit for the days you haven't used. Moving to a lower plan is scheduled for the end of your current period. On a 2-Year plan, you can switch to a shorter period when your 2 years end.
