@@ -24,7 +24,7 @@ On the checkout page, or in **Settings > Subscription**, use the switch above th
 ## Good to know
 
 - **Nothing renews automatically.** When your two years are nearly up, renew from **Settings > Subscription**. Renewing early adds the new period on top of the days you have left.
-- **You can still upgrade.** Moving to a higher plan or to Lifetime part-way through gives you credit for the days you haven't used. Switching to a shorter period (Yearly or Quarterly) is available when your 2 years end.
-- **Refunds:** direct purchases can be refunded in full within 15 days, the same as every plan.
+- **You can still upgrade.** Moving to a higher plan part-way through gives you credit for the days you haven't used. Switching to a shorter period (Yearly or Quarterly) is available when your 2 years end.
+- **Refunds:** the same as every plan. If you paid without using the free trial first, you can get a full refund within 15 days. If you started on the free trial, payments are non-refundable.
 
 Full details are on the [Subscription Plans](/docs/billing/subscription-plans) page.

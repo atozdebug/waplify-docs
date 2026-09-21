@@ -64,7 +64,7 @@ Invoice details depend on your account information. Make sure your business deta
 
 ### What happens if my payment fails?
 
-Your subscription will continue for a short grace period. During this time, you can retry the payment. After the grace period, your account access will be paused until payment is completed.
+Nothing is charged automatically, so a failed payment just means the plan wasn't bought or renewed. Your current plan keeps running until its end date. Check with your bank, then try again from **Settings > Subscription**. If your plan has already ended, everything keeps working for about 3 more days before most of the app pauses until you renew.
 
 ### Do I get charged for WhatsApp messages through Waplify?
 

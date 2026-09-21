@@ -16,7 +16,7 @@ Waplify offers different subscription plans to access the platform's features. Y
 1. Go to **Settings > Subscription** from the sidebar
 <!-- screenshot: Subscription page showing available plans -->
 2. You will see the available plans with their pricing and features. Each plan (Starter, Growth, Business) can be paid for over different periods:
-   - **Quarterly**: pay every 3 months
+   - **Quarterly**: pay for 3 months at a time
    - **Yearly**: pay once for 12 months, 25% cheaper per month than quarterly
    - **2-Year**: pay once for 24 months, 35% cheaper per month than quarterly. Our lowest monthly price
    - **Lifetime**: a one-time payment for permanent access
@@ -59,7 +59,7 @@ You can renew the **same** plan before it runs out. When you do, the new period 
 3. The downgrade will be **scheduled** to take effect at the end of your current period
 4. You can cancel the scheduled downgrade before it takes effect
 
-**On a 2-Year plan**, you can move up to a higher plan or to Lifetime at any time, but you can't switch to a shorter period (Yearly or Quarterly) part-way through. You can choose any plan when your 2-Year plan ends.
+**On a 2-Year plan**, you can move up to a higher plan at any time, but you can't switch to a shorter period (Yearly or Quarterly) part-way through. You can choose any plan when your 2-Year plan ends.
 
 ### Cancelling your subscription
 
@@ -113,7 +113,7 @@ No. Cancelling always takes effect at the **end of your current period**. You ke
 
 ### Can I get a refund?
 
-If you bought directly from Waplify, you can ask for a full refund within **15 days** of your payment. After 15 days, payments are non-refundable, including on Yearly and 2-Year plans. Contact support at support@waplify.io for refund requests.
+If you paid directly, without using the free trial first, you can ask for a full refund within **15 days** of your payment. If you started on the free trial, payments are non-refundable: the trial is the time to try Waplify out. After 15 days, payments are non-refundable, including on Yearly and 2-Year plans. Contact support at support@waplify.io for refund requests.
 
 ### Is there a free plan?
 
