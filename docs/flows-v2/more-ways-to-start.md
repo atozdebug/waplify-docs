@@ -37,6 +37,43 @@ Open the ad in **Meta Ads Manager**. In your browser's address bar you'll see pa
 Run different flows for different campaigns. A "Summer Sale" ad can open a flow about the sale, while a "Book a demo" ad opens a booking flow — just point each ad's ID at its own flow.
 :::
 
+### When two flows could answer the same ad
+
+If one flow is set to **Any ad** and another flow is set to a **specific ad**, the specific one always answers a lead from that ad. The Any ad flow answers everyone else. If two flows are set to the same ad, the one higher in your flow order answers.
+
+### Use the ad's details in your messages
+
+In any message step, click the **{ }** button (or type **/**) and open **Start**. Flows started by an ad have these extra fields:
+
+| Field | What it gives you |
+|---|---|
+| **Ad headline** | the headline people saw, e.g. "Diwali Offer" |
+| **Ad text** | the main text of the ad |
+| **Ad ID** | the ad's number in Meta Ads Manager |
+| **Ad or post** | `ad`, or `post` for a Facebook / Instagram post |
+| **Ad link** | a link to the ad or post |
+| **Ad click ID** | advanced: for sending sales back to Meta |
+
+For example: "Thanks for your interest in `{{ad.headline}}`! Here are the details."
+
+:::tip
+Run one flow for several ads. Add a **Condition** step that checks **Ad ID**, and send each ad's leads down their own branch.
+:::
+
+These fields stay available for the whole flow, even after the customer replies.
+
+<!-- screenshot: variable picker showing the Ad fields under Start -->
+
+### See which ad brought a contact
+
+Waplify remembers the ad on the contact:
+
+- **Inbox:** open the chat and look at **Conversation Context** in the customer panel. You'll see **Came from ad** (or **First ad** and **Latest ad** if they came from more than one), with the date and a link to the ad.
+- **Contacts and campaigns:** add the filter **Came from ad**, and type an Ad ID or the ad's headline. Use it to send a follow-up broadcast to everyone from one ad.
+- **Export:** your contacts export adds columns for the first and latest ad (ID, headline and time in UTC) whenever at least one contact came from an ad.
+
+<!-- screenshot: Conversation Context showing Came from ad -->
+
 ## Start when a contact is created or updated
 
 The **Contact created or updated** trigger starts a flow the moment a contact's record changes in a way you care about — for example, when a new lead is added, or when someone's status becomes `approved`. It's a powerful way to message people based on what you know about them, not just what they type.
