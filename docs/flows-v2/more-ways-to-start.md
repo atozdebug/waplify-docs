@@ -68,11 +68,15 @@ These fields stay available for the whole flow, even after the customer replies.
 
 Waplify remembers the ad on the contact:
 
-- **Inbox:** open the chat and look at **Conversation Context** in the customer panel. You'll see **Came from ad** (or **First ad** and **Latest ad** if they came from more than one), with the date and a link to the ad.
+- **Inbox:** open the chat and look at **Conversation Context** in the customer panel. You'll see **Came from ad** (or **First ad** and **Latest ad** if they came from more than one), with the date and a link to the ad. Click **All ad taps** to see every ad this person has tapped, newest first.
 - **Contacts and campaigns:** add the filter **Came from ad**, and type an Ad ID or the ad's headline. Use it to send a follow-up broadcast to everyone from one ad.
 - **Export:** your contacts export adds columns for the first and latest ad (ID, headline and time in UTC) whenever at least one contact came from an ad.
 
 <!-- screenshot: Conversation Context showing Came from ad -->
+
+:::note
+Ad details are available on the Growth and Business plans, on Lifetime Gold, Platinum and Diamond, and on plans bought before the current pricing. On other plans Waplify still records which ad brought each contact, so the history is there as soon as you upgrade.
+:::
 
 ## Start when a contact is created or updated
 
