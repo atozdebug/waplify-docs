@@ -47,8 +47,8 @@ For example, use **Yes** with "Ask the question again" and **No thanks** with "E
 ### Change it for one flow
 
 1. Open the flow and click **Settings** at the top of the builder.
-2. Under **When the customer stops replying**, pick one:
-   - **Use the business setting** (the default)
+2. Pick **No reply** in the menu on the left, then choose one:
+   - **Use the business setting** (the default). It shows what your business setting is, with a link to change it.
    - **Off for this flow**
    - **Custom for this flow**, which shows the same timeline as above, plus the **Go to a step** button action
    <!-- screenshot: Flow settings with the When the customer stops replying section -->
@@ -56,7 +56,7 @@ For example, use **Yes** with "Ask the question again" and **No thanks** with "E
 
 ### Choose what happens when a flow ends
 
-In the same **Settings** window, **When this flow ends** decides what happens to the chat after the last step of the flow: keep it open, mark it as resolved, or assign it to someone.
+In the same **Settings** window, **When it ends** decides what happens to the chat after the last step of the flow: keep it open, mark it as resolved, or assign it to someone.
 
 ### See it in action
 

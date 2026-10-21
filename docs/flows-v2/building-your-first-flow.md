@@ -103,11 +103,16 @@ From the **⋯ menu** in the toolbar you can:
 
 ## Flow settings
 
-Open **flow settings** (⚙) to adjust:
+Click **Settings** at the top of the builder. The window has a menu on the left. Pick a section to see its options:
 
-- **Flow name**
-- **Session expiry** — how long a customer's place in the flow is remembered before it times out
-- **Maximum steps per run** — a safety limit that stops a flow from looping forever
+- **Timing**: how soon the same person can start this flow again, and how long the bot keeps a paused chat before it ends the flow.
+- **No reply**: what happens when the customer stops answering. See [When the customer stops replying](./when-the-customer-stops-replying.md).
+- **When it ends**: after the last step, keep the chat open, mark it as resolved, or assign it to someone.
+- **Variables**: values the flow can save and reuse while it runs, like an answer or a counter.
+
+If a section needs a fix before you can save, it shows a red dot in the menu.
+
+<!-- screenshot: Flow settings window with the menu on the left -->
 
 ## Tips & best practices
 
