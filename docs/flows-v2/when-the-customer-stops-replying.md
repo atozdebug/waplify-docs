@@ -36,7 +36,7 @@ You set this up **once** for your whole business. It works on every question you
 Click **Edit** on a reminder, then **Add button** (up to 3 on each reminder). Give each button your own name, up to 20 characters, and choose what it does:
 
 - **Ask the question again**: the bot sends its question once more.
-- **Talk to a person**: the bot replies "Thanks! Someone from our team will reply soon." and gives the chat to your team, using the same choice as **Assign the chat to someone**.
+- **Talk to a person**: the bot replies "Thanks! Someone from our team will reply soon." and gives the chat to your team. Right under the button, choose who gets the chat. If **Then** is set to **Assign the chat to someone**, the button uses that same choice.
 - **End the chat**: the bot says goodbye and closes the chat.
 - **Go to a step**: only in a flow's own settings. The bot carries on from the step you pick, so you can build anything there: an offer, a picture, more questions. The step does not need to be connected to Start.
 
