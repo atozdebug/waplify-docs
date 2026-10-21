@@ -30,6 +30,19 @@ You set this up **once** for your whole business. It works on every question you
 9. Optionally switch on **Tag the contact "No reply"**, so you can find these people later.
 10. Click **Save Changes**.
 
+### Add buttons to the reminder
+
+Under the reminder message, click **Add button** (up to 3). Give each button your own name, up to 20 characters, and choose what it does:
+
+- **Ask the question again**: the bot sends its question once more.
+- **Talk to a person**: the bot replies "Thanks! Someone from our team will reply soon." and gives the chat to your team, using the same choice as **Assign the chat to someone**.
+- **End the chat**: the bot says goodbye and closes the chat.
+- **Go to a step**: only in a flow's own settings. The bot carries on from the step you pick, so you can build anything there: an offer, a picture, more questions. The step does not need to be connected to Start.
+
+For example, use **Yes** with "Ask the question again" and **No thanks** with "End the chat".
+
+<!-- screenshot: reminder with two buttons on a phone -->
+
 ### Change it for one flow
 
 1. Open the flow and click **Settings** at the top of the builder.
@@ -80,6 +93,10 @@ No. The bot only reminds a customer who has not answered the current question. I
 ### What if the customer replies after the chat was closed?
 
 Their message is handled like any new message: it can start a flow again, or go to your team, depending on your other settings.
+
+### What if the customer taps a reminder button after the chat closed?
+
+**Talk to a person** still hands the chat to your team. The other buttons are treated like a normal message.
 
 ### Does the reminder cost anything extra?
 
