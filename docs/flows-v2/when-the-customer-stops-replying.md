@@ -16,30 +16,31 @@ You set this up **once** for your whole business. It works on every question you
 ### Turn it on for your business
 
 1. Go to **Settings > Inbox & routing**.
-2. Find **When the customer stops replying** and switch it on.
-   <!-- screenshot: the When the customer stops replying card switched on -->
-3. Choose how many **Reminders** to send: none, once or twice.
-4. Choose **Remind after**: how long the bot waits before reminding.
-5. Edit the **Reminder message** if you like. The bot sends just this message. Your question, with its buttons, stays right above it in the chat, so the customer can still answer it.
-6. Choose **Close if still no reply after**: how long the bot waits after the last reminder.
-7. Edit the **Goodbye message**, or leave it empty to close without a message.
+2. Find **When the customer stops replying** and switch it on. The settings appear as a timeline you read from top to bottom, in the order things happen.
+   <!-- screenshot: the When the customer stops replying timeline switched on -->
+3. Under **Your bot asks a question**, choose how long the bot waits, for example **No answer for 2 hours**.
+4. The **Send a reminder** card shows the message the bot sends. Click **Edit** to change it. The bot sends just this message. Your question, with its buttons, stays right above it in the chat, so the customer can still answer it.
+5. To remind a second time, click **Add another reminder**. Each reminder has its own wait and its own message. To send no reminder at all, remove it with the bin icon.
+6. Under the last reminder, choose how long to wait before closing, for example **Still no answer for 3 hours**.
+7. The **Say goodbye and close** card shows the goodbye message. Click **Edit** to change it, or leave it empty to close without a message.
 8. Under **Then**, choose what happens to the chat:
    - **Keep the chat open**: nothing changes in your inbox.
    - **Mark the chat as resolved**: the chat moves to Resolved.
    - **Assign the chat to someone**: a teammate gets it, using the same choices as [handing off to a human](./handing-off-to-a-human.md).
 9. Optionally switch on **Tag the contact "No reply"**, so you can find these people later.
-10. Click **Save Changes**.
+10. Check the sentence at the bottom. It sums up your choices in plain words, for example *"Reminder after 2 hours, chat closes after 5 hours."*
+11. Click **Save Changes**.
 
-### Add buttons to the reminder
+### Add buttons to a reminder
 
-Under the reminder message, click **Add button** (up to 3). Give each button your own name, up to 20 characters, and choose what it does:
+Click **Edit** on a reminder, then **Add button** (up to 3 on each reminder). Give each button your own name, up to 20 characters, and choose what it does:
 
 - **Ask the question again**: the bot sends its question once more.
 - **Talk to a person**: the bot replies "Thanks! Someone from our team will reply soon." and gives the chat to your team, using the same choice as **Assign the chat to someone**.
 - **End the chat**: the bot says goodbye and closes the chat.
 - **Go to a step**: only in a flow's own settings. The bot carries on from the step you pick, so you can build anything there: an offer, a picture, more questions. The step does not need to be connected to Start.
 
-For example, use **Yes** with "Ask the question again" and **No thanks** with "End the chat".
+For example, use **Yes** with "Ask the question again" and **No thanks** with "End the chat". Each reminder keeps its own buttons, so a second reminder can offer different choices from the first.
 
 <!-- screenshot: reminder with two buttons on a phone -->
 
@@ -49,7 +50,7 @@ For example, use **Yes** with "Ask the question again" and **No thanks** with "E
 2. Under **When the customer stops replying**, pick one:
    - **Use the business setting** (the default)
    - **Off for this flow**
-   - **Custom for this flow**, which shows the same options as above
+   - **Custom for this flow**, which shows the same timeline as above, plus the **Go to a step** button action
    <!-- screenshot: Flow settings with the When the customer stops replying section -->
 3. Save the flow.
 
@@ -65,7 +66,7 @@ Open a flow's activity (**View sessions**) and pick a conversation. You will see
 ## Good to know
 
 - **Any reply resets the clock.** As soon as the customer answers, the reminders start again from zero at the next question.
-- **Everything happens within 23 hours.** WhatsApp only lets a business send normal messages for 24 hours after the customer's last message. Waplify keeps reminders and the goodbye inside that time. If the window has already closed, the bot closes the chat quietly without sending anything.
+- **Everything happens within 23 hours.** WhatsApp only lets a business send normal messages for 24 hours after the customer's last message, so all the waits in the timeline together can add up to 23 hours at most. Waplify keeps reminders and the goodbye inside that time. If the window has already closed, the bot closes the chat quietly without sending anything.
 - **Your team comes first.** If someone on your team takes over the chat, or it is resolved, the reminders stop.
 - **Closing frees the customer.** After the chat is closed, the customer can start any of your flows again with their next message.
 
