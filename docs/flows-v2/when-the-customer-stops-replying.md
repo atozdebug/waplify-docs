@@ -7,7 +7,7 @@ keywords: [WhatsApp chatbot reminder, chatbot follow up no reply, close chatbot 
 
 ## What is "When the customer stops replying"?
 
-Sometimes a customer starts chatting with your bot, gets a question, and then goes quiet. Instead of waiting forever, your bot can send a friendly reminder, ask the question again, and if there is still no answer, say goodbye and close the chat.
+Sometimes a customer starts chatting with your bot, gets a question, and then goes quiet. Instead of waiting forever, your bot can send a friendly reminder, and if there is still no answer, say goodbye and close the chat.
 
 You set this up **once** for your whole business. It works on every question your chatbots ask, so you never have to add anything to each step. A flow can still use its own settings when it needs to.
 
@@ -20,7 +20,7 @@ You set this up **once** for your whole business. It works on every question you
    <!-- screenshot: the When the customer stops replying card switched on -->
 3. Choose how many **Reminders** to send: none, once or twice.
 4. Choose **Remind after**: how long the bot waits before reminding.
-5. Edit the **Reminder message** if you like. The bot sends it, then asks the same question again (buttons and lists included).
+5. Edit the **Reminder message** if you like. The bot sends just this message. Your question, with its buttons, stays right above it in the chat, so the customer can still answer it.
 6. Choose **Close if still no reply after**: how long the bot waits after the last reminder.
 7. Edit the **Goodbye message**, or leave it empty to close without a message.
 8. Under **Then**, choose what happens to the chat:
