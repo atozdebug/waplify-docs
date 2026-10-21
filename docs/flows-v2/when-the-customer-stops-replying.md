@@ -1,7 +1,7 @@
 ---
 title: When the Customer Stops Replying
 description: Let your chatbot remind a customer who goes quiet, then close the chat on its own, with one setting for every flow
-sidebar_position:
+sidebar_position: 5.5
 keywords: [WhatsApp chatbot reminder, chatbot follow up no reply, close chatbot conversation, WhatsApp bot timeout, inactive customer]
 ---
 
