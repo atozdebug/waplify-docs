@@ -1,0 +1,8 @@
+{
+  "label": "WhatsApp Calling",
+  "position": 7.5,
+  "link": {
+    "type": "generated-index",
+    "description": "Take and make WhatsApp voice calls in Waplify, on the website and in the Android app, with voicemail and call recording."
+  }
+}
