@@ -26,27 +26,30 @@ If the switch can't be turned on, the line under **WhatsApp calling** tells you 
 
 ### 2. Be available for calls
 
-Calls ring only for team members who are **available**, who have access to that WhatsApp number, and who are not already on a call.
+Calls ring only for team members who are **Available**, who have access to that WhatsApp number, and who are not already on a call.
 
-**On the website**
+**Your status: Available or Away**
 
-1. Click your status at the top of the page, next to the notification bell. It shows **Available** or **Away**.
-<!-- screenshot: the header status with Available and Away -->
-2. Choose **Available**. The first time, your browser asks to use your microphone. Click **Allow**.
-3. A green dot means calls ring for you. Choose **Away** when you step away: the dot becomes a grey ring and calls stop ringing for you.
+You have one status, the same on the website and in the app. Change it in either place and the other shows the change within a second.
 
-Keep a Waplify tab open while you are available. If you close the browser or your computer goes to sleep, calls stop ringing for you within about a minute. Your choice is remembered in that browser.
+- **On the website:** click your status at the top of the page, next to the notification bell, and choose **Available** or **Away**.
+- **In the Android app:** tap your status at the top of the chat list and choose **Available** or **Away**.
+<!-- screenshot: the status with Available and Away, on the website and in the app -->
+
+A green dot means calls ring for you. Choose **Away** when you step away: the dot becomes a grey ring and calls stop ringing for you everywhere, on the website and on your phone. You can still call customers while Away.
 
 If your status shows **Calls off** with a lock, your admin has turned off calls for you (see below).
 
-**In the Android app**
+**Where calls ring while you are Available**
 
-1. Open the Waplify app and go to **Settings > Notifications**.
-2. Switch on **Available for WhatsApp calls**.
-3. Allow the **microphone**. On Android 14 and newer, also allow Waplify to show **full-screen** call alerts when the phone asks.
-<!-- screenshot: the app's Notifications settings with Available for WhatsApp calls -->
+- **On the website,** in any open Waplify tab. The first time, your browser asks to use your microphone. Click **Allow**. If you close the browser or your computer goes to sleep, calls stop ringing there within about a minute.
+- **On your Android phone,** when **Ring this phone** is on:
+  1. Open the Waplify app and go to **Settings > Notifications**.
+  2. Switch on **Ring this phone**.
+  3. Allow the **microphone**. On Android 14 and newer, also allow Waplify to show **full-screen** call alerts when the phone asks.
+  <!-- screenshot: the app's Notifications settings with Ring this phone -->
 
-Now calls ring on your phone like a normal call, even when the app is closed or the phone is locked. The switch appears only when your company has a number with calling on.
+  Calls then ring on your phone like a normal call, even when the app is closed or the phone is locked. Switch it off if you only want calls on your computer.
 
 **Turn calls off for a team member (owners and admins)**
 
@@ -56,7 +59,7 @@ Some team members shouldn't take calls at all, for example someone who only hand
 2. In the **Calls** column, switch the member off.
 <!-- screenshot: Settings > Team with the Calls column -->
 
-Calls never ring for them and they can't call customers, whatever their own status says. Their status shows **Calls off** with a lock, and in the app their **Available for WhatsApp calls** switch is locked. You can switch it back on at any time. Everyone has calls on until an admin turns them off, and only the owner can change the owner's switch.
+Calls never ring for them and they can't call customers, whatever their own status says. Their status shows **Calls off** with a lock, and in the app their **Ring this phone** switch is locked. You can switch it back on at any time. Everyone has calls on until an admin turns them off, and only the owner can change the owner's switch.
 
 If every team member has calls off, the Team page warns you: calls then go to voicemail or ring out.
 
@@ -115,7 +118,7 @@ Not in the iPhone app yet. Open Waplify in the browser on a computer to take cal
 They may. You don't have to wait: tap **Call back** on the missed call in their chat. Their call lets you call them back for 7 days. See [Call your customers](./call-your-customers.md).
 
 **Why didn't a call ring for me?**
-Check that your status is **Available** (or the app switch is on), that your admin hasn't turned off your calls, that you have access to that WhatsApp number, and that you weren't already on a call. If the chat is assigned to a teammate, they ring first for about 10 seconds.
+Check that your status is **Available**, that a Waplify tab is open (or **Ring this phone** is on in the app), that your admin hasn't turned off your calls, that you have access to that WhatsApp number, and that you weren't already on a call. If the chat is assigned to a teammate, they ring first for about 10 seconds.
 
 **Can I transfer a call to a teammate?**
 Not during the call. WhatsApp doesn't support call transfer. You can assign the chat to a teammate afterwards.
