@@ -30,12 +30,14 @@ Calls ring only for team members who are **available**, who have access to that 
 
 **On the website**
 
-1. Click the **phone icon** at the top of the page, next to the notification bell.
-<!-- screenshot: the header phone icon with the green dot -->
-2. The first time, your browser asks to use your microphone. Click **Allow**.
-3. A green dot and "Available for calls" mean calls will ring for you. Click again when you step away: it shows "Not taking calls".
+1. Click your status at the top of the page, next to the notification bell. It shows **Available** or **Away**.
+<!-- screenshot: the header status with Available and Away -->
+2. Choose **Available**. The first time, your browser asks to use your microphone. Click **Allow**.
+3. A green dot means calls ring for you. Choose **Away** when you step away: the dot becomes a grey ring and calls stop ringing for you.
 
 Keep a Waplify tab open while you are available. If you close the browser or your computer goes to sleep, calls stop ringing for you within about a minute. Your choice is remembered in that browser.
+
+If your status shows **Calls off** with a lock, your admin has turned off calls for you (see below).
 
 **In the Android app**
 
@@ -45,6 +47,18 @@ Keep a Waplify tab open while you are available. If you close the browser or you
 <!-- screenshot: the app's Notifications settings with Available for WhatsApp calls -->
 
 Now calls ring on your phone like a normal call, even when the app is closed or the phone is locked. The switch appears only when your company has a number with calling on.
+
+**Turn calls off for a team member (owners and admins)**
+
+Some team members shouldn't take calls at all, for example someone who only handles chats.
+
+1. Go to **Settings > Team**.
+2. In the **Calls** column, switch the member off.
+<!-- screenshot: Settings > Team with the Calls column -->
+
+Calls never ring for them and they can't call customers, whatever their own status says. Their status shows **Calls off** with a lock, and in the app their **Available for WhatsApp calls** switch is locked. You can switch it back on at any time. Everyone has calls on until an admin turns them off, and only the owner can change the owner's switch.
+
+If every team member has calls off, the Team page warns you: calls then go to voicemail or ring out.
 
 ### 3. Answer a call
 
@@ -74,15 +88,17 @@ If you're available on the website and in the app, both ring. Whichever you answ
 ### 4. After the call
 
 - The customer's chat shows the call: "Voice call" with how long it lasted and who answered, or "Missed voice call", "Declined", "No answer" or "Voicemail left".
+- **A missed call** moves the chat to the top of your chat list as unread, with "Missed voice call". The people who take calls get a "Missed WhatsApp call" alert on the website and on their phone, as soon as the call stops ringing.
+- **Call back** from the missed call in the chat, on the website or in the app. The customer's call lets you call them back for 7 days without asking again.
 - If the chat had no owner, it is now assigned to the person who answered: "Chat is now assigned to (name) after a call".
-- The **Calls** page in the left menu lists every call. You can filter by **All calls**, **Missed**, **Voicemail**, **Answered**, **Declined** and **Not connected**, for the last 7, 30 or 90 days.
+- The **Calls** page in the left menu lists calls. Each team member sees the calls in the chats they can see. You can filter by **All calls**, **Missed**, **Voicemail**, **Answered**, **Declined** and **Not connected**, for the last 7, 30 or 90 days.
 <!-- screenshot: the Calls page -->
-
-The Calls page is for team members who can see all chats. Team members who see only their assigned chats see calls inside those chats.
+- A red number on **Calls** counts the missed calls you haven't looked at yet. Opening the page clears it.
+- In the Android app, tap the **phone icon** at the top of your chats for recent calls: missed calls in red, with a call-back button.
 
 ## Tips & best practices
 
-- Turn yourself **available** only when you can really take calls. Calls that ring with nobody answering count against your number with WhatsApp.
+- Set yourself **Available** only when you can really take calls. Calls that ring with nobody answering count against your number with WhatsApp.
 - Use a headset on the website for clearer sound and no echo.
 - On Android, if calls don't ring when the app is closed: check that Waplify notifications are allowed, that battery saving isn't restricting Waplify, and that you haven't used **Force stop** on the app (Android then blocks its alerts until you open it again).
 - If your microphone doesn't work on the website, check the browser's permission for Waplify (the icon next to the web address).
@@ -96,10 +112,10 @@ On the website, yes: keep a tab open and stay available. In the Android app, no:
 Not in the iPhone app yet. Open Waplify in the browser on a computer to take calls.
 
 **A call rang but I couldn't answer in time. Will the customer try again?**
-They may. You can also call them back from their chat if they've allowed calls, or send them a **Call us** button: see [Call your customers](./call-your-customers.md).
+They may. You don't have to wait: tap **Call back** on the missed call in their chat. Their call lets you call them back for 7 days. See [Call your customers](./call-your-customers.md).
 
 **Why didn't a call ring for me?**
-Check that you're available (green dot or the app switch), that you have access to that WhatsApp number, and that you weren't already on a call. If the chat is assigned to a teammate, they ring first for about 10 seconds.
+Check that your status is **Available** (or the app switch is on), that your admin hasn't turned off your calls, that you have access to that WhatsApp number, and that you weren't already on a call. If the chat is assigned to a teammate, they ring first for about 10 seconds.
 
 **Can I transfer a call to a teammate?**
 Not during the call. WhatsApp doesn't support call transfer. You can assign the chat to a teammate afterwards.

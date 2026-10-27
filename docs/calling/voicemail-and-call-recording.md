@@ -50,7 +50,7 @@ From then on:
 
 **Who can listen:** team members who can open and reply in that customer's chat.
 
-**How long recordings are kept:** while your plan is active.
+**How long recordings are kept:** there is no time limit.
 
 ## Tips & best practices
 
@@ -71,7 +71,7 @@ Not yet. With **Record calls** on, every answered call on that number is recorde
 No. WhatsApp plays it on every recorded call.
 
 **Does a voicemail count as a missed call?**
-It's listed as **Voicemail**, not missed, so you can find and return it easily.
+Yes. You get the missed-call alert as soon as the call stops ringing, and the voicemail arrives right below it in the chat as a voice message. On the Calls page it's listed as **Voicemail**, so you can find and return it easily.
 
 **Is call recording free?**
 Yes. Recording comes with the plans listed above, and WhatsApp doesn't charge for it today. WhatsApp says it may charge for recording in future, with notice.

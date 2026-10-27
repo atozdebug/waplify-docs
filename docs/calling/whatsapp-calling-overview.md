@@ -23,6 +23,8 @@ Calls are voice only.
 - **Voicemail:** when nobody can answer, the caller hears your greeting and can leave a voice message. It arrives in the chat. *(Some plans, see below.)*
 - **Record calls** and play them back from the chat. *(Some plans, see below.)*
 - **See every call** in the customer's chat and on the **Calls** page: who called, who answered, how long, missed, declined or voicemail.
+- **Never lose a missed call:** the chat moves to the top as unread, your team gets an alert, and you call back with one tap.
+- **Choose who takes calls:** each person sets themselves Available or Away, and an admin can turn calls off for anyone who shouldn't take them.
 
 ## What WhatsApp requires from your number
 
