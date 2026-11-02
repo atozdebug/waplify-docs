@@ -12,41 +12,36 @@ Use it for spam, abusive messages, or anyone who keeps messaging after you have 
 
 ## How to use it
 
-### Block someone from a chat
+### Block someone
 
-1. Open the chat in **Chat**.
-2. Click the **⋮** menu at the top right of the chat.
-3. Click **Block number**.
-4. Check the message and click **Block**.
+1. In **Chat**, open the chat, then click the **⋮** menu at the top right of the chat.
+   You can also hover over the chat in the chat list and click its **⋮** menu.
+2. Click **Block number**.
+3. Check the message and click **Block**.
 
-<!-- screenshot: chat header menu with Block number -->
+<!-- screenshot: chat menu with Block number -->
 
 The chat is resolved and marked **Blocked**. Any drip sequence or chatbot running for that person stops.
+
+Owners, admins and managers can block numbers. Agents can't.
 
 ### Unblock someone
 
 1. Open the chat. A blocked chat shows **This number is blocked** where you normally type.
 2. Click **Unblock number**, then **Unblock**.
 
-You can also unblock from **Settings > Blocked numbers**.
+You can also choose **Unblock number** from the chat's **⋮** menu in the chat list.
 
 <!-- screenshot: blocked chat with the Unblock number button -->
 
 ### See everyone you have blocked
 
-Go to **Settings > Blocked numbers**. You will see each blocked number, who blocked it and when, and a button to unblock it.
+1. In **Chat**, click the filter icon next to the search box.
+2. Tick **Blocked numbers only** and apply.
 
-<!-- screenshot: Settings > Blocked numbers -->
+The list shows every blocked chat, each marked **Blocked**. Open one to unblock it.
 
-### Block a number that has never messaged you
-
-1. Go to **Settings > Blocked numbers**.
-2. Click **Block a number**.
-3. Type the number with its country code, for example `+91 98765 43210`, and click **Block**.
-
-### Let agents block numbers
-
-By default, owners, admins and managers can block numbers. To let agents block too, an owner or admin can switch on **Agents can block numbers** in **Settings > Blocked numbers**.
+<!-- screenshot: chat filter with Blocked numbers only -->
 
 ## Tips & best practices
 
@@ -68,7 +63,7 @@ When a message fails because WhatsApp says the number is blocked, for example be
 Nothing is sent to that person. In the campaign report they show as **You blocked this number**.
 
 **I blocked the wrong person. What do I do?**
-Unblock them from the chat or from **Settings > Blocked numbers**. They can message you again straight away, and you can reply as normal.
+Unblock them from the chat. They can message you again straight away, and you can reply as normal.
 
 **Does blocking cost anything?**
 No. Blocking is free on every plan.
