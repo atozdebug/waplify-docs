@@ -14,20 +14,31 @@ WhatsApp requires all business-initiated messages to use **pre-approved template
 ### Viewing your templates
 
 1. Go to **Templates** from the sidebar
-<!-- screenshot: Templates page showing list of templates -->
-2. You will see all your synced templates with their:
-   - **Name** — the template identifier
-   - **Category** — Marketing, Utility, or Authentication
-   - **Language** — the language of the template
-   - **Status** — whether it is synced and approved
+<!-- screenshot: Templates page with the Number, Category and Status filters and preview cards -->
+2. Each template shows as a card with a WhatsApp-style preview of the message, so you can see exactly what your customer will receive. Each card also shows:
+   - **Name** and a green tick when the template is approved (other statuses, like Pending or Rejected, are written next to the name)
+   - **Category, language and date**, for example "Marketing · English (US) · 22 Oct"
+   - **Variables** as green tags in the message, like `first_name`
+   - **Numbers that can send it**, at the bottom of the card, if your business has more than one WhatsApp number
+3. Click any card to see the full template, its details and the **Edit** and **Delete** buttons.
+
+### Finding a template
+
+Use the filters at the top of the page:
+
+- **Number**: the page opens on **All numbers**, so you see every template your numbers can send. Pick one number to see only its templates.
+- **Category**: Marketing, Utility or Authentication (and Commerce, if your plan includes it). Each option shows how many templates it has.
+- **Status**: Approved, Pending, Rejected, Paused or Drafts. **All statuses** shows every template except drafts. Pick **Drafts** to see templates you saved but haven't submitted yet.
+- **Search templates**: type part of a template's name or message.
+<!-- screenshot: Category dropdown with counts -->
 
 ### Creating a template
 
 You can create templates two ways — both submit to Meta for approval:
 
 - **Inside Waplify (recommended)** — click **Create Template** on the Templates page and build it with the visual editor. This is the easiest option, and it supports special types like [carousel templates](./carousel-templates.md).
-- **On Meta's website** — click **Create on Meta** to open Meta's Template Manager in a new tab and build it there.
-<!-- screenshot: Create Template button on the Templates page -->
+- **On Meta's website**: click the small arrow next to **Create Template**, then **Create on Meta**. This opens Meta's Template Manager in a new tab, where you build it.
+<!-- screenshot: Create Template button and its arrow menu on the Templates page -->
 
 Either way, choose a template **category** based on what you want to send:
 
@@ -45,21 +56,22 @@ Template approval time varies. Verified businesses usually get approved within a
 
 Templates you create or change on Meta appear in Waplify **automatically** — there's no manual import step. The list also updates on its own as Meta approves, rejects, or pauses your templates.
 
-If you want to refresh the list right away, click **Sync Templates** on the Templates page to pull the latest state straight from Meta.
-<!-- screenshot: Sync Templates button on the Templates page -->
+If you want to refresh the list right away, click the **Sync from Meta** button (the round arrows next to the search box) to pull the latest state straight from Meta. With **All numbers** picked, this refreshes the templates for every number at once.
+<!-- screenshot: Sync from Meta button on the Templates page -->
 
 ### Deleting a template
 
-1. Find the template you want to remove in the list
-2. Click the **delete** icon next to the template
-3. Confirm the deletion — this removes the template from both Waplify and Meta
+1. Click the template's card to open it
+2. Click **Delete**
+3. Confirm the deletion. This removes the template from both Waplify and Meta.
 
 ## Tips & best practices
 
 - Use **lowercase names with underscores** for template names (e.g., `welcome_offer`, `order_update`)
 - Include an **opt-out option** in marketing templates (e.g., "Reply STOP to unsubscribe") — this improves approval chances
 - Keep your message clear and concise — WhatsApp may reject vague or misleading content
-- Templates created or edited on Meta sync to Waplify automatically — use **Sync Templates** only when you want an immediate refresh
+- Templates created or edited on Meta sync to Waplify automatically. Use **Sync from Meta** only when you want an immediate refresh.
+- With more than one WhatsApp number, look at the bottom of each card to see which numbers can send that template
 - You can create templates with **variables** (like customer name) that get filled in when you send a campaign — see [Template Variables & Media](./template-variables-and-media.md)
 
 ## Frequently asked questions
@@ -79,6 +91,18 @@ Check the rejection reason in Meta's Template Manager. Common reasons include un
 ### Can I edit an approved template?
 
 Yes. Edit it from the **Templates** page — your changes are sent to Meta for a fresh review, and the template returns to **Pending** until it is re-approved. Carousel templates are the exception: they can't be edited, so create a new one instead. See [Creating Templates](./creating-templates.md).
+
+### Why does a template show more than one number?
+
+Templates belong to your WhatsApp Business account on Meta, not to a single number. If two of your numbers are on the same account, both can send the same template, so the card lists both.
+
+### I'm a team member and I only see some numbers. Why?
+
+Your admin can limit which WhatsApp numbers each team member can use. The Templates page only shows the numbers, and the templates, that you have access to.
+
+### Where are my draft templates?
+
+Pick **Drafts** in the **Status** filter. Drafts aren't linked to a number until you publish them, so their card says "Not linked to a number".
 
 ### What is the difference between Marketing, Utility, and Authentication templates?
 

@@ -69,7 +69,7 @@ If your selected template has a **media header** (image, video, or document):
 
 ### What if I don't see my template in the dropdown?
 
-Make sure the template is **approved** on Meta and that you have clicked **Sync Templates** on the Templates page. Only approved and synced templates appear in the campaign dropdown.
+Make sure the template is **approved** on Meta and that you have clicked **Sync from Meta** on the Templates page. Only approved and synced templates appear in the campaign dropdown.
 
 ### Can I use the same template for multiple campaigns?
 

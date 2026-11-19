@@ -62,7 +62,7 @@ If you leave this turned off, WhatsApp uses its default of about 10 minutes. Cho
 
 If you prefer, you can also create templates directly on Meta's website and then import them into Waplify.
 
-1. From the Templates page, click **Create on Meta** — this opens Meta's Template Manager in a new tab
+1. On the Templates page, click the small arrow next to **Create Template**, then **Create on Meta**. This opens Meta's Template Manager in a new tab.
 2. Create your template directly on Meta's platform
 3. The template appears in Waplify automatically once Meta processes it — there's no manual import step
 
@@ -70,8 +70,8 @@ If you prefer, you can also create templates directly on Meta's website and then
 
 Templates you create or change on Meta's website appear in Waplify **automatically** — you don't need to import them by hand.
 
-If you want to refresh the list immediately, go to the **Templates** page and click **Sync Templates**. This pulls the latest status and content for every template straight from Meta.
-<!-- screenshot: Templates list with the Sync Templates button -->
+If you want to refresh the list immediately, go to the **Templates** page and click **Sync from Meta** (the round arrows next to the search box). This pulls the latest status and content for every template straight from Meta.
+<!-- screenshot: Templates page with the Sync from Meta button -->
 
 ## Tips & best practices
 
@@ -79,7 +79,7 @@ If you want to refresh the list immediately, go to the **Templates** page and cl
 - **Keep messages concise** — WhatsApp is a messaging platform, not email. Short, clear messages work best
 - **Include opt-out text** in marketing templates (e.g., "Reply STOP to unsubscribe") — this is recommended by Meta and improves approval chances
 - **Test your template** by creating a small campaign to yourself before sending it to customers
-- **Sync is automatic** — templates created or edited on Meta show up in Waplify on their own. Use the **Sync Templates** button only when you want an immediate refresh.
+- **Sync is automatic**: templates created or edited on Meta show up in Waplify on their own. Use the **Sync from Meta** button only when you want an immediate refresh.
 - New to templates? Read the [Message Templates Overview](./message-templates.md) to understand how templates and approvals work
 - Want to add personalization or images? See [Template Variables & Media](./template-variables-and-media.md) to learn about variables and media headers
 
