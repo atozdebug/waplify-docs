@@ -188,6 +188,11 @@ const config = {
             position: 'left',
           },
           {
+            to: '/roadmap',
+            label: 'Roadmap',
+            position: 'left',
+          },
+          {
             href: 'https://waplify.io',
             label: 'Website',
             position: 'right',

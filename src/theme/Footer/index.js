@@ -7,26 +7,26 @@ const footerLinks = {
     title: 'Company',
     links: [
       {label: 'Home', href: 'https://waplify.io/'},
-      {label: 'Contact Us', href: 'https://waplify.io/contact'},
-      {label: 'Pricing', href: 'https://waplify.io/pricing'},
-      {label: 'Feature', href: 'https://waplify.io/feature'},
-      {label: 'Blog', href: 'https://waplify.io/blog'},
+      {label: 'Contact Us', href: 'https://waplify.io/contact-us/'},
+      {label: 'Pricing', href: 'https://waplify.io/pricing/'},
+      {label: 'Feature', href: 'https://waplify.io/features/'},
+      {label: 'Blog', href: 'https://waplify.io/blog/'},
     ],
   },
   freeTools: {
     title: 'Free Tools',
     links: [
-      {label: 'Chat Widget for WhatsApp', href: 'https://waplify.io/chat-widget'},
-      {label: 'WhatsApp Link Generator', href: 'https://waplify.io/whatsapp-link-generator'},
-      {label: 'WhatsApp QR Generator', href: 'https://waplify.io/whatsapp-qr-generator'},
+      {label: 'Chat Widget for WhatsApp', href: 'https://tools.waplify.io/whatsapp-widget-for-website'},
+      {label: 'WhatsApp Link Generator', href: 'https://tools.waplify.io/whatsapp-link-generator'},
+      {label: 'WhatsApp QR Generator', href: 'https://tools.waplify.io/whatsapp-qr-code-generator'},
     ],
   },
   links: {
     title: 'Links',
     links: [
-      {label: 'Privacy Policy', href: 'https://waplify.io/privacy-policy'},
-      {label: 'Terms of Service', href: 'https://waplify.io/terms-of-service'},
-      {label: 'Refund & Cancellation', href: 'https://waplify.io/refund-and-cancellation'},
+      {label: 'Privacy Policy', href: 'https://waplify.io/privacy-policy/'},
+      {label: 'Terms of Service', href: 'https://waplify.io/terms-and-conditions/'},
+      {label: 'Refund & Cancellation', href: 'https://waplify.io/refund-cancellation-policy/'},
     ],
   },
 };
