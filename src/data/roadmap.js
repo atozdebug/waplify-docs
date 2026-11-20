@@ -28,24 +28,14 @@ export const columns = [
         text: 'Running more than one business? Give each one its own plan, and switch between them in one click.',
       },
       {
-        tag: 'Calling',
-        title: 'WhatsApp calling',
-        text: 'Make and answer WhatsApp voice calls right from your team inbox.',
-      },
-      {
         tag: 'Mobile',
-        title: 'Calls on Android, Waplify on iPhone',
-        text: 'Answer WhatsApp calls in the Android app, and add Waplify to your iPhone home screen.',
+        title: 'Calls in the Android app',
+        text: 'Answer WhatsApp calls in the Waplify Android app, even when your phone is locked.',
       },
       {
         tag: 'Home',
         title: 'A new Home page',
         text: "Today's chats, campaigns and setup steps on one screen when you log in.",
-      },
-      {
-        tag: 'Media',
-        title: 'Media library',
-        text: 'All your images, videos and documents in one place, ready to reuse in campaigns and chats.',
       },
       {
         tag: 'Integrations',
@@ -97,7 +87,7 @@ export const columns = [
       {
         tag: 'Templates',
         title: 'Template upgrades',
-        text: "See why Meta rejected a template, add a Call on WhatsApp button, and use WhatsApp's newest template types.",
+        text: "See why Meta rejected a template, and use WhatsApp's newest template types.",
       },
       {
         tag: 'Notifications',
@@ -144,7 +134,7 @@ export const columns = [
       {
         tag: 'Contacts',
         title: 'Faster contact imports',
-        text: "Match your file's columns when you import, and upload big lists in the background.",
+        text: 'Upload big contact lists in the background while you keep working.',
       },
       {
         tag: 'API',
@@ -158,34 +148,34 @@ export const columns = [
 // The latest 5 Changelog posts. `to` is the post's page under /changelog.
 export const recentlyShipped = [
   {
-    date: '23 Oct 2026',
-    title: 'Waplify Android app: reply to customers from your phone',
-    tag: 'Mobile',
-    to: '/changelog/2026/10/23/android-app',
+    date: '20 Nov 2026',
+    title: 'Media library: all your files in one place',
+    tag: 'Media',
+    to: '/changelog/2026/11/20/media-library',
   },
   {
-    date: '21 Oct 2026',
-    title: 'Extra agents: add more team members to any plan',
-    tag: 'Team inbox',
-    to: '/changelog/2026/10/21/extra-agents',
+    date: '19 Nov 2026',
+    title: 'A cleaner Templates page with message previews',
+    tag: 'Templates',
+    to: '/changelog/2026/11/19/new-templates-page',
   },
   {
-    date: '20 Oct 2026',
-    title: 'Shopify integration',
-    tag: 'Integrations',
-    to: '/changelog/2026/10/20/shopify-integration',
+    date: '13 Nov 2026',
+    title: 'Change your WhatsApp profile photo from Waplify',
+    tag: 'Account',
+    to: '/changelog/2026/11/13/whatsapp-profile-photo',
   },
   {
-    date: '15 Oct 2026',
-    title: 'Share chats between chosen agents',
-    tag: 'Team inbox',
-    to: '/changelog/2026/10/15/share-chats-between-chosen-agents',
+    date: '12 Nov 2026',
+    title: 'A new way to import contacts',
+    tag: 'Contacts',
+    to: '/changelog/2026/11/12/new-contact-import',
   },
   {
-    date: '17 Sep 2026',
-    title: 'Your chatbot can send your product catalog',
-    tag: 'Automation',
-    to: '/changelog/2026/09/17/chatbot-sends-your-catalog',
+    date: '11 Nov 2026',
+    title: 'WhatsApp calling: take and make customer calls',
+    tag: 'Calling',
+    to: '/changelog/2026/11/11/whatsapp-calling',
   },
 ];
 
