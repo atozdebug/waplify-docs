@@ -28,6 +28,11 @@ export const columns = [
         text: 'Running more than one business? Give each one its own plan, and switch between them in one click.',
       },
       {
+        tag: 'Mobile',
+        title: 'Waplify on iPhone',
+        text: 'Use Waplify on your iPhone like an app, from your home screen.',
+      },
+      {
         tag: 'Home',
         title: 'A new Home page',
         text: "Today's chats, campaigns and setup steps on one screen when you log in.",
