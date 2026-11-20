@@ -13,7 +13,7 @@ Go to **Settings > Media library**.
 
 ## What you can do
 
-- **Upload** by dragging files onto the page, or click **Browse files**.
+- **Upload** by dragging files onto the page, or click **Upload**.
 - **Find files fast** with tabs for each file type.
 - **Rename** a file, **Download** it, or **Copy link** to use it elsewhere (for example as `media_url` in the API).
 - **Move to trash** and **Restore**. Files in the trash are deleted for good after 30 days, or straight away with **Delete permanently**.
@@ -31,4 +31,6 @@ Go to **Settings > Media library**.
 ## Good to know
 
 - Owners, admins and managers can open the Media library page. Agents can still pick and upload files when they send a message.
-- Your existing files are already there. You don't need to upload them again.
+- Every file you upload anywhere in Waplify, for example in a chat or a quick response, is saved here automatically.
+
+Full details are on the [Media Library](/docs/account/media-library) page.

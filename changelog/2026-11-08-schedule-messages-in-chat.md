@@ -27,4 +27,4 @@ A strip above the message box shows how many messages are waiting and when the n
 - The message goes out in the name of the person who scheduled it.
 - Available on every plan.
 
-New to the inbox? See [Sending Messages](/docs/chat/sending-messages).
+Full details are on the [Schedule Messages](/docs/chat/schedule-messages) page. New to the inbox? See [Sending Messages](/docs/chat/sending-messages).
