@@ -64,7 +64,7 @@ If the file is still used by a sequence, a chatbot flow or a quick response, Wap
 
 When you add an image, video, audio file or document to a quick response:
 
-1. Click **Choose** (for example **Choose Image**).
+1. Click the button to add the file. The **Select media** window opens.
 2. Pick a file on the **Library** tab, or upload a new one on the **Upload** tab.
 3. Click **Select**.
 <!-- screenshot: the media picker with the Library and Upload tabs -->

@@ -28,11 +28,6 @@ export const columns = [
         text: 'Running more than one business? Give each one its own plan, and switch between them in one click.',
       },
       {
-        tag: 'Mobile',
-        title: 'Calls in the Android app',
-        text: 'Answer WhatsApp calls in the Waplify Android app, even when your phone is locked.',
-      },
-      {
         tag: 'Home',
         title: 'A new Home page',
         text: "Today's chats, campaigns and setup steps on one screen when you log in.",

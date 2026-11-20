@@ -1,101 +1,96 @@
 ---
-title: Account Settings
-description: How to update your Waplify profile and business details, manage your password, and stay on top of notifications
+title: Organisation Settings and Your Profile
+description: Update your business details in Settings > Organisation, and your own name, photo and password in Profile
 sidebar_position: 1
-keywords: [Waplify account settings, update Waplify profile, change password Waplify, business profile settings]
+keywords: [Waplify organisation settings, Waplify account settings, update Waplify profile, change password Waplify, business profile settings]
 ---
 
-## What are Account Settings?
+## What are Organisation settings and Profile?
 
-The Account Settings page is where you manage your personal profile, business information, and account preferences in Waplify. This is where you update your name, email, profile picture, and organization details.
+Waplify keeps two kinds of details apart:
+
+- **Settings > Organisation** holds your business details: the organisation name, industry and website. Everyone on your team works under these.
+- **Profile** holds your own details: your name, photo, phone number and password. Only you see and change them.
 
 ## How to use it
 
-### Accessing settings
+### Update your business details
 
-1. Click **Settings** in the sidebar
-2. Select **Account** to see your profile and business information
-<!-- screenshot: Account settings page showing profile and business sections -->
+1. Click **Settings** in the sidebar.
+2. Select **Organisation**. The page is called **Organisation Profile**.
+<!-- screenshot: Settings > Organisation with the Business Profile card -->
+3. In the **Business Profile** card, change what you need:
 
-### Updating your profile
-
-You can update the following fields on the Account page:
-
-| Field | What it does |
+| Field | What it is |
 |-------|-------------|
-| **Full Name** | Your display name — shown in the team inbox and to other team members |
-| **Email Address** | Used for login, password recovery, and notifications |
-| **Profile Picture** | Shown in the team inbox when chatting with customers |
+| **Organisation name** | The name of your business in Waplify |
+| **Industry** | Pick your industry from the list, or search for it |
+| **Website URL** | Your business website |
 
-1. Click on the field you want to change
-2. Update the value
-3. Click **Save** to apply changes
+4. Click **Save Changes**. To undo your edits before saving, click **Cancel**.
 
-### Uploading a profile picture
+### Update your own profile
 
-1. On the Account page, click the profile picture area or the **upload** button
-2. Select an image from your computer
-3. The picture will be saved automatically
-<!-- screenshot: Profile picture upload section -->
+1. Click your name at the bottom of the sidebar to open the menu.
+2. Click **Profile**.
+<!-- screenshot: the sidebar menu with Profile, and the Profile window -->
+3. Under **Identity**, change your **Full name** or **Phone number**, and click **Save changes**.
+4. To change your photo, click **Upload** next to the picture and pick an image. Click **Remove** to take it off.
 
-### Viewing business information
+Your **Email** is shown but can't be changed here, because it is how you log in.
 
-Your organization details are displayed on the settings page:
+### Change your password
 
-| Detail | Description |
-|--------|-------------|
-| **Organization name** | The name of your workspace — visible to team members |
-| **Business details** | Your business information used across the platform |
+1. Open **Profile** as above.
+2. Under **Security**, click **Change password**.
+3. Enter your **Current password**, then your **New password** twice (**Confirm new password**).
+4. The new password needs an uppercase letter, a lowercase letter, a number and a special character. When all of them are there you see **All requirements met**.
 
-These details are set during account creation and can be updated from the Settings page.
+Forgot your password? Use the **Forgot Password** link on the login screen to reset it by email.
 
-### Switching between organizations
+### Switching between organisations
 
-If you belong to multiple Waplify organizations (e.g., managing multiple businesses), you can switch between them:
-
-1. Look for the **organization switcher** in the sidebar
-2. Click to see your available organizations
-3. Select the one you want to work in
+If you belong to more than one Waplify organisation, click your name at the bottom of the sidebar. The menu lists your **Organisations**. Click one to switch to it.
 
 ### Notifications
 
 Waplify keeps you informed with in-app notifications. Click the **bell icon** in the top bar to open your notification center.
 
 - A badge on the bell shows how many notifications you haven't read yet
-- Notifications cover important account events — such as changes to your WhatsApp Business account status or quality rating
+- Notifications cover important account events, such as changes to your WhatsApp Business account status or quality rating
 - Each notification has an urgency level, so you can see at a glance what needs your attention
 - Click a notification to mark it as read, or mark them all as read at once
 <!-- screenshot: notification bell and notification center -->
 
 ## Tips & best practices
 
-- Keep your **email address up to date** — this is how you recover your account if you forget your password
-- Use a **professional profile picture** if your team uses the shared inbox — customers may see it during conversations
-- Review your settings after any organizational changes (like a business name change). You should also check your [WhatsApp Account Info](./whatsapp-account-info.md) to make sure your connected numbers are still in good standing
-- If you manage multiple businesses, use separate organizations to keep data separate. You can [manage team members](../team/managing-your-team.md) for each organization independently
+- Use a clear **profile photo** if your team uses the shared inbox, so teammates can tell who is who.
+- Keep the **Organisation name** the same as the name your customers know you by.
+- After a change to your business, also check your [WhatsApp Account Info](./whatsapp-account-info.md) to make sure your connected numbers are still in good standing.
+- You can [manage team members](../team/managing-your-team.md) for each organisation separately.
 
 ## Frequently asked questions
 
+### Where did the "Account" page go?
+
+It is now called **Organisation**, in the same place under **Settings**. It always held your business details. Your own details are in **Profile**.
+
 ### Can I change my email address?
 
-Yes. Go to the Account Settings page, update your email field, and save. You may need to verify the new email address.
+Not from Profile. Your email is your login. Contact support@waplify.io if you need it changed.
 
-### Can I change my organization name?
+### Can I change my organisation name?
 
-Yes, organization details can be updated from the Settings page. For major changes (like transferring ownership), contact support at support@waplify.io.
+Yes. Go to **Settings > Organisation**, change **Organisation name** and click **Save Changes**.
 
 ### How do I change my password?
 
-Go to the Settings page and look for the password change option. You can also use the **Forgot Password** link on the login screen to reset your password via email.
+Open **Profile** from the menu under your name, then click **Change password** under **Security**. You can also use **Forgot Password** on the login screen.
 
 ### Why am I getting notifications about my WhatsApp account?
 
-Waplify alerts you when something needs attention on your WhatsApp Business account — for example, a drop in quality rating or a change to your messaging limits. Acting on these quickly helps protect your ability to send messages.
+Waplify alerts you when something needs attention on your WhatsApp Business account, for example a drop in quality rating or a change to your messaging limits. Acting on these quickly helps protect your ability to send messages.
 
 ### Can I delete my account?
 
-Account deletion is handled by the support team. Contact support@waplify.io to request deletion. Make sure to export any data you need first.
-
-### What happens to my data if I close my account?
-
-Your data (contacts, campaigns, templates, message history) will be deleted after account closure. Export your contacts and campaign reports before requesting deletion.
+Contact support@waplify.io to request deletion. Export any data you need first, such as your contacts and campaign reports.
