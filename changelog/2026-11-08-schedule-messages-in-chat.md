@@ -5,6 +5,8 @@ tags: [inbox, chat]
 
 You can now **schedule a message** from any chat. Write your reply, pick a time, and Waplify sends it for you. It works for text, photos, videos, documents and approved templates.
 
+![The arrow next to Send opens Schedule send](/img/changelog/2026-11-08-schedule-messages-in-chat-1.png)
+
 <!-- truncate -->
 
 ## How to schedule a message

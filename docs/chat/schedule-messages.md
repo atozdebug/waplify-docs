@@ -18,13 +18,13 @@ Scheduled messages wait in a strip above the message box, so you and your team c
 1. Go to **Chat** and open the conversation.
 2. Type your message. You can also attach a photo, video or document, or open the [rich message window](./rich-messages.md) to add buttons.
 3. Click the small **arrow** joined to the **Send** button (it says **Schedule message** when you point at it). The **Schedule send** menu opens.
-<!-- screenshot: the Send button with the schedule arrow and the Schedule send menu open -->
+![The arrow next to Send opens the Schedule send menu](/img/docs/chat/schedule-messages-menu.png)
 4. Pick one of the quick times, for example:
    - **Today at 1:00 PM** (shown in the morning) or **Today at 6:00 PM** (shown from 11 AM to 4 PM)
    - **Tomorrow at 8:00 AM**
    - **Next Monday at 8:00 AM**
 5. Or click **Pick a custom time**, choose a date under **Select a date** and a time under **Select a time**, then click **Schedule send**.
-<!-- screenshot: the Pick a custom time window with date and time fields -->
+![The Pick a custom time window with a date and a time](/img/docs/chat/schedule-messages-custom-time.png)
 
 You see **Message scheduled**, and the message appears in the scheduled strip above the message box.
 
@@ -39,7 +39,7 @@ Templates can be scheduled at any time, even when the 24-hour reply window is cl
 1. In the chat, open the template window (**Send Template Message**).
 2. Choose an approved template and fill in its variables.
 3. Click **Schedule** (the button with the calendar icon, next to **Send Template**).
-<!-- screenshot: the Send Template Message window with the Schedule button -->
+![The Send Template Message window with the Schedule button](/img/docs/chat/schedule-messages-template.png)
 4. Pick a quick time or **Pick a custom time**.
 
 You see **Template scheduled**.
@@ -47,7 +47,7 @@ You see **Template scheduled**.
 ### See what is scheduled
 
 When a chat has messages waiting, a strip appears above the message box. It shows how many are scheduled (for example "2 scheduled") and when the next one goes out, with the start of its text.
-<!-- screenshot: the scheduled strip above the message box, collapsed and opened -->
+![The strip above the message box showing 2 scheduled messages](/img/docs/chat/schedule-messages-strip.png)
 
 Click the strip to see every scheduled message in that chat, with its time. If a teammate scheduled one, you see **by** and their name.
 

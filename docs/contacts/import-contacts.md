@@ -17,9 +17,9 @@ Waplify reads your file, asks you to match its columns if it isn't sure, and sho
 
 1. Go to **Contacts** from the sidebar.
 2. Click **Bulk Upload**. (On a small screen this is an icon; point at it to see the name.) The **Import contacts** page opens.
-<!-- screenshot: Contacts page with the Bulk Upload button highlighted -->
+![The Contacts page with the Bulk Upload button](/img/docs/contacts/import-contacts-button.png)
 3. Click **Choose a file**, or drag your file onto the box. You can use a **CSV** or **Excel** file (.csv, .xlsx or .xls) with up to 2,000 contacts.
-<!-- screenshot: the upload box with Sample CSV and Sample Excel -->
+![The upload box with Sample CSV and Sample Excel](/img/docs/contacts/import-contacts-upload.png)
 
 No file yet? Click **Sample CSV** or **Sample Excel** to download one with the right columns, fill it in, and upload it.
 
@@ -28,7 +28,7 @@ Each contact needs at least a **phone number**. It's best to write numbers with 
 ### Step 2: Match your columns (only if needed)
 
 Waplify tries to recognise your columns by their headings. If it can't find the phone number column, it shows a **Columns** step so you can tell it which column is which.
-<!-- screenshot: the Columns step with a dropdown open -->
+![The Columns step: pick what each column of your file holds](/img/docs/contacts/import-contacts-columns.png)
 
 For each column in your file, pick what it holds, for example:
 
@@ -45,7 +45,7 @@ You can come back to this step any time from the review step with **Edit columns
 ### Step 3: Review and choose your options
 
 The review step shows how many contacts are ready (for example "1,250 contacts ready") and lets you decide how to handle tricky rows.
-<!-- screenshot: the review step with options and the list of rows -->
+![The review step: options at the top, rows that will be skipped, and the Import button](/img/docs/contacts/import-contacts-review.png)
 
 - **Default country code:** used for numbers written without a country code.
 - **No name:** what to do with rows that have no name.

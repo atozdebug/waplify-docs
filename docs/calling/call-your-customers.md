@@ -15,7 +15,7 @@ Your team can call a customer on WhatsApp straight from their chat in Waplify. W
 
 1. Open the customer's chat.
 2. Click the **phone icon** in the chat header ("Call on WhatsApp"). In the Android app, tap the phone icon at the top of the chat.
-<!-- screenshot: the chat header with the Call on WhatsApp icon -->
+![The Call on WhatsApp icon at the top of a chat](/img/docs/calling/call-your-customers-header.png)
 3. Waplify checks with WhatsApp whether the customer allows calls from you.
    - **If they do,** the call starts. You see "Calling...", then "Ringing...", then the call time once they pick up.
    - **If they don't yet,** you're offered a way to ask (next section).
@@ -33,7 +33,7 @@ What you send depends on whether the 24-hour chat window is open (the customer h
 1. Click the phone icon. Waplify shows "(name) has not allowed calls yet".
 2. Check the message, which is "May we call you on WhatsApp?" by default. You can change it.
 3. Click **Send request**.
-<!-- screenshot: the Send request popover -->
+![The customer has not allowed calls yet, so Waplify offers Send request](/img/docs/calling/call-your-customers-request.png)
 
 **The window is closed**
 
@@ -57,7 +57,7 @@ When you'd rather the customer calls you:
 1. In the chat, click the **phone icon** in the message toolbar ("Ask to call").
 2. Check the message: "Tap the button below to call us on WhatsApp." by default.
 3. Click **Send call button**. The customer gets your message with a **Call us** button.
-<!-- screenshot: the Ask to call popover -->
+![Ask the customer to call: Waplify sends them a Call button](/img/docs/calling/call-your-customers-ask.png)
 
 When they tap it, the call rings for you first if you're available. This only works while the 24-hour window is open, and the button works for 60 minutes after you send it.
 

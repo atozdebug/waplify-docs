@@ -17,13 +17,13 @@ Upload a price list or a product video once, then pick it from the library whene
 
 1. Go to **Settings**.
 2. Under **Workspace**, click **Media library**.
-<!-- screenshot: Settings with Media library under Workspace -->
+![Media library in the Settings menu, under Workspace](/img/docs/account/media-library-settings-nav.png)
 
 ### Upload files
 
 1. Click **Upload**.
 2. Drag your files into the box, or click **Browse files** to choose them.
-<!-- screenshot: the Upload to media window -->
+![The Upload to media window](/img/docs/account/media-library-upload.png)
 3. Wait until you see **Uploaded to your media library**, then click **Done**.
 
 You can also drag files straight onto the Media library page to upload them.
@@ -35,7 +35,7 @@ Photos and videos get a WhatsApp-ready copy made automatically, so they send wit
 - Use the tabs **All**, **Images**, **Videos**, **Audio** and **Documents** to see one type of file. A tab only shows when you have files of that type.
 - Type in **Search** to find a file by name.
 - Switch between **Grid view** and **List view**.
-<!-- screenshot: the Media library with tabs, search and file cards -->
+![The Media library with file type tabs, search and the Upload button](/img/docs/account/media-library-page.png)
 
 ### Rename, copy a link or download
 

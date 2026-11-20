@@ -26,7 +26,7 @@ On other plans you see the option with a lock and an **Upgrade** button. Both op
 2. Under **Voicemail**, add a greeting under 60 seconds:
    - **Record** it right there with your computer's microphone (it stops by itself at 59 seconds), then **Save**; or
    - **Upload** an audio file (MP3, M4A, WAV or OGG, under 60 seconds and under 10 MB).
-<!-- screenshot: the Voicemail row with Record and Upload -->
+![The Voicemail switch and the Change menu for your greeting](/img/docs/calling/voicemail-and-call-recording-voicemail.png)
 3. Switch **Voicemail** on. If you switch it on before adding a greeting, Waplify asks you for one first.
 
 To change your greeting later, click **Change** and choose **Record a new one**, **Upload a file** or **Remove greeting**. Removing the greeting turns voicemail off.
@@ -40,7 +40,7 @@ To change your greeting later, click **Change** and choose **Record a new one**,
 1. Go to **Settings > WhatsApp** and find your number.
 2. Switch **Record calls** on.
 3. Choose the **Notice language**: **English** or **Hindi**.
-<!-- screenshot: the Record calls row with Notice language -->
+![The Record calls switch and its Notice language](/img/docs/calling/voicemail-and-call-recording-record.png)
 
 From then on:
 

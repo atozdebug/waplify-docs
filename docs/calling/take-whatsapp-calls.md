@@ -19,7 +19,7 @@ An owner or admin does this once per number.
 
 1. Go to **Settings > WhatsApp**.
 2. Find your number and switch **WhatsApp calling** on.
-<!-- screenshot: Settings > WhatsApp number card with the WhatsApp calling switch -->
+![The WhatsApp calling switch on your number in Settings > WhatsApp](/img/docs/calling/take-whatsapp-calls-switch.png)
 3. You see "Calling is on. The call button can take up to 7 days to show on WhatsApp." The button appears for customers gradually over those days.
 
 If the switch can't be turned on, the line under **WhatsApp calling** tells you why, for example that the number also runs on the WhatsApp Business app, or that your business can't yet message 2,000 customers a day.
@@ -34,7 +34,7 @@ You have one status, the same on the website and in the app. Change it in either
 
 - **On the website:** click your status at the top of the page, next to the notification bell, and choose **Available** or **Away**.
 - **In the Android app:** tap your status at the top of the chat list and choose **Available** or **Away**.
-<!-- screenshot: the status with Available and Away, on the website and in the app -->
+![Set yourself Available or Away at the top of the page](/img/docs/calling/take-whatsapp-calls-status.png)
 
 A green dot means calls ring for you. Choose **Away** when you step away: the dot becomes a grey ring and calls stop ringing for you everywhere, on the website and on your phone. You can still call customers while Away.
 
@@ -57,7 +57,7 @@ Some team members shouldn't take calls at all, for example someone who only hand
 
 1. Go to **Settings > Team**.
 2. In the **Calls** column, switch the member off.
-<!-- screenshot: Settings > Team with the Calls column -->
+![The Calls column in Settings > Team](/img/docs/calling/take-whatsapp-calls-team.png)
 
 Calls never ring for them and they can't call customers, whatever their own status says. Their status shows **Calls off** with a lock, and in the app their **Ring this phone** switch is locked. You can switch it back on at any time. Everyone has calls on until an admin turns them off, and only the owner can change the owner's switch.
 
@@ -68,7 +68,7 @@ If every team member has calls off, the Team page warns you: calls then go to vo
 **On the website**, a card appears at the bottom centre of any page with the caller's name and "WhatsApp call", and a ringtone plays. If Waplify is in a background tab, you also get a desktop notification.
 
 1. Click **Answer**, or **Decline** if you can't take it.
-<!-- screenshot: the incoming call card with Decline and Answer -->
+![An incoming WhatsApp call, with Decline and Answer](/img/docs/calling/take-whatsapp-calls-incoming.png)
 2. During the call, the card shows "On call" and the time, with **Open chat**, **Mute** and **Hang up**.
 3. You can move around Waplify during the call. Don't close or reload the tab: that ends the call.
 
@@ -95,7 +95,7 @@ If you're available on the website and in the app, both ring. Whichever you answ
 - **Call back** from the missed call in the chat, on the website or in the app. The customer's call lets you call them back for 7 days without asking again.
 - If the chat had no owner, it is now assigned to the person who answered: "Chat is now assigned to (name) after a call".
 - The **Calls** page in the left menu lists calls. Each team member sees the calls in the chats they can see. You can filter by **All calls**, **Missed**, **Voicemail**, **Answered**, **Declined** and **Not connected**, for the last 7, 30 or 90 days.
-<!-- screenshot: the Calls page -->
+![The Calls page: who called, the result, how long and who answered](/img/docs/calling/take-whatsapp-calls-calls-page.png)
 - A red number on **Calls** counts the missed calls you haven't looked at yet. Opening the page clears it.
 - In the Android app, tap the **phone icon** at the top of your chats for recent calls: missed calls in red, with a call-back button.
 

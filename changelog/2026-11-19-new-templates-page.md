@@ -5,6 +5,8 @@ tags: [templates, web]
 
 The **Templates** page has a new look. Every template now shows as a card with a WhatsApp-style preview, so you see exactly what your customer will receive, and simple filters help you find the one you need.
 
+![The new Templates page with filters and preview cards](/img/changelog/2026-11-19-new-templates-page-1.png)
+
 <!-- truncate -->
 
 ## What's new

@@ -5,6 +5,8 @@ tags: [web, chat, templates]
 
 Every image, video, audio file and document you use in Waplify now lives in one **Media library**. Upload a file once and find it again whenever you need it, without hunting for it on your computer.
 
+![The Media library in Settings](/img/changelog/2026-11-20-media-library-1.png)
+
 <!-- truncate -->
 
 ## Where to find it

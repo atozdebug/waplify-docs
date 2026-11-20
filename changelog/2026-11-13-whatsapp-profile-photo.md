@@ -5,6 +5,8 @@ tags: [account, web]
 
 You can now change the **profile photo** of your WhatsApp business number right inside Waplify. It's the photo your customers see next to your name in WhatsApp.
 
+![Change photo in the Edit Business Profile window](/img/changelog/2026-11-13-whatsapp-profile-photo-1.png)
+
 <!-- truncate -->
 
 ## How to change it

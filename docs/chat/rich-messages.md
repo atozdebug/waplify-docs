@@ -17,7 +17,7 @@ It is a quick way to share a brochure with a caption, or ask a question your cus
 
 1. Go to **Chat** and open the conversation.
 2. In the toolbar under the message box, click the **Rich message** button (it says **Rich message - format, media, buttons** when you point at it). A **New message** window opens.
-<!-- screenshot: the chat toolbar with the Rich message button highlighted -->
+![The Rich message button, first in the toolbar under the message box](/img/docs/chat/rich-messages-toolbar.png)
 
 The same window also opens when you:
 
@@ -32,7 +32,7 @@ The same window also opens when you:
    - **Italic** (Ctrl+I)
    - **Strikethrough**
    - **Monospace**
-<!-- screenshot: the New message window with the formatting buttons -->
+![The New message window with formatting buttons, Add media and a live preview](/img/docs/chat/rich-messages-window.png)
 
 ### Add a photo, video or document
 
@@ -48,7 +48,7 @@ Audio files are sent on their own, without text or buttons, so they don't open t
    - **Custom reply** (under **Quick reply buttons**): your customer taps it and their choice comes back to you as a reply. You can add up to 3.
    - **Visit website** (under **Call to action buttons**): opens a web page you choose. You can add 1.
 3. Type the **Button text** (up to 20 characters). For a website button, also enter the **Website URL**, starting with `https://`.
-<!-- screenshot: the Buttons section with three Custom reply buttons -->
+![Three Custom reply buttons in the Buttons section, shown in the preview](/img/docs/chat/rich-messages-buttons.png)
 
 You can't mix the two kinds in one message: use reply buttons or a website button.
 

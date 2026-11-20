@@ -5,6 +5,8 @@ tags: [contacts]
 
 Importing contacts from a spreadsheet now happens step by step. Waplify reads your file, lets you match its columns if needed, shows you what will be imported, and only then adds your contacts. You decide how to handle missing names, repeated numbers and opt-in status before anything is saved.
 
+![The review step shows what will be imported before you click Import](/img/changelog/2026-11-12-new-contact-import-1.png)
+
 <!-- truncate -->
 
 ## How to import

@@ -19,7 +19,7 @@ Use it for spam, abusive messages, or anyone who keeps messaging after you have 
 2. Click **Block number**.
 3. Check the message and click **Block**.
 
-<!-- screenshot: chat menu with Block number -->
+![The More actions menu at the top right of a chat, with Block number](/img/docs/chat/block-a-number-menu.png)
 
 The chat is resolved and marked **Blocked**. Any drip sequence or chatbot running for that person stops.
 
@@ -32,7 +32,7 @@ Owners, admins and managers can block numbers. Agents can't.
 
 You can also choose **Unblock number** from the chat's **⋮** menu in the chat list.
 
-<!-- screenshot: blocked chat with the Unblock number button -->
+![A blocked chat, with Unblock number in the More actions menu](/img/docs/chat/block-a-number-unblock.png)
 
 ### See everyone you have blocked
 
@@ -41,7 +41,7 @@ You can also choose **Unblock number** from the chat's **⋮** menu in the chat 
 
 The list shows every blocked chat, each marked **Blocked**. Open one to unblock it.
 
-<!-- screenshot: chat filter with Blocked numbers only -->
+![The chat filter with Blocked numbers only](/img/docs/chat/block-a-number-filter.png)
 
 ## Tips & best practices
 

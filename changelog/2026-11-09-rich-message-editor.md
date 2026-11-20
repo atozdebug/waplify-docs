@@ -5,6 +5,8 @@ tags: [inbox, chat]
 
 Replying with more than plain text is now easier. The new **rich message** window lets you format your text, add a photo, video or document, and add buttons your customer can tap, all with a live preview before you send.
 
+![The new rich message window with formatting, media and a live preview](/img/changelog/2026-11-09-rich-message-editor-1.png)
+
 <!-- truncate -->
 
 ## How to use it

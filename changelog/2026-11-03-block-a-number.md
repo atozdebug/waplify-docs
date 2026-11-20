@@ -5,6 +5,8 @@ tags: [inbox, chat]
 
 You can now **block a number** from the inbox. A blocked number can no longer reach your inbox, your chatbots or your team, and Waplify sends nothing to it: no replies, campaigns, sequences or chatbot messages.
 
+![Block number in the More actions menu of a chat](/img/changelog/2026-11-03-block-a-number-1.png)
+
 <!-- truncate -->
 
 ## How to block someone

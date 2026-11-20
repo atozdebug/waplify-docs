@@ -5,6 +5,8 @@ tags: [calling, inbox, web]
 
 Your customers can now **call your business on WhatsApp** and the call rings in Waplify for your team. You answer in the browser, talk, and the call is saved in the customer's chat so everyone can see it happened. Your team can also call customers back, once the customer has allowed calls from you.
 
+![A customer's WhatsApp call ringing in Waplify, with Decline and Answer](/img/changelog/2026-11-11-whatsapp-calling-1.png)
+
 <!-- truncate -->
 
 ## What you can do

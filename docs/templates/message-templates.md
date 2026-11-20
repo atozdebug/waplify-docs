@@ -14,7 +14,7 @@ WhatsApp requires all business-initiated messages to use **pre-approved template
 ### Viewing your templates
 
 1. Go to **Templates** from the sidebar
-<!-- screenshot: Templates page with the Number, Category and Status filters and preview cards -->
+![The Templates page with the Category and Status filters and a preview card for each template](/img/docs/templates/message-templates-page.png)
 2. Each template shows as a card with a WhatsApp-style preview of the message, so you can see exactly what your customer will receive. Each card also shows:
    - **Name** and a green tick when the template is approved (other statuses, like Pending or Rejected, are written next to the name)
    - **Category, language and date**, for example "Marketing · English (US) · 22 Oct"
@@ -30,7 +30,7 @@ Use the filters at the top of the page:
 - **Category**: Marketing, Utility or Authentication (and Commerce, if your plan includes it). Each option shows how many templates it has.
 - **Status**: Approved, Pending, Rejected, Paused or Drafts. **All statuses** shows every template except drafts. Pick **Drafts** to see templates you saved but haven't submitted yet.
 - **Search templates**: type part of a template's name or message.
-<!-- screenshot: Category dropdown with counts -->
+![The Category filter showing how many templates each category has](/img/docs/templates/message-templates-category.png)
 
 ### Creating a template
 
@@ -38,7 +38,7 @@ You can create templates two ways — both submit to Meta for approval:
 
 - **Inside Waplify (recommended)** — click **Create Template** on the Templates page and build it with the visual editor. This is the easiest option, and it supports special types like [carousel templates](./carousel-templates.md).
 - **On Meta's website**: click the small arrow next to **Create Template**, then **Create on Meta**. This opens Meta's Template Manager in a new tab, where you build it.
-<!-- screenshot: Create Template button and its arrow menu on the Templates page -->
+![The arrow next to Create Template, with Create on Meta](/img/docs/templates/message-templates-create-menu.png)
 
 Either way, choose a template **category** based on what you want to send:
 
@@ -57,7 +57,7 @@ Template approval time varies. Verified businesses usually get approved within a
 Templates you create or change on Meta appear in Waplify **automatically** — there's no manual import step. The list also updates on its own as Meta approves, rejects, or pauses your templates.
 
 If you want to refresh the list right away, click the **Sync from Meta** button (the round arrows next to the search box) to pull the latest state straight from Meta. With **All numbers** picked, this refreshes the templates for every number at once.
-<!-- screenshot: Sync from Meta button on the Templates page -->
+![The Sync from Meta button next to the search box](/img/docs/templates/message-templates-sync.png)
 
 ### Deleting a template
 

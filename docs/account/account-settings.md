@@ -18,7 +18,7 @@ Waplify keeps two kinds of details apart:
 
 1. Click **Settings** in the sidebar.
 2. Select **Organisation**. The page is called **Organisation Profile**.
-<!-- screenshot: Settings > Organisation with the Business Profile card -->
+![Settings > Organisation with the Business Profile card](/img/docs/account/account-settings-org.png)
 3. In the **Business Profile** card, change what you need:
 
 | Field | What it is |
@@ -33,7 +33,7 @@ Waplify keeps two kinds of details apart:
 
 1. Click your name at the bottom of the sidebar to open the menu.
 2. Click **Profile**.
-<!-- screenshot: the sidebar menu with Profile, and the Profile window -->
+![The menu at the bottom of the sidebar, with Profile](/img/docs/account/account-settings-profile-menu.png)
 3. Under **Identity**, change your **Full name** or **Phone number**, and click **Save changes**.
 4. To change your photo, click **Upload** next to the picture and pick an image. Click **Remove** to take it off.
 

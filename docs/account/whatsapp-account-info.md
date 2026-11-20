@@ -14,7 +14,7 @@ The WhatsApp Account Info page shows the status and health of your connected Wha
 ### Viewing your WhatsApp account details
 
 1. Go to **Settings > WhatsApp** from the sidebar, or check the **Dashboard**
-<!-- screenshot: WhatsApp account info showing phone number, quality rating, and tier -->
+![Your number in Settings > WhatsApp, with its quality rating and messaging limit](/img/docs/account/whatsapp-account-info-card.png)
 2. You will see:
    - Your connected **phone number(s)** and their display names
    - **Quality rating** — Green (high), Yellow (medium), or Red (low)
@@ -27,7 +27,7 @@ Your business profile is what customers see when they open your business in What
 
 1. Go to **Settings > WhatsApp**.
 2. Find your number and click **Edit**. The **Edit Business Profile** window opens.
-<!-- screenshot: the Edit Business Profile window -->
+![The Edit Business Profile window](/img/docs/account/whatsapp-account-info-edit.png)
 3. Change any of these:
    - **About**: a short line, up to 139 characters
    - **Description**: up to 512 characters
@@ -43,7 +43,7 @@ The profile photo is the picture customers see next to your business name in Wha
 
 1. Go to **Settings > WhatsApp**, find your number and click **Edit**.
 2. Under **Profile picture**, click **Upload photo** (or **Change photo** if you already have one) and choose an image.
-<!-- screenshot: the Profile picture section with Upload photo -->
+![The Profile picture section of Edit Business Profile](/img/docs/account/whatsapp-account-info-photo.png)
 3. Changed your mind? Click **Undo** before saving.
 4. Click **Save Changes**. You see **Profile picture updated**.
 

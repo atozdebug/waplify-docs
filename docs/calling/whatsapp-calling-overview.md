@@ -82,7 +82,7 @@ When your plan does not include a feature, you see it with a lock and an **Upgra
 4. Optionally, **set up voicemail and recording**: see [Voicemail and call recording](./voicemail-and-call-recording.md).
 5. To phone customers yourself, see [Call your customers](./call-your-customers.md).
 
-<!-- screenshot: a call bubble in a chat, and the Calls page -->
+![The Calls page lists every call: who called, the result and who answered](/img/docs/calling/take-whatsapp-calls-calls-page.png)
 
 ## Tips & best practices
 
