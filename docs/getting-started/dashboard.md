@@ -11,7 +11,7 @@ The **Dashboard** is the first screen you see when you sign in. It's your home b
 
 If you're new, work down the page top to bottom — it's laid out roughly in the order you need it.
 
-<!-- screenshot: the Waplify dashboard home screen -->
+![The Dashboard: your numbers, Quick Actions, WhatsApp Accounts and Free WhatsApp Tools](/img/docs/getting-started/dashboard-home.png)
 
 ## What's on it
 

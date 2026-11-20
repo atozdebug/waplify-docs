@@ -14,7 +14,7 @@ The Waplify Inbox is where you see and manage all your WhatsApp conversations. W
 ### Navigating the inbox
 
 1. Go to **Chat** from the sidebar
-<!-- screenshot: Chat inbox showing conversation list and message area -->
+![The Chat inbox: conversation list on the left, the open chat in the middle, customer details on the right](/img/docs/chat/inbox-overview-inbox.png)
 2. On the left, you will see your **conversation list** — all contacts you have exchanged messages with
 3. Click on any conversation to open it and see the full **message history**
 4. On the right, you will see the **message area** with the conversation thread
@@ -57,13 +57,13 @@ You don't have to answer every customer from Waplify. If you reply to someone di
 
 This "answer from anywhere" behaviour is on by default. Owners and admins can control the auto-pause in [Inbox Style & Auto-Assignment](../team/inbox-setup.md).
 
-<!-- screenshot: A conversation showing a reply that was sent from the WhatsApp Business app -->
+![A reply sent from the WhatsApp Business app shows in the chat, and the bot pauses](/img/docs/chat/inbox-overview-phone-reply.png)
 
 ### Searching for conversations
 
 1. Use the **search bar** at the top of the conversation list
 2. Type a contact's name or phone number to find their conversation
-<!-- screenshot: Search bar in conversation list -->
+![Searching the conversation list for a customer by name](/img/docs/chat/inbox-overview-search.png)
 
 ### Checking conversation counts
 

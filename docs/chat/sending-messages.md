@@ -16,7 +16,7 @@ Beyond campaigns, you can send individual messages to contacts directly from the
 1. Go to **Chat** from the sidebar
 2. Click on a conversation, or start a new one
 3. Type your message in the **message input** at the bottom
-<!-- screenshot: Message input area with send button -->
+![The message box at the bottom of a chat, with the Send button](/img/docs/chat/sending-messages-input.png)
 4. Press **Enter** or click the **Send** button
 
 :::info

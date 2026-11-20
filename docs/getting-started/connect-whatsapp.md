@@ -20,7 +20,7 @@ Before you can send messages through Waplify, you need to connect your WhatsApp 
 ### Step-by-step setup
 
 1. Log in to Waplify and you will see the **Get Started** checklist on your dashboard
-<!-- screenshot: Onboarding checklist with Connect WhatsApp step expanded -->
+![The Get Started with Waplify checklist on the Dashboard, with the Connect Number button](/img/docs/getting-started/connect-whatsapp-checklist.png)
 2. Click **Connect Number** — a Meta popup will open
 3. Log in with your **Facebook account** and select your **Meta Business Portfolio**
 <!-- screenshot: Meta popup asking to select business portfolio -->

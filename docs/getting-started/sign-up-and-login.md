@@ -14,31 +14,31 @@ Waplify lets you create an account using your email or Google account. Once sign
 ### Create a new account
 
 1. Go to [app.waplify.io](https://app.waplify.io) and click **Sign Up**
-<!-- screenshot: Sign up page with email and Google options -->
-2. Enter your **full name**, **email address**, and create a **password**
-3. You will receive a **verification code** on your email — enter it to verify your account
-4. Once verified, you are logged in and ready to start the setup wizard
+![The sign-up page: name, phone number, email with Get OTP, password, and Sign up with Google](/img/docs/getting-started/sign-up-and-login-signup.png)
+2. Enter your **name** and **phone number**
+3. Enter your **email address** and click **Get OTP**, then type the 6-digit code we email you
+4. Create a **password** and click **Sign Up**. You are logged in and ready to start the setup
 
 ### Sign up with Google
 
-1. On the sign-up page, click **Continue with Google**
+1. On the sign-up page, click **Sign up with Google**
 2. Select your Google account
-3. If this is your first time, you will be asked to enter your **phone number** and **name** to complete setup
-<!-- screenshot: Complete signup form for Google users -->
+3. If this is your first time, you will be asked to confirm your **name** and add your **mobile number**, then click **Complete Signup**
+![Complete your signup: confirm your name and add your mobile number](/img/docs/getting-started/sign-up-and-login-complete.png)
 
 ### Log in to your account
 
 1. Go to [app.waplify.io](https://app.waplify.io) and click **Log In**
-2. Enter your **email** and **password**, then click **Log In**
-3. Or click **Continue with Google** to log in with your Google account
+2. Enter your **email** and **password**, then click **Sign In**
+3. Or click **Sign in with Google** to log in with your Google account
 
 ### Reset your password
 
 1. On the login page, click **Forgot Password?**
-2. Enter your email address and click **Send Code**
+2. Enter your email address and click **Send Reset Code**
 3. Enter the verification code sent to your email
 4. Set a new password and click **Reset Password**
-<!-- screenshot: Forgot password page -->
+![The Forgot Password page with the Send Reset Code button](/img/docs/getting-started/sign-up-and-login-forgot.png)
 
 ## Tips & best practices
 

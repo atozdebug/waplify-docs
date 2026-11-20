@@ -27,7 +27,7 @@ Without a payment method on Meta, your messages will **fail to deliver** even if
 ### Step 1: Create a message template
 
 1. Go to the **Templates** page in Waplify and click **Create Template**
-<!-- screenshot: Templates page with the Create Template button -->
+![The Create Template button on the Templates page](/img/docs/getting-started/your-first-campaign-templates.png)
 2. Choose the template type — **Marketing**, **Utility**, or **Authentication** — based on your use case
 3. Write your message content, add any media or buttons, and submit for review
 4. Wait for approval — for verified businesses this takes a few hours; for new businesses it can take up to 24 hours
@@ -43,23 +43,23 @@ Use lowercase names with underscores for your template names (e.g., `welcome_off
 
 1. Go to the **Contacts** page from the sidebar
 2. Click **Add Contact** to add contacts one by one, or click **Bulk Upload** to import from a file
-<!-- screenshot: Contacts page with Add Contact and Bulk Upload buttons -->
+![The Bulk Upload and Add Contact buttons on the Contacts page](/img/docs/getting-started/your-first-campaign-contacts.png)
 3. For bulk upload, download the **sample CSV** or **Excel template**, fill it in, and upload
 4. Each contact needs at least a **First Name** and **Mobile Number** (with country code, without the "+" sign — e.g., 919876543210)
 5. You can upload up to **10,000 contacts per batch**, but there is no limit on total contacts
 
 ### Step 3: Create and send the campaign
 
-1. Go to the **Campaigns** page and click **Create Campaign**
-<!-- screenshot: Create Campaign button on campaigns page -->
+1. Go to the **Campaigns** page and click **New Campaign**
+![The New Campaign button on the Campaigns page](/img/docs/getting-started/your-first-campaign-new.png)
 2. Enter a **campaign name** and optional description
-3. Choose an **approved template** from the dropdown
-4. If your template has variables (like customer name), map them to contact fields or enter fixed values
-<!-- screenshot: Template variable mapping step -->
+3. Click **Select a template** and pick an **approved template**
+4. If your template has variables (like customer name), fill them in under **Variable Configuration**: type `$` to pick a contact field such as `$first_name`, or type a fixed value
+![Variable Configuration: $first_name fills in each contact's first name](/img/docs/getting-started/your-first-campaign-variables.png)
 5. Choose recipients — select **individual contacts**, **contact groups**, or paste numbers directly
-6. Click **Create Campaign** to save it
-7. Review the campaign details, then click **Send Campaign** to start sending
-<!-- screenshot: Campaign details page with Send button -->
+6. Under **Scheduling**, choose **Send Manually** (or **Schedule for a specific time**), then click **Create Campaign**
+7. Your campaign is saved on the Campaigns page as a **Draft**. Click **Send** next to it, then confirm with **Send Campaign**
+![A draft campaign on the Campaigns page, with the Send button](/img/docs/getting-started/your-first-campaign-send.png)
 
 :::tip
 For your very first campaign, start with a **small test group** of 5-10 contacts to make sure everything works as expected.
@@ -73,7 +73,7 @@ For your very first campaign, start with a **small test group** of 5-10 contacts
    - **Delivered** — message reached the contact's phone
    - **Read** — contact opened and read the message
    - **Failed** — message could not be delivered
-<!-- screenshot: Campaign stats showing sent, delivered, read, failed counts -->
+![Campaign results: Sent, Delivered, Read, Replied, Clicked and Failed](/img/docs/getting-started/your-first-campaign-results.png)
 
 ## Tips & best practices
 
