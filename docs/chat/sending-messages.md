@@ -37,7 +37,9 @@ This is useful when the 24-hour window has closed and you need to re-engage the 
 1. In the message input area, click the **attachment** icon
 2. Select the file you want to send (image, video, document, or audio)
 <!-- screenshot: Media attachment options -->
-3. The file will be uploaded and sent to the contact
+3. For a photo, video or document, a window opens where you can add a caption and buttons, then click **Send**. Audio files are sent straight away.
+
+To format your text or add buttons your customer can tap, see [Rich Messages](./rich-messages.md). To send a message later, see [Schedule Messages](./schedule-messages.md).
 
 ### Sending a voice note
 

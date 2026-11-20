@@ -29,4 +29,4 @@ The same window opens when you attach a photo, video or document, or pick a quic
 - Buttons in a chat reply work only within the 24-hour reply window, like any other free-form message.
 - Available on every plan.
 
-See [Sending Messages](/docs/chat/sending-messages) for more on replying to customers.
+Full details are on the [Rich Messages](/docs/chat/rich-messages) page. See [Sending Messages](/docs/chat/sending-messages) for more on replying to customers.

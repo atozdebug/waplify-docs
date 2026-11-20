@@ -21,6 +21,38 @@ The WhatsApp Account Info page shows the status and health of your connected Wha
    - **Messaging tier** — your current daily messaging limit
    - **Business verification status** — whether your business is verified on Meta
 
+### Editing your business profile
+
+Your business profile is what customers see when they open your business in WhatsApp: your photo, a short About line, a description, your address, email, category and websites.
+
+1. Go to **Settings > WhatsApp**.
+2. Find your number and click **Edit**. The **Edit Business Profile** window opens.
+<!-- screenshot: the Edit Business Profile window -->
+3. Change any of these:
+   - **About**: a short line, up to 139 characters
+   - **Description**: up to 512 characters
+   - **Email**
+   - **Category**
+   - **Address**: up to 256 characters
+   - **Websites**: up to 2, each starting with `http://` or `https://`
+4. Click **Save Changes**.
+
+### Changing your profile photo
+
+The profile photo is the picture customers see next to your business name in WhatsApp.
+
+1. Go to **Settings > WhatsApp**, find your number and click **Edit**.
+2. Under **Profile picture**, click **Upload photo** (or **Change photo** if you already have one) and choose an image.
+<!-- screenshot: the Profile picture section with Upload photo -->
+3. Changed your mind? Click **Undo** before saving.
+4. Click **Save Changes**. You see **Profile picture updated**.
+
+Use a **JPG, PNG or WEBP** image of at least **192 x 192 pixels**, up to **10 MB**. Waplify crops it to a square from the centre, so keep your logo in the middle.
+
+:::note
+Only owners and admins can edit the business profile. If your number also runs on the **WhatsApp Business app** on a phone, there is no **Edit** button here: change your photo and profile in that app instead.
+:::
+
 ### Understanding the quality rating
 
 WhatsApp assigns a quality rating based on how recipients interact with your messages:
@@ -70,6 +102,14 @@ Yes. If your quality rating drops to Red, your tier may be downgraded. This mean
 ### What should I do if my quality rating is Red?
 
 Stop sending campaigns immediately and review your recent messages. Look for content that might be perceived as spam or irrelevant. Wait for your rating to improve before resuming sends.
+
+### Why was my profile photo not accepted?
+
+It must be a JPG, PNG or WEBP image, at least 192 x 192 pixels and under 10 MB. If Waplify says it could not read the image, open it on your computer, save it again as a JPG or PNG, and upload that copy.
+
+### Why don't I see the Edit button on my number?
+
+Either you are not an owner or admin, or the number also runs on the WhatsApp Business app on a phone. In that case, change the profile and photo in the app.
 
 ### Can I see the quality rating for each phone number separately?
 

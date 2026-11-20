@@ -10,7 +10,7 @@ You can now change the **profile photo** of your WhatsApp business number right 
 ## How to change it
 
 1. Go to **Settings > WhatsApp**.
-2. Click **Edit** on your number, then **Edit Business Profile**.
+2. Click **Edit** on your number. The **Edit Business Profile** window opens.
 3. Under **Profile picture**, click **Upload photo** (or **Change photo**).
 4. Click **Save Changes**.
 
@@ -20,4 +20,4 @@ You can now change the **profile photo** of your WhatsApp business number right 
 - Owners and admins can change it.
 - If your number also runs on the **WhatsApp Business app** on a phone, change the photo in that app instead.
 
-See [WhatsApp Account Info](/docs/account/whatsapp-account-info) for the rest of your business profile.
+See [Changing your profile photo](/docs/account/whatsapp-account-info#changing-your-profile-photo) for the full steps and the rest of your business profile.
