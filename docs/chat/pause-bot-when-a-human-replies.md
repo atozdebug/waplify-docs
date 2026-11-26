@@ -15,7 +15,7 @@ If you also answer customers from the **WhatsApp Business app on your phone**, y
 
 You'll find it under **Settings → Inbox & routing**. Only Owners and Admins can change it.
 
-<!-- screenshot: Settings → Inbox & routing, the "Pause bot when a human replies" card -->
+![The Pause bot when a human replies card in Inbox & routing](/img/docs/chat/pause-bot-card.png)
 
 ## How to use it
 
@@ -25,7 +25,6 @@ You'll find it under **Settings → Inbox & routing**. Only Owners and Admins ca
 2. Find **Pause bot when a human replies** and switch it on.
 3. Click **Save Changes**.
 
-<!-- screenshot: "Pause bot when a human replies" switched on -->
 
 With the setting on:
 
@@ -41,7 +40,7 @@ If your WhatsApp number is connected to both Waplify and the WhatsApp Business a
 2. Leave it on to pause the bot for **24 hours** each time you reply from your phone. Switch it off if you'd rather the bot keep replying alongside you.
 3. Click **Save Changes**.
 
-<!-- screenshot: "Also pause when you reply from your phone" with "Pause length: 24 hours (fixed)" -->
+![Also pause when you reply from your phone, with a pause length of 24 hours (fixed)](/img/docs/chat/pause-bot-phone.png)
 
 How the 24 hours work:
 
@@ -51,7 +50,7 @@ How the 24 hours work:
 
 While a chat is paused this way, your team sees a note above the message box, for example: *"Bot paused after a reply from the WhatsApp Business app. It comes back in 23 hours if nobody replies."* Click **Keep paused** to assign the chat to yourself. The bot then stays paused until someone gives the chat back to it.
 
-<!-- screenshot: the phone pause note with the Keep paused button -->
+![The note above the message box after a reply from the phone, with Keep paused](/img/docs/chat/inbox-overview-phone-reply.png)
 
 ### What your team sees in a chat
 

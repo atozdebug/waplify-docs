@@ -9,7 +9,7 @@
 // - Group small items into one card per area so each column stays short.
 // - Change `updated` every time you edit this file.
 
-export const updated = '20 Nov 2026';
+export const updated = '26 Nov 2026';
 
 export const columns = [
   {
@@ -148,6 +148,12 @@ export const columns = [
 // The latest 5 Changelog posts. `to` is the post's page under /changelog.
 export const recentlyShipped = [
   {
+    date: '25 Nov 2026',
+    title: 'Module access: choose what each teammate can open',
+    tag: 'Team',
+    to: '/changelog/2026/11/25/module-access-for-each-teammate',
+  },
+  {
     date: '20 Nov 2026',
     title: 'Media library: all your files in one place',
     tag: 'Media',
@@ -170,12 +176,6 @@ export const recentlyShipped = [
     title: 'A new way to import contacts',
     tag: 'Contacts',
     to: '/changelog/2026/11/12/new-contact-import',
-  },
-  {
-    date: '11 Nov 2026',
-    title: 'WhatsApp calling: take and make customer calls',
-    tag: 'Calling',
-    to: '/changelog/2026/11/11/whatsapp-calling',
   },
 ];
 

@@ -83,7 +83,10 @@ When you add an image, video, audio file or document to a quick response:
 - **Owners, admins and managers** can open the Media library page, and upload, rename, trash and delete files.
 - **Agents** can't open the page, but they can still pick files from the library and upload new ones when they send a message.
 
-The **Storage** button at the top of the page shows how much space your files use. Files in the trash still count until they are deleted.
+An owner or admin can change this for one person with [Module access](../team/roles-and-permissions.md#module-access-change-what-one-person-can-open).
+
+The **Storage** button at the top of the page shows how much space your files use. Click it to see, for example, "120 MB of 1 GB used", with a bar and the space each file type takes. Files in the trash still count until they are deleted.
+![The Storage box showing how much of 1 GB is used](/img/docs/account/media-library-storage.png)
 
 ## Tips & best practices
 
@@ -110,6 +113,6 @@ Only owners, admins and managers can open it. If you are an agent, you can still
 
 Yes. Click **Copy link** on the file and use that link as `media_url` in your API request.
 
-### Is there a storage limit?
+### How much storage do I have?
 
-Click **Storage** at the top of the page to see how much space you use and whether your plan has a limit.
+Click **Storage** at the top of the page. It shows how much of your 1 GB you use. If you go over 1 GB, the bar turns amber and suggests deleting files you no longer need. Emptying the trash frees space too.

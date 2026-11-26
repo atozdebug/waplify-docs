@@ -19,14 +19,12 @@ WhatsApp requires all business-initiated messages to use **pre-approved template
    - **Name** and a green tick when the template is approved (other statuses, like Pending or Rejected, are written next to the name)
    - **Category, language and date**, for example "Marketing · English (US) · 22 Oct"
    - **Variables** as green tags in the message, like `first_name`
-   - **Numbers that can send it**, at the bottom of the card, if your business has more than one WhatsApp number
 3. Click any card to see the full template, its details and the **Edit** and **Delete** buttons.
 
 ### Finding a template
 
 Use the filters at the top of the page:
 
-- **Number**: the page opens on **All numbers**, so you see every template your numbers can send. Pick one number to see only its templates.
 - **Category**: Marketing, Utility or Authentication (and Commerce, if your plan includes it). Each option shows how many templates it has.
 - **Status**: Approved, Pending, Rejected, Paused or Drafts. **All statuses** shows every template except drafts. Pick **Drafts** to see templates you saved but haven't submitted yet.
 - **Search templates**: type part of a template's name or message.
@@ -56,7 +54,7 @@ Template approval time varies. Verified businesses usually get approved within a
 
 Templates you create or change on Meta appear in Waplify **automatically** — there's no manual import step. The list also updates on its own as Meta approves, rejects, or pauses your templates.
 
-If you want to refresh the list right away, click the **Sync from Meta** button (the round arrows next to the search box) to pull the latest state straight from Meta. With **All numbers** picked, this refreshes the templates for every number at once.
+If you want to refresh the list right away, click the **Sync from Meta** button (the round arrows next to the search box) to pull the latest state straight from Meta.
 ![The Sync from Meta button next to the search box](/img/docs/templates/message-templates-sync.png)
 
 ### Deleting a template
@@ -71,7 +69,6 @@ If you want to refresh the list right away, click the **Sync from Meta** button 
 - Include an **opt-out option** in marketing templates (e.g., "Reply STOP to unsubscribe") — this improves approval chances
 - Keep your message clear and concise — WhatsApp may reject vague or misleading content
 - Templates created or edited on Meta sync to Waplify automatically. Use **Sync from Meta** only when you want an immediate refresh.
-- With more than one WhatsApp number, look at the bottom of each card to see which numbers can send that template
 - You can create templates with **variables** (like customer name) that get filled in when you send a campaign — see [Template Variables & Media](./template-variables-and-media.md)
 
 ## Frequently asked questions

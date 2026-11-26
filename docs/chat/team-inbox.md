@@ -24,16 +24,16 @@ The team inbox sorts every conversation into four tabs:
 | **Open** | Open conversations your teammates are handling — the team's queue |
 | **Resolved** | Conversations that have been marked as finished |
 
-<!-- screenshot: inbox showing the four tabs -->
+![The Mine, Unassigned, Open and Resolved tabs above the chat list](/img/docs/chat/team-inbox-tabs.png)
 
 ### Picking up a conversation
 
 When a conversation is in **Unassigned**, anyone can take it:
 
 1. Open the conversation
-2. Click **Assign** in the conversation header
+2. Click **Assign** in the conversation header. If the chat already has an owner, the button shows their name
 3. Choose yourself (or a teammate) from the list
-<!-- screenshot: Assign dropdown in the conversation header -->
+![The assign button in the chat header, with the list of teammates](/img/docs/chat/team-inbox-assign.png)
 
 The conversation immediately moves to that person's **Mine** tab.
 
@@ -55,7 +55,7 @@ When you've finished helping a customer, mark the conversation as done:
 1. Click **Resolve** in the conversation header
 2. Optionally add a **closing note** describing the outcome
 3. Click **Resolve**
-<!-- screenshot: Resolve dialog with a closing note -->
+![The Resolve conversation window with a closing note](/img/docs/chat/team-inbox-resolve.png)
 
 The conversation moves to the **Resolved** tab. Don't worry — resolving isn't permanent.
 
@@ -77,7 +77,7 @@ Every conversation has an **info panel** alongside the messages, showing who you
 - **Marketing opt-in** — whether the customer has agreed to receive marketing messages
 - **Handoff history** — who the conversation has been assigned to, and any notes left along the way
 
-<!-- screenshot: customer info panel open beside a conversation -->
+![The customer info panel beside a chat](/img/docs/chat/team-inbox-info-panel.png)
 
 ## Tips & best practices
 

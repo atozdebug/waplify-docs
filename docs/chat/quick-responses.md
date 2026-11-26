@@ -14,8 +14,8 @@ Quick Responses are pre-written message templates you can use in the chat inbox.
 ### Creating a quick response
 
 1. Go to **Settings > Quick Responses** from the sidebar
-2. Click **Create Quick Response**
-<!-- screenshot: Create Quick Response form -->
+2. Click **Create New**
+![The Create Quick Response window](/img/docs/chat/quick-responses-create.png)
 3. Fill in:
    - **Name** — a short label to identify this response (e.g., "Business Hours")
    - **Message** — the actual text you want to send

@@ -146,9 +146,41 @@ Pick **Only their assigned chats** when you want an agent to focus strictly on t
 
 You choose the scope when inviting an agent, and you can change it any time from the **Team** page using the **View scope** dropdown on the agent's row. The agent picks up the change the next time they refresh or sign in. Owners, Admins, and Managers always see all conversations — view scope applies only to Agents. See [Working as a Team in the Inbox](../chat/team-inbox.md).
 
+## Module access: change what one person can open
+
+A role gives everyone the same access. **Module access** lets you change it for one person, without changing their role. For example, let one agent see campaigns, or keep one manager out of chatbot flows.
+
+Owners and admins can do this, for Admins, Managers and Agents.
+
+1. Go to **Settings > Team**.
+2. Click the **⋯** menu on the person's row.
+3. Under "Access", click **Module access**.
+![The Module access item in a team member's menu](/img/docs/team/roles-and-permissions-module-access-menu.png)
+4. For each module, pick a level: **Off**, **View** or **Manage**. The level their role gives them is selected to start with. A module you change shows a **Custom** label.
+![The Module access window with an Off, View and Manage choice for each module](/img/docs/team/roles-and-permissions-module-access.png)
+5. Click **Save**. Their open tabs update on their own.
+
+On the team list, a person with changed access shows a **Custom access** badge. Point at it to see what is different.
+
+**The modules:** Inbox, Contacts, Campaigns, Templates and forms, Chatbot flows, Sequences, Commerce, Media library, Integrations, Settings, Team and Developer. A few use their own words for the levels:
+
+- **Inbox**: **Off**, **Read only** (see chats, can't reply) or **Reply**.
+- **Media library**: **Off**, **Use** (pick and upload files) or **Manage** (also rename and delete).
+- **Developer** (API keys and webhooks): **Off** or **On**.
+
+**Good to know:**
+
+- **Manage** covers everyday work, like creating, editing and sending. Deleting stays with the role: a Manager given **Manage** on Campaigns still can't delete a campaign.
+- Only Admins can get **Manage** on **Team** or turn **Developer** on. For anyone else, those choices are locked.
+- You can't give someone more access than you have yourself.
+- **Changing a person's role resets their module access** to the new role's levels.
+- To undo your changes, open **Module access** again and click **Reset to role defaults**.
+
+You can also set module access while inviting someone: in the invite window, tick **Customise access** and pick the levels before you click **Send Invite**.
+
 ## Full capability matrix
 
-"✓" means the role can do the action. "—" means it cannot. When a role cannot do an action, the button for that action is hidden from them in the app.
+This table shows each role's starting access. [Module access](#module-access-change-what-one-person-can-open) can change it for one person. "✓" means the role can do the action. "—" means it cannot. When a role cannot do an action, the button for that action is hidden from them in the app.
 
 | Capability | Owner | Admin | Manager | Agent |
 |------------|:-----:|:-----:|:-------:|:-----:|
@@ -203,7 +235,7 @@ Each row in the matrix falls into one of these categories:
 
 ### How to invite a team member and pick a role
 
-1. Open **Team** from the sidebar.
+1. Go to **Settings > Team**.
 2. Click **Invite Member** in the top-right.
 3. Enter the person's email address.
 4. Pick a role from the dropdown — Admin, Manager, or Agent. You'll see a short summary of that role's capabilities below the dropdown.
@@ -214,18 +246,18 @@ The invited person receives an email with a link. When they click it, they can e
 - sign up with a new password (if they don't have a Waplify account), or
 - sign in to their existing Waplify account and join your workspace.
 
-<!-- screenshot: Invite Member dialog with role dropdown open showing the three options -->
+![The Invite Team Member window with the Role list open: Admin, Manager, Agent](/img/docs/team/roles-and-permissions-invite-role.png)
 
 ### How to change a team member's role
 
-1. Open **Team** from the sidebar.
+1. Go to **Settings > Team**.
 2. Find the member in the **Members** list.
 3. Click the **⋯** (three dots) menu on their row.
 4. Under "Change role", pick the new role.
 
 The new role takes effect immediately. The member may need to refresh their browser to see the updated menus.
 
-<!-- screenshot: Team page with the ⋯ dropdown menu open showing "Change role" section -->
+![A team member's menu with Change role, Access, Status and Danger zone](/img/docs/team/roles-and-permissions-change-role.png)
 
 ### How to deactivate or remove a member
 
@@ -233,7 +265,7 @@ The new role takes effect immediately. The member may need to refresh their brow
 
 **Remove** is permanent. The member loses access and can only be re-added via a fresh invitation.
 
-1. Open **Team** from the sidebar.
+1. Go to **Settings > Team**.
 2. Click the **⋯** menu on the member's row.
 3. Under "Status", click **Deactivate** (or **Reactivate** if already deactivated).
 4. Or under "Danger zone", click **Remove from team**.
@@ -258,8 +290,8 @@ Admin. Admins can manage the team, delete data, and change settings — just not
 **"I want an accountant to only view invoices."**
 Not possible today. Billing is Owner-only. Forward invoices to your accountant out-of-band.
 
-**"I want a reports-only role for a stakeholder."**
-Not available yet. Give them Agent for now; they can view the inbox but not send anything.
+**"I want a view-only account for a stakeholder."**
+Give them the Manager or Agent role, then use [Module access](#module-access-change-what-one-person-can-open) to set the modules they need to **View** and the rest to **Off**. Set **Inbox** to **Read only** so they can't reply.
 
 **"An employee left the team yesterday."**
 Deactivate them immediately. If you're sure they won't return, follow up with Remove.
@@ -281,7 +313,7 @@ Open the Team page, click the ⋯ menu on that Agent, and select "Change to Mana
 
 ### Can I create custom roles?
 
-Not yet. Waplify offers four fixed roles: Owner, Admin, Manager, and Agent. Custom roles are on the roadmap — let us know what fine-grained role you need and we'll prioritise it.
+There are four fixed roles: Owner, Admin, Manager and Agent. But you can change what one person can open with [Module access](#module-access-change-what-one-person-can-open). Pick the closest role, then turn single modules up or down for that person.
 
 ### Can an Admin access billing?
 

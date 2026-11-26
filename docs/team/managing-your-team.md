@@ -13,8 +13,8 @@ Waplify lets you invite team members to your workspace so multiple people can ma
 
 ### Viewing your team
 
-1. Go to **Team** from the sidebar
-<!-- screenshot: Team page showing members table -->
+1. Go to **Settings > Team**
+![The Team page in Settings, with the members table](/img/docs/team/managing-your-team-page.png)
 2. You will see a table of all team members with their:
    - Name and email
    - Role (Owner, Admin, Manager, Agent)
@@ -24,7 +24,7 @@ Waplify lets you invite team members to your workspace so multiple people can ma
 ### Inviting a new team member
 
 1. On the Team page, click **Invite Member**
-<!-- screenshot: Invite member dialog -->
+![The Invite Team Member window, with Customise access ticked](/img/docs/team/managing-your-team-invite.png)
 2. Enter the person's **email address**
 3. Select a **role** for them:
    - **Admin** — manages the team, settings, and messaging — everything except billing
@@ -32,8 +32,9 @@ Waplify lets you invite team members to your workspace so multiple people can ma
    - **Agent** — handles customer chats in the inbox
    - For a full breakdown, see [Roles & Permissions](./roles-and-permissions.md)
 4. If you chose **Agent**, set their **view scope** — *All conversations*, *Assigned + unassigned* (default, includes the shared queue), or *Only their assigned chats* (strictest — they see only their own). See [Roles & Permissions](./roles-and-permissions.md#agent-view-scope) for details
-5. Click **Send Invitation**
-6. The person will receive an email with a link to join your workspace
+5. Optional: tick **Customise access** to pick, module by module, what this person can open instead of the role's usual access. See [Module access](./roles-and-permissions.md#module-access-change-what-one-person-can-open)
+6. Click **Send Invite**
+7. The person will receive an email with a link to join your workspace
 
 ### Managing pending invitations
 
